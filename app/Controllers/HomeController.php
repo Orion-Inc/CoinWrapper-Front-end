@@ -6,7 +6,7 @@
     {
         public function index($request, $response)
         {
-            return $this->container->view->render($response, 'home.twig');
+            return $this->view->render($response, 'home.twig');
         }
     }
     
