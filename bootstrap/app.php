@@ -24,4 +24,12 @@
         return $view;
     };
 
+    $container['HomeController'] = function ($container){
+        return new \Crypto\Controllers\HomeController($container);
+    };
+
+    $container['AuthController'] = function ($container){
+        return new \Crypto\Controllers\AuthController($container);
+    };
+
     require __DIR__.'/../routes/routes.php';
