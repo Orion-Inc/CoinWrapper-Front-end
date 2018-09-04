@@ -1,0 +1,111 @@
+{% extends 'template/app.twig' %}
+
+
+
+{% block body %}
+
+    <div id="header-holder" class="about-header">
+        <div class="bg-animation"></div>
+        {% include 'template/partials/html_blocks/navbar.twig' %}
+        <div id="page-head" class="container-fluid inner-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center">
+                        <div class="icons-animation-holder">
+                            <div class="aicon aicon1"><img src="images/aicon1.png" alt=""></div>
+                            <div class="aicon aicon2"><img src="images/aicon2.png" alt=""></div>
+                            <div class="aicon aicon3"><img src="images/aicon3.png" alt=""></div>
+                            <div class="aicon aicon4"><img src="images/aicon4.png" alt=""></div>
+                            <div class="aicon aicon-main">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 company-info-holder">
+                        <h4>About Coin Wrapper</h4>
+                        <div class="info-slider">
+                            <div>
+                                <div class="details-holder">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details-holder">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details-holder">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ifeatures" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row-title">Why Choose Us?</div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="more-info" class="container-fluid">
+        <div class="bg-custom"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="links-holder">
+                        <ul>
+                            <li><div class="info-link opened" data-id="1">Our Mission</div></li>
+                            <li><div class="info-link" data-id="2">Our Vision</div></li>
+                            <li><div class="info-link" data-id="3">Our Commitment</div></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-details-holder">
+                        <div class="info-details info-d1 show-details">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                        <div class="info-details info-d2">
+                            <h1></h1>
+                            <p></p>
+                        </div>
+                        <div class="info-details info-d3">
+                            <h1></h1>
+                            <p></p>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="team" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row-title">Our Team</div>
+                </div>
+            </div>
+            <div class="row team-holder">
+            </div>
+        </div>
+    </div>
+
+    {% include 'template/partials/hero/create-account.twig' %}
+
+    {% include 'template/partials/html_blocks/footer.twig' %}
+{% endblock %}

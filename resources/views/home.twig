@@ -1,1 +1,53 @@
 {% extends 'template/app.twig' %}
+
+
+
+{% block body %}
+<div id="header-holder" class="homepage-header">
+    <div class="bg-animation"></div>
+    {% include 'template/partials/html_blocks/navbar.twig' %}
+    <div id="page-head" class="container-fluid inner-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <div class="logo-icon">
+                        <img src="assets/img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="head-content">
+                        <p>Lorem ipsum dolor sit amir anim amoe yosner dolner</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer elit, sed diam <span>nonummy</span> nibh tincidunt ut laoreet dolore magna aliquam erat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% include 'template/partials/html_blocks/footer.twig' %}
+{% endblock %}

@@ -24,8 +24,8 @@
         return $view;
     };
 
-    $container['HomeController'] = function ($container){
-        return new \Crypto\Controllers\HomeController($container);
+    $container['WebController'] = function ($container){
+        return new \Crypto\Controllers\WebController($container);
     };
 
     $container['AuthController'] = function ($container){
