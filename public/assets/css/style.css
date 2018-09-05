@@ -154,6 +154,8 @@ input[type="submit"] {
     margin: 5px 10px;
     display: inline-block;
     white-space: nowrap;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
