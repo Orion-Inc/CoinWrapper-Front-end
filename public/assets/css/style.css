@@ -69,7 +69,7 @@ input[type="submit"] {
     text-align: center;
     font-size: 25px;
     font-weight: 300;
-    color: #f16ff9;
+    color: #593295;
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -80,7 +80,7 @@ input[type="submit"] {
     content: "";
     width: 58px;
     height: 2px;
-    background-color: #f16ff9;
+    background-color: #593295;
     left: 50%;
     margin-left: -29px;
     bottom: -8px;
