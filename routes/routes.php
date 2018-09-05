@@ -1,5 +1,5 @@
 <?php
-    $app->get('/', 'WebController:home')->setName('home');
+    $app->get('/', 'WebController:index')->setName('home');
 
     $app->get('/about-us', 'WebController:aboutus')->setName('about-us');
 
@@ -13,3 +13,7 @@
     $app->get('/sign-in', 'AuthController:signin')->setName('auth.signin');
 
     $app->get('/sign-up', 'AuthController:signup')->setName('auth.signup');
+
+
+    $app->get('/dashboard', 'AppController:index')->setName('app.dashboard');
+

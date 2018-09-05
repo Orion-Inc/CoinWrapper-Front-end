@@ -32,4 +32,8 @@
         return new \Crypto\Controllers\AuthController($container);
     };
 
+    $container['AppController'] = function ($container){
+        return new \Crypto\Controllers\AppController($container);
+    };
+
     require __DIR__.'/../routes/routes.php';

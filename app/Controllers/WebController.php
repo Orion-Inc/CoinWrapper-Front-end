@@ -2,9 +2,9 @@
     namespace Crypto\Controllers;
     use Slim\Views\Twig as View;
 
-    class WebController extends BaseController
+    class WebController extends Controller
     {
-        public function home($request, $response)
+        public function index($request, $response)
         {
             return $this->view->render($response, 'home.twig', [
                 'pageTitle' => 'Home',

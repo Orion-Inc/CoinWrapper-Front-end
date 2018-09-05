@@ -1,7 +1,7 @@
 <?php
     namespace Crypto\Controllers;
 
-    class BaseController
+    class Controller
     {
         protected $container;
 

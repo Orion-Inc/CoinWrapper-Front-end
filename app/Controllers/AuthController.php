@@ -2,7 +2,7 @@
     namespace Crypto\Controllers;
     use Slim\Views\Twig as View;
 
-    class AuthController extends BaseController
+    class AuthController extends Controller
     {
         public function signin($request, $response)
         {

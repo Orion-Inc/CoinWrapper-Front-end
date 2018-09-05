@@ -372,11 +372,11 @@ input[type="submit"] {
 .logo-holder {
     font-family: 'Rubik', sans-serif;
     color: #ffffff;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     display: inline-block;
-    padding-top: 17px;
+    padding-top: 0px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -2844,6 +2844,12 @@ svg.logo text {
     font-size: 15px;
 }
 
+#footer .address-holder a {
+    color: #ffffff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
 #footer .phone {
     color: #ffffff;
     font-size: 15px;
@@ -3257,8 +3263,8 @@ svg.logo text {
 
 .signin-signup-form .form-title {
     color: #756de7;
-    font-weight: 300;
-    font-size: 19px;
+    font-size: 26px;
+    font-weight: 500;
     margin-bottom: 50px;
     text-align: left;
 }
@@ -3273,13 +3279,14 @@ svg.logo text {
     padding-left: 10px;
 }
 
-.signin-signup-form .row div[class^="col-"]:first-child {
-    padding-right: 5px;
+
+/* .signin-signup-form .row div[class^="col-"]:first-child {
+    padding-right: 0px;
 }
 
 .signin-signup-form .row div[class^="col-"]:last-child {
-    padding-left: 5px;
-}
+    padding-left: 0px;
+} */
 
 .signin-signup-form .form-text {
     margin-bottom: 10px;
@@ -5672,12 +5679,14 @@ svg.logo text {
     }
     .website-logo {
         position: absolute;
-        top: 30px;
+        top: 10px;
         left: 30px;
         width: inherit;
     }
     .website-logo .logo {
-        background-image: url("../img/logo_dark.png");
+        background-image: url("../img/logo.png");
+        width: 50px!important;
+        height: 50px!important
     }
     #form-section svg.logo text {
         fill: #756de7;
