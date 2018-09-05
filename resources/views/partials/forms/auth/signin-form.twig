@@ -1,13 +1,13 @@
-<form id="signinform">
+<form action="{{ path_for('auth.signin') }}" method="POST" id="signinform" autocomplete="off">
     <div class="form-text">
-        <input type="email" name="signin[email]" placeholder="Enter Your Email Address or Phone Number" required>
+        <input type="text" name="email-phoneNumber" placeholder="Enter Your Email Address or Phone Number" required>
     </div>
     <div class="form-text text-holder">
         <span class="text-only">Preferred Authentication Method</span>
     </div>
     <div class="form-text text-holder">
-        <input type="radio" name="signin[auth-method]" class="hno-radiobtn" id="rad1" value="email" checked><label for="rad1">Email</label>
-        <input type="radio" name="signin[auth-method]" class="hno-radiobtn" id="rad2" value="sms"><label for="rad2">Sms</label>
+        <input type="radio" name="auth-method" class="hno-radiobtn" id="rad1" value="email" checked><label for="rad1">Email</label>
+        <input type="radio" name="auth-method" class="hno-radiobtn" id="rad2" value="sms"><label for="rad2">Sms</label>
     </div>
 
     <div class="form-button">

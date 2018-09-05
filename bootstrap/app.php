@@ -8,10 +8,12 @@
     $app = new \Slim\App([
         'settings' => [
             'diplayErrorDetails' => true,
-        ]
+        ],
+        'mode' => file_get_contents(__DIR__.'/../configuration')
     ]);
 
     $container = $app->getContainer();
+
     $container['view'] = function ($container){
         $view = new \Slim\Views\Twig(__DIR__.'/../resources/views', [
             'cache' => false
@@ -24,12 +26,16 @@
         return $view;
     };
 
+    $container['plugins'] = function ($container){
+        
+    };
+
     $container['WebController'] = function ($container){
         return new \Crypto\Controllers\WebController($container);
     };
 
     $container['AuthController'] = function ($container){
-        return new \Crypto\Controllers\AuthController($container);
+        return new \Crypto\Controllers\Auth\AuthController($container);
     };
 
     $container['AppController'] = function ($container){

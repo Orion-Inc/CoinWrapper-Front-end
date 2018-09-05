@@ -11,8 +11,10 @@
 
 
     $app->get('/sign-in', 'AuthController:signin')->setName('auth.signin');
+    $app->post('/sign-in', 'AuthController:postSignin');
 
     $app->get('/sign-up', 'AuthController:signup')->setName('auth.signup');
+    $app->post('/sign-up', 'AuthController:postSignup');
 
 
     $app->get('/dashboard', 'AppController:index')->setName('app.dashboard');

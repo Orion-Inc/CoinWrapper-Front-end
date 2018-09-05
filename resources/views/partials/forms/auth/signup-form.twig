@@ -1,13 +1,13 @@
-<form id="signupform">
+<form action="{{ path_for('auth.signup') }}" method="POST" id="signupform" autocomplete="off">
     <div class="row">
         <div class="col-sm-6 col-md-6">
             <div class="form-text">
-                <input type="text" name="signup[first-name]" placeholder="Enter Your First Name" required>
+                <input type="text" name="first-name" placeholder="Enter Your First Name" required>
             </div>
         </div>
         <div class="col-sm-6 col-md-6">
             <div class="form-text">
-                <input type="text" name="signup[other-names]" placeholder="Enter Your Other Names" required>
+                <input type="text" name="other-names" placeholder="Enter Your Other Names" required>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-text">
-                <input type="text" name="signup[username]" placeholder="Enter A Preferred Username" required>
+                <input type="text" name="username" placeholder="Enter A Preferred Username" required>
             </div>
         </div>
     </div>
@@ -23,12 +23,12 @@
     <div class="row">
         <div class="col-sm-6 col-md-6">
             <div class="form-text">
-                <input type="email" name="signup[email]" placeholder="Enter Your Email Address" required>
+                <input type="email" name="email" placeholder="Enter Your Email Address" required>
             </div>
         </div>
         <div class="col-sm-6 col-md-6">
             <div class="form-text">
-                <input type="text" name="signup[phone-number]" placeholder="Enter Your Phone Number" required>
+                <input type="text" name="phone-number" placeholder="Enter Your Phone Number" required>
             </div>
         </div>
     </div>
