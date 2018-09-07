@@ -1,7 +1,6 @@
 <?php
     namespace Crypto\Controllers\Auth;
 
-
     use Crypto\Classes\Auth;
     use Crypto\Models\User;
     use Crypto\Controllers\Controller;

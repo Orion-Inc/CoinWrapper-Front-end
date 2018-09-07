@@ -35,7 +35,15 @@
             ]);
         }
 
-        public function listBuySell($request, $response)
+        public function termsofservice($request, $response)
+        {
+            return $this->view->render($response, 'website/terms-of-service.twig', [
+                'pageTitle' => 'Terms of Service',
+                'uri' => 'terms-of-service'
+            ]);
+        }
+
+        public function buySell($request, $response)
         {
             return $this->view->render($response, 'website/buy-sell.twig', [
                 'pageTitle' => 'Buy/Sell',

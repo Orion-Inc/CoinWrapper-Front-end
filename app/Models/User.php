@@ -1,7 +1,9 @@
 <?php
     namespace Crypto\Models;
 
-    class User 
+    use Crypto\Classes\Api as request;
+
+    class User
     {
         public static function create($args = array())
         {

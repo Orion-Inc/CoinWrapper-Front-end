@@ -1,0 +1,36 @@
+{% extends 'template/app.twig' %}
+
+
+
+{% block body %}
+    <div id="header-holder" class="inner-header web-hosting-page">
+    <div class="whitebg"><img src="assets/img/headbg.svg" alt=""></div>
+    {% include 'template/partials/html_blocks/navbar.twig' %}
+    <div id="page-head" class="container-fluid inner-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="page-title">{{ pageTitle }}</div>
+                    <div id="page-icon">
+                        <div class="pricing-icon pricing-color1">
+                            <i class="htfy htfy-padlock"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+    {% include 'template/partials/html_blocks/footer.twig' %}
+{% endblock %}

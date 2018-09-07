@@ -1,6 +1,8 @@
 <?php
     namespace Crypto\Classes;
 
+    use Crypto\Classes\Api as request;
+
     class Auth
     {
         public static function authenticate($args = array())

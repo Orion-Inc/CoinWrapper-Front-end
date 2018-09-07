@@ -7,7 +7,9 @@
 
     $app->get('/faqs', 'WebController:faqs')->setName('faqs');
 
-    $app->get('/buy-sell', 'WebController:listBuySell')->setName('buy-sell');
+    $app->get('/buy-sell', 'WebController:buySell')->setName('buy-sell');
+
+    $app->get('/terms-of-service', 'WebController:termsofservice')->setName('terms-of-service');
 
     $app->get('/sign-up', 'AuthController:signup')->setName('auth.sign-up');
     $app->post('/sign-up', 'AuthController:postSignup');
