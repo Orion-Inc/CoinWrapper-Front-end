@@ -1,34 +1,50 @@
 <form action="{{ path_for('auth.signup') }}" method="POST" id="signupform" autocomplete="off">
+    {{ csrf.fields | raw }}
     <div class="row">
         <div class="col-sm-6 col-md-6">
-            <div class="form-text">
-                <input type="text" name="first-name" placeholder="Enter Your First Name" required>
+            <div class="form-text {{ errors.firstname ? 'has-error' : '' }}">
+                <input type="text" name="firstname" placeholder="Enter Your First Name" value="{{ input.firstname }}" required>
+                {% if errors.firstname %}
+                    <span class="help-block">{{ errors.firstname | first }}</span>
+                {% endif %}
             </div>
         </div>
         <div class="col-sm-6 col-md-6">
-            <div class="form-text">
-                <input type="text" name="other-names" placeholder="Enter Your Other Names" required>
+            <div class="form-text {{ errors.othernames ? 'has-error' : '' }}">
+                <input type="text" name="othernames" placeholder="Enter Your Other Names" value="{{ input.othernames }}" required>
+                {% if errors.othernames %}
+                    <span class="help-block">{{ errors.othernames | first }}</span>
+                {% endif %}
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            <div class="form-text">
-                <input type="text" name="username" placeholder="Enter A Preferred Username" required>
+            <div class="form-text {{ errors.username ? 'has-error' : '' }}">
+                <input type="text" name="username" placeholder="Enter A Preferred Username" value="{{ input.username }}" required>
+                {% if errors.username %}
+                    <span class="help-block">{{ errors.username | first }}</span>
+                {% endif %}
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-sm-6 col-md-6">
-            <div class="form-text">
-                <input type="email" name="email" placeholder="Enter Your Email Address" required>
+            <div class="form-text {{ errors.email ? 'has-error' : '' }}">
+                <input type="email" name="email" placeholder="Enter Your Email Address" value="{{ input.email }}" required>
+                {% if errors.email %}
+                    <span class="help-block">{{ errors.email | first }}</span>
+                {% endif %}
             </div>
         </div>
         <div class="col-sm-6 col-md-6">
-            <div class="form-text">
-                <input type="text" name="phone-number" placeholder="Enter Your Phone Number" required>
+            <div class="form-text {{ errors.phonenumber ? 'has-error' : '' }}">
+                <input type="text" name="phonenumber" placeholder="Enter Your Phone Number" value="{{ input.phonenumber }}" required>
+                {% if errors.phonenumber %}
+                    <span class="help-block">{{ errors.phonenumber | first }}</span>
+                {% endif %}
             </div>
         </div>
     </div>

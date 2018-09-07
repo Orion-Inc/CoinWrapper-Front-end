@@ -9,10 +9,6 @@
             
         }
 
-        public static function authenticate($args = array())
-        {
-            print("<pre>".print_r($args,1)."</pre>");
-            
-        }
+        
     }
     

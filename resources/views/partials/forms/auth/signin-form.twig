@@ -1,13 +1,17 @@
 <form action="{{ path_for('auth.signin') }}" method="POST" id="signinform" autocomplete="off">
-    <div class="form-text">
-        <input type="text" name="email-phoneNumber" placeholder="Enter Your Email Address or Phone Number" required>
+    {{ csrf.fields | raw }}
+    <div class="form-text {{ errors.emailphonennumber ? 'has-error' : '' }}">
+        <input type="text" name="emailphonennumber" placeholder="Enter Your Email Address or Phone Number" value="{{ input.emailphonennumber }}" required>
+        {% if errors.emailphonennumber %}
+            <span class="help-block">{{ errors.emailphonennumber | first }}</span>
+        {% endif %}
     </div>
     <div class="form-text text-holder">
         <span class="text-only">Preferred Authentication Method</span>
     </div>
     <div class="form-text text-holder">
-        <input type="radio" name="auth-method" class="hno-radiobtn" id="rad1" value="email" checked><label for="rad1">Email</label>
-        <input type="radio" name="auth-method" class="hno-radiobtn" id="rad2" value="sms"><label for="rad2">Sms</label>
+        <input type="radio" name="authmethod" class="hno-radiobtn" id="rad1" value="email" checked><label for="rad1">Email</label>
+        <input type="radio" name="authmethod" class="hno-radiobtn" id="rad2" value="sms"><label for="rad2">Sms</label>
     </div>
 
     <div class="form-button">

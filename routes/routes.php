@@ -18,4 +18,6 @@
 
 
     $app->get('/dashboard', 'AppController:index')->setName('app.dashboard');
+    $app->get('/account-settings', 'AppController:accountsettings')->setName('app.account-settings');
+    $app->get('/help', 'AppController:help')->setName('app.help');
 

@@ -1,8 +1,12 @@
 <?php
     namespace Crypto\Controllers\Auth;
 
+
+    use Crypto\Classes\Auth;
     use Crypto\Models\User;
     use Crypto\Controllers\Controller;
+    use Respect\Validation\Validator as v;
+    use Crypto\Classes\Stringify;
 
     class AuthController extends Controller
     {
@@ -16,15 +20,25 @@
 
         public function postSignup($request, $response)
         {
-            $user = User::create([
-                'first-name' => $request->getParam('first-name'),
-                'other-names' => $request->getParam('other-names'),
-                'username' => $request->getParam('username'),
-                'email' => $request->getParam('email'),
-                'phone-number' => $request->getParam('phone-number')
+            $valaidation = $this->validator->validate($request, [
+                'firstname' => v::notEmpty()->alpha(),
+                'othernames' => v::notEmpty()->alpha(),
+                'username' => v::noWhitespace()->notEmpty()->alpha(),
+                'email' => v::noWhitespace()->notEmpty()->email(),
+                'phonenumber' =>  v::noWhitespace()->notEmpty()->phone()
             ]);
 
-            
+            if($valaidation->invalidate()){
+                return $response->withRedirect($this->router->pathFor('auth.signup'));
+            }
+
+            $user = User::create([
+                'firstname' => Stringify::capFirstLetters($request->getParam('firstname')),
+                'othernames' => Stringify::capFirstLetters($request->getParam('othernames')),
+                'username' => $request->getParam('username'),
+                'email' => $request->getParam('email'),
+                'phone-number' => $request->getParam('phonenumber')
+            ]);
         }
 
         public function signin($request, $response)
@@ -37,12 +51,24 @@
 
         public function postSignin($request, $response)
         {
-            $user = User::authenticate([
-                'email-phoneNumber' => $request->getParam('email-phoneNumber'),
-                'auth-method' => $request->getParam('auth-method')
+            $valaidation = $this->validator->validate($request, [
+                'emailphonennumber' => v::notEmpty()->noWhitespace()->signin()
             ]);
 
+            if($valaidation->invalidate()){
+                return $response->withRedirect($this->router->pathFor('auth.signin'));
+            }
 
+            $auth = Auth::authenticate([
+                'emailphonennumber' => $request->getParam('emailphonennumber'),
+                'authmethod' => $request->getParam('authmethod')
+            ]);
+
+            if(!$auth){
+                return $response->withRedirect($this->router->pathFor('auth.signin'));
+            }
+
+            return $response->withRedirect($this->router->pathFor('app.dashboard'));
         }
     }
     

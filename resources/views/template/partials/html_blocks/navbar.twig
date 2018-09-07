@@ -9,36 +9,37 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="logo-holder" href="./">
-                            <div class="logo" style="width:60px;height:60px"></div>
+                        <a class="logo-holder" href="{{ path_for('home') }}">
+                            <div class="logo" style="width:50px;height:50px"></div>
                         </a>
                     </div>
+                    {% if user.checkSession %}
                     <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse" id="menu">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="./">Coin Wrapper</a></li>
-                            <li><a href="buy-sell">Buy/Sell</a></li>
-                            <li><a href="about-us">About Us</a></li>
-                            <li><a href="contact-us">Contact Us</a></li>
-                            <li class="signin-button-holder">
-                                <a class="signin-button" href="sign-in">Sign In</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse" id="menu">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="dashboard">Dashboard</a></li>
+                            <li><a href="{{ path_for('app.dashboard') }}">Dashboard</a></li>
                             <li class="dropdown">
                                 <a href="#">Username <i class="fa fa-caret-down"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="account-settings">Account Settings</a></li>
-                                    <li><a href="help">Help</a></li>
+                                    <li><a href="{{ path_for('app.app.account-settings') }}">Account Settings</a></li>
+                                    <li><a href="{{ path_for('app.help') }}">Help</a></li>
                                     <li><a href="">Sign Out</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-
+                    {% else %}
+                    <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse" id="menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ path_for('home') }}">Coin Wrapper</a></li>
+                            <li><a href="{{ path_for('buy-sell') }}">Buy/Sell</a></li>
+                            <li><a href="{{ path_for('about-us') }}">About Us</a></li>
+                            <li><a href="{{ path_for('contact-us') }}">Contact Us</a></li>
+                            <li class="signin-button-holder">
+                                <a class="signin-button" href="{{ path_for('auth.signin') }}">Sign In</a>
+                            </li>
+                        </ul>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
