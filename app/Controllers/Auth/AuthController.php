@@ -70,5 +70,10 @@
 
             return $response->withRedirect($this->router->pathFor('app.dashboard'));
         }
+
+        public function signout($request, $response)
+        {
+            
+        }
     }
     

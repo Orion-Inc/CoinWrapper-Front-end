@@ -35,7 +35,7 @@
 
         $view->getEnvironment()->addGlobal('user', [
             'checkSession' => $container->auth->checkSession(),
-            'userSession' => $container->auth->userSession(),
+            'userSession' => $container->auth->session(),
         ]);
 
         return $view;

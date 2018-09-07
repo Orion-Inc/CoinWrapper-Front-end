@@ -18,11 +18,11 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{{ path_for('app.dashboard') }}">Dashboard</a></li>
                             <li class="dropdown">
-                                <a href="#">Username <i class="fa fa-caret-down"></i></a>
+                                <a href="#">{{ user.session.name }} <i class="fa fa-caret-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{ path_for('app.app.account-settings') }}">Account Settings</a></li>
                                     <li><a href="{{ path_for('app.help') }}">Help</a></li>
-                                    <li><a href="">Sign Out</a></li>
+                                    <li><a href="{{ path_for('auth.sign-out') }}">Sign Out</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -35,7 +35,7 @@
                             <li><a href="{{ path_for('about-us') }}">About Us</a></li>
                             <li><a href="{{ path_for('contact-us') }}">Contact Us</a></li>
                             <li class="signin-button-holder">
-                                <a class="signin-button" href="{{ path_for('auth.signin') }}">Sign In</a>
+                                <a class="signin-button" href="{{ path_for('auth.sign-in') }}">Sign In</a>
                             </li>
                         </ul>
                     </div>

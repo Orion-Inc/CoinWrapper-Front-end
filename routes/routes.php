@@ -9,13 +9,13 @@
 
     $app->get('/buy-sell', 'WebController:listBuySell')->setName('buy-sell');
 
-
-    $app->get('/sign-in', 'AuthController:signin')->setName('auth.signin');
-    $app->post('/sign-in', 'AuthController:postSignin');
-
-    $app->get('/sign-up', 'AuthController:signup')->setName('auth.signup');
+    $app->get('/sign-up', 'AuthController:signup')->setName('auth.sign-up');
     $app->post('/sign-up', 'AuthController:postSignup');
 
+    $app->get('/sign-in', 'AuthController:signin')->setName('auth.sign-in');
+    $app->post('/sign-in', 'AuthController:postSignin');
+
+    $app->get('/sign-out', 'AuthController:signout')->setName('auth.sign-out');
 
     $app->get('/dashboard', 'AppController:index')->setName('app.dashboard');
     $app->get('/account-settings', 'AppController:accountsettings')->setName('app.account-settings');

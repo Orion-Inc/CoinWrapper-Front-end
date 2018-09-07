@@ -1,8 +1,8 @@
 {% if uri == 'sign-in' %}
     <div class="menu-holder">
         <ul class="main-links">
-            <li class="hidden-xs"><a class="normal-link" href="{{ path_for('auth.signup') }}">Don’t have an account?</a></li>
-            <li><a class="sign-button" href="{{ path_for('auth.signup') }}">Sign up</a></li>
+            <li class="hidden-xs"><a class="normal-link" href="{{ path_for('auth.sign-up') }}">Don’t have an account?</a></li>
+            <li><a class="sign-button" href="{{ path_for('auth.sign-up') }}">Sign up</a></li>
         </ul>
     </div> 
 {% endif %}
@@ -10,8 +10,8 @@
 {% if uri == 'sign-up' %}
     <div class="menu-holder">
         <ul class="main-links">
-            <li class="hidden-xs"><a class="normal-link" href="{{ path_for('auth.signin') }}">You have an account?</a></li>
-            <li><a class="sign-button" href="{{ path_for('auth.signin') }}">Sign in</a></li>
+            <li class="hidden-xs"><a class="normal-link" href="{{ path_for('auth.sign-in') }}">You have an account?</a></li>
+            <li><a class="sign-button" href="{{ path_for('auth.sign-in') }}">Sign in</a></li>
         </ul>
     </div>
 {% endif %}

@@ -1,4 +1,4 @@
-<form action="{{ path_for('auth.signin') }}" method="POST" id="signinform" autocomplete="off">
+<form action="{{ path_for('auth.sign-in') }}" method="POST" id="signinform" autocomplete="off">
     {{ csrf.fields | raw }}
     <div class="form-text {{ errors.emailphonennumber ? 'has-error' : '' }}">
         <input type="text" name="emailphonennumber" placeholder="Enter Your Email Address or Phone Number" value="{{ input.emailphonennumber }}" required>

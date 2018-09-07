@@ -9,7 +9,7 @@
             
         }
 
-        public static function userSession()
+        public static function session()
         {
             if(isset($_SESSION['user'])){
                 return $_SESSION['user'];
