@@ -1,6 +1,7 @@
 <?php 
     use Crypto\Middleware\AuthMiddleware;
     use Crypto\Middleware\GuestMiddleware;
+    use Crypto\Middleware\DashboardMiddleware;
 
     $app->get('/', 'WebController:index')->setName('home');
 
@@ -20,16 +21,15 @@
         $this->get('/sign-up', 'AuthController:signup')->setName('auth.sign-up');
         $this->post('/sign-up', 'AuthController:postSignup');
 
-        $this->get('/activate', 'AuthController:activate')->setName('auth.activate');
-
         $this->get('/sign-in', 'AuthController:signin')->setName('auth.sign-in');
         $this->post('/sign-in', 'AuthController:postSignin');
     })->add( new GuestMiddleware($container) );
 
-    $app->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
-    // $app->group('', function() {
-    //     $this->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
-    // })->add( new AuthorizeMiddleware($container) );
+    //$app->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
+
+    $app->group('', function() {
+        $this->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
+    })->add( new AuthMiddleware($container) );
 
 
     $app->group('', function() {
@@ -38,7 +38,7 @@
         $this->get('/dashboard', 'AppController:index')->setName('app.dashboard');
         $this->get('/account-settings', 'AppController:accountsettings')->setName('app.account-settings');
         $this->get('/help', 'AppController:help')->setName('app.help');
-    })->add( new AuthMiddleware($container) );
+    })->add( new DashboardMiddleware($container) );
 
     
 

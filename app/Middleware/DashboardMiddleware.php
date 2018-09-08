@@ -1,11 +1,11 @@
 <?php
     namespace Crypto\Middleware;
 
-    class AuthMiddleware extends Middleware
+    class DashboardMiddleware extends Middleware
     {
         public function __invoke($request, $response, $next)
         {
-            if (!$this->container->auth->checkAuthorize()) {
+            if (!$this->container->auth->checkSession()) {
                 $this->container->flash->addMessage('message', 'Please sign in first.');
                 return $response->withRedirect($this->container->router->pathFor('auth.sign-in'));
             }
@@ -15,3 +15,4 @@
             return $response;
         }
     }
+

@@ -31,6 +31,7 @@
         ));
 
         $view->getEnvironment()->addGlobal('user', [
+            'checkAuthorize' => $container->auth->checkAuthorize(),
             'checkSession' => $container->auth->checkSession(),
             'userSession' => $container->auth->session(),
         ]);

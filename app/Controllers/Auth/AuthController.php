@@ -48,15 +48,7 @@
                 return $response->withRedirect($this->router->pathFor('auth.sign-up'));
             }
 
-            return $response->withRedirect($this->router->pathFor('auth.activate'));
-        }
-
-        public function activate($request, $response)
-        {
-            return $this->view->render($response, 'auth/activate.twig', [
-                'pageTitle' => 'Activate',
-                'uri'=> 'activate'
-            ]);
+            return $response->withRedirect($this->router->pathFor('auth.authorize'));
         }
 
         public function signin($request, $response)

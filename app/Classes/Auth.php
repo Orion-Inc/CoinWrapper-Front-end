@@ -9,7 +9,7 @@
         {
             $response = callApi::login($args, $method, $endpoint);
             if($response['success'] == true){
-                $_SESSION['user'] = [
+                $_SESSION['authorize'] = [
                     'authorize' => true
                 ];
             }
@@ -22,6 +22,11 @@
             if(isset($_SESSION['user'])){
                 return $_SESSION['user'];
             }
+        }
+
+        public static function checkAuthorize()
+        {
+            return isset($_SESSION['authorize']);
         }
 
         public static function checkSession()
