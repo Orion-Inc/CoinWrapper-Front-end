@@ -3597,16 +3597,11 @@ svg.logo text {
     position: relative;
     display: inline-block;
     text-align: center;
-    padding-top: 70px;
+    margin-top: -50px;
     width: 345px;
     height: 345px;
     border-radius: 500px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(120deg, #cf6a87, #5750b5);
-    background-image: -o-linear-gradient(120deg, #cf6a87, #5750b5);
-    background-image: linear-gradient(120deg, #cf6a87, #5750b5);
-    -webkit-box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     -webkit-transform-origin: center center;
     -moz-transform-origin: center center;
     -ms-transform-origin: center center;
@@ -3619,6 +3614,8 @@ svg.logo text {
     transition: all 0.3s cubic-bezier(0.34, 1.61, 0.7, 1);
 }
 
+
+/*
 #header-holder.homepage-header #page-head .logo-icon:before {
     position: absolute;
     content: "";
@@ -3672,6 +3669,7 @@ svg.logo text {
     -webkit-transition: all 0.5s cubic-bezier(0.34, 1.61, 0.7, 1);
     transition: all 0.5s cubic-bezier(0.34, 1.61, 0.7, 1);
 }
+*/
 
 #header-holder.homepage-header #page-head .logo-icon img {
     width: 294px;
