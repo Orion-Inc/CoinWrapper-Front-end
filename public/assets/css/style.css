@@ -69,7 +69,7 @@ input[type="submit"] {
     text-align: center;
     font-size: 25px;
     font-weight: 300;
-    color: #593295;
+    color: #cf6a87;
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -80,7 +80,7 @@ input[type="submit"] {
     content: "";
     width: 58px;
     height: 2px;
-    background-color: #593295;
+    background-color: #cf6a87;
     left: 50%;
     margin-left: -29px;
     bottom: -8px;
@@ -131,7 +131,7 @@ input[type="submit"] {
 
 .row-icon .pricing-icon.color1 .htfy,
 .row-icon .pricing-icon.color1 .fa {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .row-icon .pricing-icon.color2 .htfy,
@@ -181,7 +181,7 @@ input[type="submit"] {
 
 .ybtn-accent-color {
     color: #ffffff;
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 .ybtn-accent-color:hover,
@@ -202,7 +202,7 @@ input[type="submit"] {
 }
 
 .ybtn-purple-text {
-    color: #756de7;
+    color: #cf6a87;
     background-color: transparent;
 }
 
@@ -213,7 +213,7 @@ input[type="submit"] {
 
 .ybtn-purple {
     color: #ffffff;
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 .ybtn-purple:hover,
@@ -223,7 +223,7 @@ input[type="submit"] {
 }
 
 .ybtn-purple-text {
-    color: #756de7;
+    color: #cf6a87;
     background-color: transparent;
 }
 
@@ -318,7 +318,7 @@ input[type="submit"] {
     background-image: url(../img/headbg.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-color: #756de7;
+    background-color: #cf6a87;
     -webkit-transform: skewY(-10deg);
     -moz-transform: skewY(-10deg);
     -ms-transform: skewY(-10deg);
@@ -327,7 +327,7 @@ input[type="submit"] {
 }
 
 #header-holder.inner-header {
-    background-color: #5c54c6;
+    background-color: #c44569;
 }
 
 #header-holder.inner-header .bg-animation {
@@ -335,7 +335,7 @@ input[type="submit"] {
     top: 0;
     height: 100%;
     background-image: inherit;
-    background-color: #756de7;
+    background-color: #cf6a87;
     -webkit-transform: skewY(0deg);
     -moz-transform: skewY(0deg);
     -ms-transform: skewY(0deg);
@@ -354,7 +354,7 @@ nav.custom-footer a {
 
 nav.custom-footer .navbar-text,
 nav.custom-footer p.navbar-text>a {
-    color: #756de7!important;
+    color: #cf6a87!important;
     font-size: 14px!important;
     font-weight: 600!important;
     -webkit-transition: all 0.3s ease 0s!important;
@@ -373,7 +373,7 @@ nav.custom-footer p.navbar-text>span {
         top: 0;
         width: 100%;
         height: 30%;
-        background-color: #756DE7;
+        background-color: #cf6a87;
         -webkit-transform: skewY(-10deg);
         -moz-transform: skewY(-10deg);
         -ms-transform: skewY(-10deg);
@@ -471,7 +471,7 @@ svg.logo text {
     position: relative;
     cursor: pointer;
     padding: 9px 30px;
-    background-color: #756de7!important;
+    background-color: #cf6a87!important;
     border-radius: 4px;
     color: #ffffff;
     opacity: 1;
@@ -487,7 +487,7 @@ svg.logo text {
 
 .signin-button-holder a.signin-button:hover,
 .signin-button-holder a.signin-button:focus {
-    background-color: #5550a8 !important;
+    background-color: #c44569 !important;
     color: #ffffff !important;
     opacity: 1 !important;
 }
@@ -568,7 +568,7 @@ svg.logo text {
 
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
-    color: #756de7;
+    color: #cf6a87;
     background-color: #f7f6f8;
 }
 
@@ -677,7 +677,7 @@ svg.logo text {
 }
 
 .mega-box.m-color1 .mega-icon {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .mega-box.m-color1:hover .mega-icon,
@@ -805,7 +805,7 @@ svg.logo text {
 
 .signin-button-holder .dropdown-menu li a:hover,
 .signin-button-holder .dropdown-menu li a:focus {
-    color: #756de7;
+    color: #cf6a87;
     background-color: #f7f6f8;
 }
 
@@ -1351,25 +1351,25 @@ svg.logo text {
 .text-purple-light {
     font-size: 25px;
     font-weight: 300;
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .text-other-color1 {
     font-size: 25px;
     font-weight: 300;
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .text-purple-dark {
     font-size: 25px;
     font-weight: 400;
-    color: #593295;
+    color: #000;
 }
 
 .text-other-color2 {
     font-size: 25px;
     font-weight: 400;
-    color: #593295;
+    color: #000;
 }
 
 
@@ -1579,30 +1579,30 @@ svg.logo text {
 }
 
 .pricing-box.pricing-color1:before {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-icon {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-title {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-price {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-details ul li:before {
-    background-color: #756de7;
+    background-color: #cf6a87;
     -webkit-box-shadow: 0 3px 8px rgba(117, 109, 231, 0.5);
     box-shadow: 0 3px 8px rgba(117, 109, 231, 0.5);
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-link a {
     color: #ffffff;
-    background-color: #756de7;
+    background-color: #cf6a87;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -2197,7 +2197,7 @@ svg.logo text {
 }
 
 #page-icon .pricing-icon.pricing-color1 {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #page-icon .pricing-icon.pricing-color2 {
@@ -2403,7 +2403,7 @@ svg.logo text {
     left: 0;
     top: 0;
     padding: 60px 50px;
-    background-color: #756de7;
+    background-color: #cf6a87;
     border-radius: 10px;
     -webkit-transform: rotateX(60deg) scale(0.5) translateY(50px);
     -moz-transform: rotateX(60deg) scale(0.5) translateY(50px);
@@ -2491,7 +2491,7 @@ svg.logo text {
     width: 62px;
     height: 62px;
     border-radius: 100px;
-    background-color: #756de7;
+    background-color: #cf6a87;
     text-align: center;
     padding-top: 8px;
     z-index: 100;
@@ -2808,7 +2808,7 @@ svg.logo text {
 -------------------------------------------------------------------*/
 
 #footer {
-    background-color: #756de7;
+    background-color: #cf6a87;
     padding-top: 90px;
     padding-bottom: 70px;
     text-align: center;
@@ -2844,7 +2844,7 @@ svg.logo text {
 }
 
 #footer ul.footer-menu li a {
-    color: #ccc9fb;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 300;
     padding: 2px 15px;
@@ -2857,7 +2857,7 @@ svg.logo text {
 
 #footer ul.footer-menu li a:hover,
 #footer ul.footer-menu li a:focus {
-    color: #756de7;
+    color: #cf6a87;
     background-color: #ffffff;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -2865,7 +2865,7 @@ svg.logo text {
 }
 
 #footer ul.footer-menu li.active a {
-    color: #756de7;
+    color: #cf6a87;
     background-color: #ffffff;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -2910,7 +2910,7 @@ svg.logo text {
 }
 
 #footer .phone:hover {
-    background-color: #6159d1;
+    background-color: #c44569;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
@@ -2936,7 +2936,7 @@ svg.logo text {
 }
 
 #footer .email:hover {
-    background-color: #6159d1;
+    background-color: #c44569;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
@@ -2967,7 +2967,7 @@ svg.logo text {
 }
 
 #footer .address:hover {
-    background-color: #6159d1;
+    background-color: #c44569;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
@@ -2990,7 +2990,7 @@ svg.logo text {
 }
 
 #footer .social-menu li a .fa {
-    color: #5550a8;
+    color: #c44569;
     font-size: 30px;
     text-align: center;
     min-width: 30px;
@@ -3040,7 +3040,7 @@ svg.logo text {
     min-height: 700px;
     height: 100%;
     overflow: hidden;
-    background-color: #756de7;
+    background-color: #cf6a87;
     padding: 140px 60px 60px;
     text-align: center;
     z-index: 999;
@@ -3189,7 +3189,7 @@ svg.logo text {
     text-transform: uppercase;
     padding: 8px 20px;
     border-radius: 4px;
-    background-color: #756de7;
+    background-color: #cf6a87;
     text-decoration: none;
     margin-left: 10px;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -3200,7 +3200,7 @@ svg.logo text {
 
 .form-holder .menu-holder ul.main-links li a.sign-button:hover,
 .form-holder .menu-holder ul.main-links li a.sign-button:focus {
-    background-color: #5550a8;
+    background-color: #c44569;
 }
 
 .form-holder.signup .menu-holder ul.main-links li a.normal-link {
@@ -3295,7 +3295,7 @@ svg.logo text {
 }
 
 .signin-signup-form .form-title {
-    color: #756de7;
+    color: #cf6a87;
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 50px;
@@ -3405,7 +3405,7 @@ svg.logo text {
 
 .signin-signup-form .form-text input[type="checkbox"]:checked+label,
 .signin-signup-form .form-text input[type="radio"]:checked+label {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 .signin-signup-form .form-text input[type="checkbox"]:checked+label:before,
@@ -3416,7 +3416,7 @@ svg.logo text {
     top: 2px;
     width: 15px;
     height: 15px;
-    background: #756de7;
+    background: #cf6a87;
     border-radius: 50px;
     border: 0px solid #abb4bc;
     -webkit-transition: all 0.3s ease;
@@ -3482,6 +3482,22 @@ svg.logo text {
     transition: all 0.2s ease;
 }
 
+.signin-signup-form .form-text.has-error input {
+    border: 1px #fd7270 solid;
+}
+
+.signin-signup-form .form-text span.help-block {
+    display: none;
+}
+
+.signin-signup-form .form-text.has-error span.help-block {
+    display: inherit;
+    color: #ff3a36;
+    font-size: 12px;
+    text-align: left!important;
+    text-transform: capitalize;
+}
+
 .signin-signup-form .form-button {
     margin-top: 40px;
     margin-bottom: 25px;
@@ -3519,7 +3535,7 @@ svg.logo text {
 }
 
 #header-holder.contact-header {
-    background-color: #5c54c6;
+    background-color: #c44569;
 }
 
 #header-holder.contact-header #page-head .page-title {
@@ -3536,16 +3552,16 @@ svg.logo text {
 }
 
 #header-holder.contact-header .signin-button-holder a.signin-button {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #header-holder.contact-header .signin-button-holder a.signin-button:hover,
 #header-holder.contact-header .signin-button-holder a.signin-button:focus {
-    background-color: #5550a8 !important;
+    background-color: #c44569 !important;
 }
 
 #header-holder.about-header {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #header-holder.about-header #page-head {
@@ -3559,12 +3575,12 @@ svg.logo text {
 }
 
 #header-holder.homepage-header {
-    background-color: #5c54c6;
+    background-color: #c44569;
     overflow: hidden;
 }
 
 #header-holder.homepage-header .navbar-default .navbar-nav>li>a:not(.signin-button) {
-    color: #756de7!important;
+    color: #cf6a87!important;
 }
 
 #header-holder.homepage-header .bg-animation {
@@ -3586,9 +3602,9 @@ svg.logo text {
     height: 345px;
     border-radius: 500px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(120deg, #756de7, #5750b5);
-    background-image: -o-linear-gradient(120deg, #756de7, #5750b5);
-    background-image: linear-gradient(120deg, #756de7, #5750b5);
+    background-image: -webkit-linear-gradient(120deg, #cf6a87, #5750b5);
+    background-image: -o-linear-gradient(120deg, #cf6a87, #5750b5);
+    background-image: linear-gradient(120deg, #cf6a87, #5750b5);
     -webkit-box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     -webkit-transform-origin: center center;
@@ -3612,9 +3628,9 @@ svg.logo text {
     top: 0;
     border-radius: 500px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #756de7);
-    background-image: -o-linear-gradient(120deg, #aaa5f1, #756de7);
-    background-image: linear-gradient(120deg, #aaa5f1, #756de7);
+    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #cf6a87);
+    background-image: -o-linear-gradient(120deg, #aaa5f1, #cf6a87);
+    background-image: linear-gradient(120deg, #aaa5f1, #cf6a87);
     -webkit-box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     opacity: 0.04;
@@ -3639,9 +3655,9 @@ svg.logo text {
     top: 0;
     border-radius: 500px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #756de7);
-    background-image: -o-linear-gradient(120deg, #aaa5f1, #756de7);
-    background-image: linear-gradient(120deg, #aaa5f1, #756de7);
+    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #cf6a87);
+    background-image: -o-linear-gradient(120deg, #aaa5f1, #cf6a87);
+    background-image: linear-gradient(120deg, #aaa5f1, #cf6a87);
     -webkit-box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     opacity: 0.08;
@@ -3701,7 +3717,7 @@ svg.logo text {
 #header-holder.homepage-header #page-head .head-content p>span {
     font-size: 22px;
     font-weight: 700;
-    color: #756de7;
+    color: #cf6a87;
 }
 
 #header-holder.domainspage-header {
@@ -3754,7 +3770,7 @@ svg.logo text {
     font-size: 19px;
     font-weight: 700;
     color: #ffffff;
-    background-color: #756de7;
+    background-color: #cf6a87;
     border-radius: 5px;
 }
 
@@ -3774,9 +3790,9 @@ svg.logo text {
 
 .bg-custom .obj-gradiant1 {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(90deg, #8700ee, #756de7);
-    background-image: -o-linear-gradient(90deg, #8700ee, #756de7);
-    background-image: linear-gradient(90deg, #8700ee, #756de7);
+    background-image: -webkit-linear-gradient(90deg, #8700ee, #cf6a87);
+    background-image: -o-linear-gradient(90deg, #8700ee, #cf6a87);
+    background-image: linear-gradient(90deg, #8700ee, #cf6a87);
     opacity: 0.43;
     position: absolute;
     width: 70%;
@@ -3787,9 +3803,9 @@ svg.logo text {
 
 .bg-custom .obj-gradiant2 {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(90deg, #756de7, #8700ee);
-    background-image: -o-linear-gradient(90deg, #756de7, #8700ee);
-    background-image: linear-gradient(90deg, #756de7, #8700ee);
+    background-image: -webkit-linear-gradient(90deg, #cf6a87, #8700ee);
+    background-image: -o-linear-gradient(90deg, #cf6a87, #8700ee);
+    background-image: linear-gradient(90deg, #cf6a87, #8700ee);
     opacity: 0.43;
     position: absolute;
     width: 70%;
@@ -3865,9 +3881,9 @@ svg.logo text {
 
 .icons-animation-holder .aicon-main {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(-30deg, #b3aff2, #756de7);
-    background-image: -o-linear-gradient(-30deg, #b3aff2, #756de7);
-    background-image: linear-gradient(-30deg, #b3aff2, #756de7);
+    background-image: -webkit-linear-gradient(-30deg, #b3aff2, #cf6a87);
+    background-image: -o-linear-gradient(-30deg, #b3aff2, #cf6a87);
+    background-image: linear-gradient(-30deg, #b3aff2, #cf6a87);
     -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
     top: 50%;
@@ -3990,7 +4006,7 @@ svg.logo text {
 }
 
 #ifeatures .feature-box .feature-title {
-    color: #756de7;
+    color: #cf6a87;
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -4018,8 +4034,7 @@ svg.logo text {
 }
 
 #more-info {
-    background-color: #857eea;
-    background-color: #8a83eb;
+    background-color: #cf6a87;
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
@@ -4038,9 +4053,9 @@ svg.logo text {
 #more-info .bg-custom .obj-gradiant1 {
     /*@include gradient(#97cae5,$main-accent-color,0deg);*/
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(0deg, #87bdce, #756de7);
-    background-image: -o-linear-gradient(0deg, #87bdce, #756de7);
-    background-image: linear-gradient(0deg, #87bdce, #756de7);
+    background-image: -webkit-linear-gradient(0deg, #87bdce, #cf6a87);
+    background-image: -o-linear-gradient(0deg, #87bdce, #cf6a87);
+    background-image: linear-gradient(0deg, #87bdce, #cf6a87);
     opacity: 1;
     position: absolute;
     width: 45%;
@@ -4051,9 +4066,9 @@ svg.logo text {
 
 #more-info .bg-custom .obj-gradiant2 {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(90deg, #756de7, #b3aff2);
-    background-image: -o-linear-gradient(90deg, #756de7, #b3aff2);
-    background-image: linear-gradient(90deg, #756de7, #b3aff2);
+    background-image: -webkit-linear-gradient(90deg, #cf6a87, #b3aff2);
+    background-image: -o-linear-gradient(90deg, #cf6a87, #b3aff2);
+    background-image: linear-gradient(90deg, #cf6a87, #b3aff2);
     opacity: 0.4;
     position: absolute;
     width: 60%;
@@ -4097,7 +4112,7 @@ svg.logo text {
 #more-info .links-holder ul li .info-link:hover,
 #more-info .links-holder ul li .info-link:focus,
 #more-info .links-holder ul li .info-link.opened {
-    background-color: #756de7;
+    background-color: #c44569;
     border-radius: 10px;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -4313,7 +4328,7 @@ svg.logo text {
 }
 
 #header-holder.color2-header {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #header-holder.color2-header .bg-animation {
@@ -4360,7 +4375,7 @@ svg.logo text {
 }
 
 #apps {
-    background-color: #7662e5;
+    background-color: #c44569;
     background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(90deg, #7360e0, #4f429a);
     background-image: -o-linear-gradient(90deg, #7360e0, #4f429a);
@@ -4453,7 +4468,7 @@ svg.logo text {
     min-height: 228px;
     margin-bottom: -86px;
     border-radius: 0;
-    background-color: #7662e5;
+    background-color: #c44569;
     -webkit-box-shadow: 0 -9px 20px rgba(0, 0, 0, 0.05);
     box-shadow: 0 -9px 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -4491,7 +4506,7 @@ svg.logo text {
 #apps .apps-holder .app-details div[class^="app-details"] .app-text {
     font-size: 15px;
     font-weight: 300;
-    color: #d4cff3;
+    color: #ffffff;
     text-align: left;
     margin-bottom: 15px;
 }
@@ -4562,7 +4577,7 @@ svg.logo text {
 }
 
 #articles .article-summary .article-title a {
-    color: #756de7;
+    color: #cf6a87;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -4654,10 +4669,10 @@ svg.logo text {
 #articles .pagination .page-number {
     border-radius: 50px;
     padding: 5px 10px;
-    color: #756de7;
+    color: #cf6a87;
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid #756de7;
+    border: 2px solid #cf6a87;
 }
 
 #articles .pagination a.page-number {
@@ -4722,7 +4737,7 @@ svg.logo text {
 #post-content .post .meta .view:before {
     content: "\f06e";
     font-family: fontAwesome;
-    color: #756de7;
+    color: #cf6a87;
     margin-right: 10px;
 }
 
@@ -4734,7 +4749,7 @@ svg.logo text {
 #post-content .post .meta .like:before {
     content: "\f004";
     font-family: fontAwesome;
-    color: #756de7;
+    color: #cf6a87;
     margin-right: 10px;
 }
 
@@ -4757,7 +4772,7 @@ svg.logo text {
 #post-content .post .meta .comment:before {
     content: "\f27a";
     font-family: fontAwesome;
-    color: #756de7;
+    color: #cf6a87;
     margin-right: 10px;
 }
 
@@ -4948,11 +4963,11 @@ svg.logo text {
 }
 
 #contact-info .info-box:hover .info-title:before {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #contact-info .info-box .info-title {
-    color: #756de7;
+    color: #cf6a87;
     font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
@@ -4998,7 +5013,7 @@ svg.logo text {
 
 #contact-info .info-box .info-details a {
     font-size: 15px;
-    color: #756de7;
+    color: #cf6a87;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -5033,7 +5048,7 @@ svg.logo text {
 #extra-info h1 {
     font-size: 38px;
     font-weight: 600;
-    color: #756de7;
+    color: #cf6a87;
     margin-bottom: 30px;
     line-height: 50px;
 }
@@ -5041,7 +5056,7 @@ svg.logo text {
 #extra-info p {
     font-size: 16px;
     font-weight: 300;
-    color: #756de7;
+    color: #cf6a87;
     opacity: 0.7;
     line-height: 30px;
 }
@@ -5272,7 +5287,7 @@ svg.logo text {
     text-align: center;
     font-size: 15px;
     font-weight: 700;
-    color: #756de7;
+    color: #cf6a87;
     background-color: #fcfcfd;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -5321,7 +5336,7 @@ svg.logo text {
 
 #domain-pricing .pricing-table-holder table tr td .register-button:hover,
 #domain-pricing .pricing-table-holder table tr td .register-button:focus {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #domain-pricing .pricing-table-holder table tr:nth-of-type(odd) {
@@ -5338,7 +5353,7 @@ svg.logo text {
 
 #domain-pricing .pricing-table-holder table tr:hover td,
 #domain-pricing .pricing-table-holder table tr:focus td {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 #domain-pricing .htfy-pricing-table-holder {
@@ -5380,7 +5395,7 @@ svg.logo text {
     text-align: center;
     font-size: 15px;
     font-weight: 700;
-    color: #756de7;
+    color: #cf6a87;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 27px 10px;
@@ -5427,7 +5442,7 @@ svg.logo text {
 
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row .td .register-button:hover,
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row .td .register-button:focus {
-    background-color: #756de7;
+    background-color: #cf6a87;
 }
 
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row.trow:before {
@@ -5480,7 +5495,7 @@ svg.logo text {
 
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row.trow:hover .td,
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row.trow:focus .td {
-    color: #756de7;
+    color: #cf6a87;
 }
 
 #serverslocation {
@@ -5543,7 +5558,7 @@ svg.logo text {
     width: 13px;
     height: 13px;
     border-radius: 20px;
-    background-color: #756de7;
+    background-color: #cf6a87;
     margin-right: 8px;
     margin-left: 8px;
 }
@@ -5722,7 +5737,7 @@ svg.logo text {
         height: 50px!important
     }
     #form-section svg.logo text {
-        fill: #756de7;
+        fill: #cf6a87;
     }
     #contact-info div[class^="col-"]:nth-child(2) .info-box:before {
         opacity: 0;

@@ -5,6 +5,8 @@
 
     class SigninException extends Exceptions
     {
+        
+
         public static $defaultTemplates = [
             self::MODE_DEFAULT => [
                 self::STANDARD => 'Email Address of Phone Number does not exist'

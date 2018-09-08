@@ -86,14 +86,20 @@
                 '/api/v1/authenticate'
             );
 
-            print("<pre>".print_r($auth,1)."</pre>");
+            if($auth['success'] == false){
+                $this->flash->addMessage('message', $auth['message']);
+                return $response->withRedirect($this->router->pathFor('auth.sign-in'));
+            }
 
-            // if($auth['success'] == false){
-            //     $this->flash->addMessage('message', $auth['message']);
-            //     return $response->withRedirect($this->router->pathFor('auth.sign-in'));
-            // }
+            return $response->withRedirect($this->router->pathFor('auth.authorize'));
+        }
 
-            // return $response->withRedirect($this->router->pathFor('app.dashboard'));
+        public function authorize($request, $response)
+        {
+            return $this->view->render($response, 'auth/authorize.twig', [
+                'pageTitle' => 'Authorize',
+                'uri'=> 'authorize'
+            ]);
         }
 
         public function signout($request, $response)

@@ -8,11 +8,11 @@
         public static function authenticate(array $args, $method, $endpoint)
         {
             $response = callApi::login($args, $method, $endpoint);
-            // if($response['success'] == true){
-            //     $_SESSION['user'] = [
-
-            //     ];
-            // }
+            if($response['success'] == true){
+                $_SESSION['user'] = [
+                    'authorize' => true
+                ];
+            }
 
             return $response;
         }

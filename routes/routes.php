@@ -26,7 +26,10 @@
         $this->post('/sign-in', 'AuthController:postSignin');
     })->add( new GuestMiddleware($container) );
 
-
+    $app->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
+    // $app->group('', function() {
+    //     $this->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
+    // })->add( new AuthorizeMiddleware($container) );
 
 
     $app->group('', function() {

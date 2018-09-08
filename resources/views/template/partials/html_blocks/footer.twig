@@ -1,4 +1,4 @@
-{% if uri != 'activate' %}
+{% if uri in ['home', 'buy-sell', 'about-us', 'contact-us'] %}
 <div id="footer" class="container-fluid">
     <div class="container">
         <div class="row">
@@ -53,7 +53,7 @@
 </div>
 {% endif %}
 
-{% if uri == 'activate' %}
+{% if uri in ['activate', 'authorize', 'terms-of-service'] %}
 <nav class="navbar navbar-static-bottom custom-footer">
     <div class="container">
         <p class="navbar-text"><a href="{{ path_for('home') }}">Coin Wrapper</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
