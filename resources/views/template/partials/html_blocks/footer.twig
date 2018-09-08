@@ -1,3 +1,4 @@
+{% if uri != 'activate' %}
 <div id="footer" class="container-fluid">
     <div class="container">
         <div class="row">
@@ -50,3 +51,19 @@
         </div>
     </div>
 </div>
+{% endif %}
+
+{% if uri == 'activate' %}
+<nav class="navbar navbar-static-bottom custom-footer">
+    <div class="container">
+        <p class="navbar-text"><a href="{{ path_for('home') }}">Coin Wrapper</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
+        <div class="navbar-right">
+            <a href="{{ path_for('about-us') }}" class="navbar-text">About Us</a>
+            <a href="{{ path_for('contact-us') }}" class="navbar-text">Contact Us</a>
+            <a href="{{ path_for('faqs') }}" class="navbar-text">FAQs</a>
+            <a href="{{ path_for('terms-of-service') }}" class="navbar-text">Terms of Service</a>
+            <a href="" class="navbar-text">Whitepaper</a>
+        </div>
+    </div>
+</nav>
+{% endif %}

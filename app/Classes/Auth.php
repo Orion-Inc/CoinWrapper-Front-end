@@ -1,14 +1,20 @@
 <?php
     namespace Crypto\Classes;
 
-    use Crypto\Classes\Api as request;
+    use Crypto\Classes\Api as callApi;
 
     class Auth
     {
-        public static function authenticate($args = array())
+        public static function authenticate(array $args, $method, $endpoint)
         {
-            print("<pre>".print_r($args,1)."</pre>");
-            
+            $response = callApi::login($args, $method, $endpoint);
+            // if($response['success'] == true){
+            //     $_SESSION['user'] = [
+
+            //     ];
+            // }
+
+            return $response;
         }
 
         public static function session()
@@ -21,5 +27,12 @@
         public static function checkSession()
         {
             return isset($_SESSION['user']);
+        }
+
+        public function signout()
+        {
+            if(isset($_SESSION['user'])){
+                unset($_SESSION['user']);
+            }
         }
     }

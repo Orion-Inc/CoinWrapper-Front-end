@@ -7,9 +7,6 @@
     use Respect\Validation\Validator as v;
 
     require __DIR__.'/../vendor/autoload.php';
-    $config = file_get_contents(__DIR__.'/../configuration');
-
-
 
     $app = new \Slim\App([
         'settings' => [
@@ -38,7 +35,13 @@
             'userSession' => $container->auth->session(),
         ]);
 
+        $view->getEnvironment()->addGlobal('flash', $container->flash);
+
         return $view;
+    };
+
+    $container['flash'] = function () {
+        return new \Slim\Flash\Messages();
     };
 
     $container['plugins'] = function ($container){
@@ -47,6 +50,10 @@
 
     $container['auth'] = function ($container){
         return new \Crypto\Classes\Auth;
+    };
+
+    $container['api'] = function ($container){
+        return new \Crypto\Classes\Api;
     };
 
     $container['csrf'] = function ($container){

@@ -12,7 +12,8 @@
             'url' => 'http://app100.localhost/CoinWrapper-Front-end/public/'
         ],
         'api' => [
-            'url' => 'http://localhost:8080/all'
+            'base_uri' => 'http://localhost:8080/all',
+            'timeout'  => 2.0,
         ],
         'twig' => [
             'debug' => true

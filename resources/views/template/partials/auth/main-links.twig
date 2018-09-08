@@ -15,3 +15,12 @@
         </ul>
     </div>
 {% endif %}
+
+{% if uri == 'activate' %}
+    <div class="menu-holder">
+        <ul class="main-links">
+            <li><a class="normal-link" href="{{ path_for('terms-of-service') }}">You can read Our Terms of Service</a></li>
+            <li><a class="sign-button" href="{{ path_for('terms-of-service') }}">Read</a></li>
+        </ul>
+    </div>
+{% endif %}

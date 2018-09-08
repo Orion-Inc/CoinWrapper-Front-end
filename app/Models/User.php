@@ -1,14 +1,14 @@
 <?php
     namespace Crypto\Models;
 
-    use Crypto\Classes\Api as request;
+    use Crypto\Classes\Api as callApi;
 
     class User
     {
-        public static function create($args = array())
+        public static function create(array $args, $method, $endpoint)
         {
-            print("<pre>".print_r($args,1)."</pre>");
-            
+            $response = callApi::newuser($args, $method, $endpoint);
+            return $response;
         }
 
         

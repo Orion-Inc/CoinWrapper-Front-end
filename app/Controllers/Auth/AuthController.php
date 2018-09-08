@@ -20,23 +20,42 @@
         public function postSignup($request, $response)
         {
             $valaidation = $this->validator->validate($request, [
-                'firstname' => v::notEmpty()->alpha(),
-                'othernames' => v::notEmpty()->alpha(),
-                'username' => v::noWhitespace()->notEmpty()->alpha(),
-                'email' => v::noWhitespace()->notEmpty()->email(),
-                'phonenumber' =>  v::noWhitespace()->notEmpty()->phone()
+                'firstname' => v::notEmpty()->alpha()->setName('First Name'),
+                'othernames' => v::notEmpty()->alpha()->setName('Other Names'),
+                'username' => v::noWhitespace()->notEmpty()->alpha()->setName('Username'),
+                'email' => v::noWhitespace()->notEmpty()->email()->setName('Email Address'),
+                'phonenumber' =>  v::noWhitespace()->notEmpty()->phone()->setName('Phone Number')
             ]);
 
             if($valaidation->invalidate()){
-                return $response->withRedirect($this->router->pathFor('auth.signup'));
+                return $response->withRedirect($this->router->pathFor('auth.sign-up'));
             }
 
-            $user = User::create([
-                'firstname' => Stringify::capFirstLetters($request->getParam('firstname')),
-                'othernames' => Stringify::capFirstLetters($request->getParam('othernames')),
-                'username' => $request->getParam('username'),
-                'email' => $request->getParam('email'),
-                'phone-number' => $request->getParam('phonenumber')
+            $user = User::create(
+                [
+                    'firstname' => Stringify::capFirstLetters($request->getParam('firstname')),
+                    'othername' => Stringify::capFirstLetters($request->getParam('othernames')),
+                    'username' => $request->getParam('username'),
+                    'email' => $request->getParam('email'),
+                    'phone' => $request->getParam('phonenumber')
+                ],
+                $request->getMethod(),
+                '/signup'
+            );
+            
+            if($user['success'] == false){
+                $this->flash->addMessage('message', $user['message']);
+                return $response->withRedirect($this->router->pathFor('auth.sign-up'));
+            }
+
+            return $response->withRedirect($this->router->pathFor('auth.activate'));
+        }
+
+        public function activate($request, $response)
+        {
+            return $this->view->render($response, 'auth/activate.twig', [
+                'pageTitle' => 'Activate',
+                'uri'=> 'activate'
             ]);
         }
 
@@ -51,28 +70,36 @@
         public function postSignin($request, $response)
         {
             $valaidation = $this->validator->validate($request, [
-                'emailphonennumber' => v::notEmpty()->noWhitespace()->signin()
+                'emailphonennumber' => v::notEmpty()->noWhitespace()->signin()->setName('Email or Phone Number')
             ]);
 
             if($valaidation->invalidate()){
-                return $response->withRedirect($this->router->pathFor('auth.signin'));
+                return $response->withRedirect($this->router->pathFor('auth.sign-in'));
             }
 
-            $auth = Auth::authenticate([
-                'emailphonennumber' => $request->getParam('emailphonennumber'),
-                'authmethod' => $request->getParam('authmethod')
-            ]);
+            $auth = Auth::authenticate(
+                [
+                    'credentials' => $request->getParam('emailphonennumber'),
+                    'authmethod' => $request->getParam('authmethod')
+                ],
+                $request->getMethod(),
+                '/api/v1/authenticate'
+            );
 
-            if(!$auth){
-                return $response->withRedirect($this->router->pathFor('auth.signin'));
-            }
+            print("<pre>".print_r($auth,1)."</pre>");
 
-            return $response->withRedirect($this->router->pathFor('app.dashboard'));
+            // if($auth['success'] == false){
+            //     $this->flash->addMessage('message', $auth['message']);
+            //     return $response->withRedirect($this->router->pathFor('auth.sign-in'));
+            // }
+
+            // return $response->withRedirect($this->router->pathFor('app.dashboard'));
         }
 
         public function signout($request, $response)
         {
-            
+            $this->auth->signout();
+            return $response->withRedirect($this->router->pathFor('home'));
         }
     }
     
