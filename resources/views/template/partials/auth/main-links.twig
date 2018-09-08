@@ -16,7 +16,7 @@
     </div>
 {% endif %}
 
-{% if uri == 'activate' %}
+{% if uri in ['activate', 'authorize']%}
     <div class="menu-holder">
         <ul class="main-links">
             <li><a class="normal-link" href="{{ path_for('terms-of-service') }}">You can read Our Terms of Service</a></li>
