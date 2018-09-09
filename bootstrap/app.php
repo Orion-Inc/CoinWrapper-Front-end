@@ -10,12 +10,15 @@
 
     require __DIR__.'/../vendor/autoload.php';
 
-    $app = new \Slim\App(get::configuration());
+    $mode = file_get_contents(__DIR__.'/../configuration');
+
+    $app = new \Slim\App(get::configuration($mode));
 
     $container = $app->getContainer();
     $settings = $container->get('settings')['logger'];
+    $app_config = $container->get('app');
 
-    $container['view'] = function ($container){
+    $container['view'] = function ($container) use ($app_config){
         $view = new \Slim\Views\Twig(__DIR__.'/../resources/views', [
             'cache' => false
         ]);
@@ -23,6 +26,8 @@
         $view->addExtension(new \Slim\Views\TwigExtension(
             $container->router, $container->request->getUri()
         ));
+
+        $view->getEnvironment()->addGlobal('app', $app_config);
 
         $view->getEnvironment()->addGlobal('user', [
             'checkAuthorize' => $container->auth->checkAuthorize(),
