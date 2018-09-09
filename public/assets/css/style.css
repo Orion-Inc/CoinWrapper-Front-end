@@ -69,7 +69,7 @@ input[type="submit"] {
     text-align: center;
     font-size: 25px;
     font-weight: 300;
-    color: #cf6a87;
+    color: #cb4b70;
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -80,7 +80,7 @@ input[type="submit"] {
     content: "";
     width: 58px;
     height: 2px;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     left: 50%;
     margin-left: -29px;
     bottom: -8px;
@@ -100,7 +100,7 @@ input[type="submit"] {
     text-align: center;
 }
 
-.row-icon .pricing-icon {
+.row-icon .header-icon {
     position: relative;
     width: 88px;
     height: 88px;
@@ -113,34 +113,34 @@ input[type="submit"] {
     animation-name: little-move;
 }
 
-.row-icon .pricing-icon .htfy {
+.row-icon .header-icon .htfy {
     color: #ffffff;
     font-size: 45px;
     margin-top: 21px;
 }
 
-.row-icon .pricing-icon .htfy-technology {
+.row-icon .header-icon .htfy-technology {
     margin-top: 26px;
 }
 
-.row-icon .pricing-icon .fa {
+.row-icon .header-icon .fa {
     color: #ffffff;
     font-size: 40px;
     margin-top: 25px;
 }
 
-.row-icon .pricing-icon.color1 .htfy,
-.row-icon .pricing-icon.color1 .fa {
-    color: #cf6a87;
+.row-icon .header-icon.color1 .htfy,
+.row-icon .header-icon.color1 .fa {
+    color: #cb4b70;
 }
 
-.row-icon .pricing-icon.color2 .htfy,
-.row-icon .pricing-icon.color2 .fa {
+.row-icon .header-icon.color2 .htfy,
+.row-icon .header-icon.color2 .fa {
     color: #5d9cec;
 }
 
-.row-icon .pricing-icon.color3 .htfy,
-.row-icon .pricing-icon.color3 .fa {
+.row-icon .header-icon.color3 .htfy,
+.row-icon .header-icon.color3 .fa {
     color: #65d692;
 }
 
@@ -181,13 +181,13 @@ input[type="submit"] {
 
 .ybtn-accent-color {
     color: #ffffff;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 .ybtn-accent-color:hover,
 .ybtn-accent-color:focus {
     color: #ffffff;
-    background-color: #6057e3;
+    background-color: #d1698a;
 }
 
 .ybtn-other-color {
@@ -202,7 +202,7 @@ input[type="submit"] {
 }
 
 .ybtn-purple-text {
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: transparent;
 }
 
@@ -213,7 +213,7 @@ input[type="submit"] {
 
 .ybtn-purple {
     color: #ffffff;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 .ybtn-purple:hover,
@@ -223,7 +223,7 @@ input[type="submit"] {
 }
 
 .ybtn-purple-text {
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: transparent;
 }
 
@@ -233,13 +233,13 @@ input[type="submit"] {
 }
 
 .ybtn-white {
-    color: #66556b;
+    color: #cb4b70;
     background-color: #ffffff;
 }
 
 .ybtn-white:hover,
 .ybtn-white:focus {
-    color: #66556b;
+    color: #cb4b70;
     background-color: #f7f7f7;
 }
 
@@ -315,10 +315,10 @@ input[type="submit"] {
     top: -20%;
     width: 100%;
     height: 108%;
-    background-image: url(../img/headbg.svg);
+    background-image: url(../img/swapbg.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     -webkit-transform: skewY(-10deg);
     -moz-transform: skewY(-10deg);
     -ms-transform: skewY(-10deg);
@@ -335,7 +335,7 @@ input[type="submit"] {
     top: 0;
     height: 100%;
     background-image: inherit;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     -webkit-transform: skewY(0deg);
     -moz-transform: skewY(0deg);
     -ms-transform: skewY(0deg);
@@ -354,7 +354,7 @@ nav.custom-footer a {
 
 nav.custom-footer .navbar-text,
 nav.custom-footer p.navbar-text>a {
-    color: #cf6a87!important;
+    color: #cb4b70!important;
     font-size: 14px!important;
     font-weight: 600!important;
     -webkit-transition: all 0.3s ease 0s!important;
@@ -373,7 +373,7 @@ nav.custom-footer p.navbar-text>span {
         top: 0;
         width: 100%;
         height: 30%;
-        background-color: #cf6a87;
+        background-color: #cb4b70;
         -webkit-transform: skewY(-10deg);
         -moz-transform: skewY(-10deg);
         -ms-transform: skewY(-10deg);
@@ -471,7 +471,7 @@ svg.logo text {
     position: relative;
     cursor: pointer;
     padding: 9px 30px;
-    background-color: #cf6a87!important;
+    background-color: #cb4b70;
     border-radius: 4px;
     color: #ffffff;
     opacity: 1;
@@ -487,8 +487,8 @@ svg.logo text {
 
 .signin-button-holder a.signin-button:hover,
 .signin-button-holder a.signin-button:focus {
-    background-color: #c44569 !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #c44569!important;
     opacity: 1 !important;
 }
 
@@ -568,7 +568,7 @@ svg.logo text {
 
 .dropdown-menu>li>a:focus,
 .dropdown-menu>li>a:hover {
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: #f7f6f8;
 }
 
@@ -677,7 +677,7 @@ svg.logo text {
 }
 
 .mega-box.m-color1 .mega-icon {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 .mega-box.m-color1:hover .mega-icon,
@@ -805,7 +805,7 @@ svg.logo text {
 
 .signin-button-holder .dropdown-menu li a:hover,
 .signin-button-holder .dropdown-menu li a:focus {
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: #f7f6f8;
 }
 
@@ -1351,13 +1351,13 @@ svg.logo text {
 .text-purple-light {
     font-size: 25px;
     font-weight: 300;
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 .text-other-color1 {
     font-size: 25px;
     font-weight: 300;
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 .text-purple-dark {
@@ -1430,7 +1430,7 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-.pricing-box .pricing-content .pricing-icon {
+.pricing-box .pricing-content .header-icon {
     position: absolute;
     width: 88px;
     height: 88px;
@@ -1446,23 +1446,23 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-.pricing-box .pricing-content .pricing-icon .htfy {
+.pricing-box .pricing-content .header-icon .htfy {
     color: #ffffff;
     font-size: 45px;
     margin-top: 21px;
 }
 
-.pricing-box .pricing-content .pricing-icon .htfy-technology {
+.pricing-box .pricing-content .header-icon .htfy-technology {
     margin-top: 26px;
 }
 
-.pricing-box .pricing-content .pricing-icon .fa {
+.pricing-box .pricing-content .header-icon .fa {
     color: #ffffff;
     font-size: 40px;
     margin-top: 25px;
 }
 
-.pricing-box .pricing-content .pricing-icon img {
+.pricing-box .pricing-content .header-icon img {
     position: absolute;
     width: 50px;
     height: 43px;
@@ -1579,30 +1579,30 @@ svg.logo text {
 }
 
 .pricing-box.pricing-color1:before {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-icon {
-    background-color: #cf6a87;
+.pricing-box.pricing-color1 .pricing-content .header-icon {
+    background-color: #cb4b70;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-title {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-price {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-details ul li:before {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     -webkit-box-shadow: 0 3px 8px rgba(117, 109, 231, 0.5);
     box-shadow: 0 3px 8px rgba(117, 109, 231, 0.5);
 }
 
 .pricing-box.pricing-color1 .pricing-content .pricing-link a {
     color: #ffffff;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -1621,7 +1621,7 @@ svg.logo text {
     color: #5d9cec;
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-icon {
+.pricing-box.pricing-color2 .pricing-content .header-icon {
     background-color: #5d9cec;
 }
 
@@ -1660,7 +1660,7 @@ svg.logo text {
     color: #65d692;
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-icon {
+.pricing-box.pricing-color3 .pricing-content .header-icon {
     background-color: #65d692;
 }
 
@@ -1727,8 +1727,8 @@ svg.logo text {
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.08);
 }
 
-.pricing-box:hover .pricing-content .pricing-icon,
-.pricing-box:focus .pricing-content .pricing-icon {
+.pricing-box:hover .pricing-content .header-icon,
+.pricing-box:focus .pricing-content .header-icon {
     -webkit-box-shadow: 0 5px 12px rgba(141, 171, 234, 0.5);
     box-shadow: 0 5px 12px rgba(141, 171, 234, 0.5);
 }
@@ -1764,7 +1764,7 @@ svg.logo text {
     box-shadow: 0 9px 18px rgba(54, 186, 255, 0.19);
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-icon {
+.pricing-box.pricing-box-simple .pricing-content .header-icon {
     width: 76px;
     height: 76px;
     margin-left: -38px;
@@ -1775,21 +1775,21 @@ svg.logo text {
     box-shadow: 0 5px 9px rgba(141, 171, 234, 0.5);
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-icon .htfy {
+.pricing-box.pricing-box-simple .pricing-content .header-icon .htfy {
     font-size: 33px;
     color: #a1a1a1;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-icon .htfy-technology {
+.pricing-box.pricing-box-simple .pricing-content .header-icon .htfy-technology {
     margin-top: 23px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-icon .fa {
+.pricing-box.pricing-box-simple .pricing-content .header-icon .fa {
     font-size: 28px;
     color: #a1a1a1;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-icon img {
+.pricing-box.pricing-box-simple .pricing-content .header-icon img {
     width: 44px;
     margin-left: -22px;
 }
@@ -2166,7 +2166,7 @@ svg.logo text {
     transition: all 0.3s ease 0s;
 }
 
-#page-icon .pricing-icon {
+#page-icon .header-icon {
     position: absolute;
     width: 88px;
     height: 88px;
@@ -2176,39 +2176,39 @@ svg.logo text {
     border-radius: 200px;
     overflow: hidden;
     z-index: 100;
-    -webkit-box-shadow: 0 6px 12px rgba(141, 171, 234, 0.5);
-    box-shadow: 0 6px 12px rgba(141, 171, 234, 0.5);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-#page-icon .pricing-icon .htfy {
+#page-icon .header-icon .htfy {
     color: #ffffff;
     font-size: 45px;
     margin-top: 21px;
 }
 
-#page-icon .pricing-icon .htfy-technology {
+#page-icon .header-icon .htfy-technology {
     margin-top: 26px;
 }
 
-#page-icon .pricing-icon .fa {
+#page-icon .header-icon .fa {
     color: #ffffff;
     font-size: 40px;
     margin-top: 25px;
 }
 
-#page-icon .pricing-icon.pricing-color1 {
-    background-color: #cf6a87;
+#page-icon .header-icon.pricing-color1 {
+    background-color: #cb4b70;
 }
 
-#page-icon .pricing-icon.pricing-color2 {
+#page-icon .header-icon.pricing-color2 {
     background-color: #5d9cec;
 }
 
-#page-icon .pricing-icon.pricing-color3 {
+#page-icon .header-icon.pricing-color3 {
     background-color: #65d692;
 }
 
-#page-icon:hover .pricing-icon .special-gradiant {
+#page-icon:hover .header-icon .special-gradiant {
     animation-name: little-move;
 }
 
@@ -2403,7 +2403,7 @@ svg.logo text {
     left: 0;
     top: 0;
     padding: 60px 50px;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     border-radius: 10px;
     -webkit-transform: rotateX(60deg) scale(0.5) translateY(50px);
     -moz-transform: rotateX(60deg) scale(0.5) translateY(50px);
@@ -2491,7 +2491,7 @@ svg.logo text {
     width: 62px;
     height: 62px;
     border-radius: 100px;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     text-align: center;
     padding-top: 8px;
     z-index: 100;
@@ -2808,7 +2808,7 @@ svg.logo text {
 -------------------------------------------------------------------*/
 
 #footer {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     padding-top: 90px;
     padding-bottom: 70px;
     text-align: center;
@@ -2857,7 +2857,7 @@ svg.logo text {
 
 #footer ul.footer-menu li a:hover,
 #footer ul.footer-menu li a:focus {
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: #ffffff;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -2865,7 +2865,7 @@ svg.logo text {
 }
 
 #footer ul.footer-menu li.active a {
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: #ffffff;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -2910,7 +2910,7 @@ svg.logo text {
 }
 
 #footer .phone:hover {
-    background-color: #c44569;
+    background-color: #be2c5a;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
@@ -2936,7 +2936,7 @@ svg.logo text {
 }
 
 #footer .email:hover {
-    background-color: #c44569;
+    background-color: #be2c5a;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
@@ -2967,7 +2967,7 @@ svg.logo text {
 }
 
 #footer .address:hover {
-    background-color: #c44569;
+    background-color: #be2c5a;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
@@ -2990,7 +2990,7 @@ svg.logo text {
 }
 
 #footer .social-menu li a .fa {
-    color: #c44569;
+    color: #be2c5a;
     font-size: 30px;
     text-align: center;
     min-width: 30px;
@@ -3040,7 +3040,7 @@ svg.logo text {
     min-height: 700px;
     height: 100%;
     overflow: hidden;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     padding: 140px 60px 60px;
     text-align: center;
     z-index: 999;
@@ -3066,8 +3066,9 @@ svg.logo text {
     top: -20%;
     width: 100%;
     height: 70%;
-    background-image: url(../img/whitebg.svg);
-    background-color: #f27a9c background-repeat: no-repeat;
+    background-image: url(../img/swapbg.svg);
+    background-color: #f27a9c;
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     -webkit-transform: skewY(-10deg);
     -moz-transform: skewY(-10deg);
@@ -3189,7 +3190,7 @@ svg.logo text {
     text-transform: uppercase;
     padding: 8px 20px;
     border-radius: 4px;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     text-decoration: none;
     margin-left: 10px;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -3200,7 +3201,8 @@ svg.logo text {
 
 .form-holder .menu-holder ul.main-links li a.sign-button:hover,
 .form-holder .menu-holder ul.main-links li a.sign-button:focus {
-    background-color: #c44569;
+    color: #cb4b70;
+    background-color: #ffffff;
 }
 
 .form-holder.signup .menu-holder ul.main-links li a.normal-link {
@@ -3295,7 +3297,7 @@ svg.logo text {
 }
 
 .signin-signup-form .form-title {
-    color: #cf6a87;
+    color: #cb4b70;
     font-size: 26px;
     font-weight: 500;
     margin-bottom: 50px;
@@ -3405,7 +3407,7 @@ svg.logo text {
 
 .signin-signup-form .form-text input[type="checkbox"]:checked+label,
 .signin-signup-form .form-text input[type="radio"]:checked+label {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 .signin-signup-form .form-text input[type="checkbox"]:checked+label:before,
@@ -3416,7 +3418,7 @@ svg.logo text {
     top: 2px;
     width: 15px;
     height: 15px;
-    background: #cf6a87;
+    background: #cb4b70;
     border-radius: 50px;
     border: 0px solid #abb4bc;
     -webkit-transition: all 0.3s ease;
@@ -3552,16 +3554,16 @@ svg.logo text {
 }
 
 #header-holder.contact-header .signin-button-holder a.signin-button {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 #header-holder.contact-header .signin-button-holder a.signin-button:hover,
 #header-holder.contact-header .signin-button-holder a.signin-button:focus {
-    background-color: #c44569 !important;
+    background-color: #ffffff !important;
 }
 
 #header-holder.about-header {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 #header-holder.about-header #page-head {
@@ -3580,11 +3582,11 @@ svg.logo text {
 }
 
 #header-holder.homepage-header .navbar-default .navbar-nav>li>a:not(.signin-button) {
-    color: #cf6a87!important;
+    color: #cb4b70!important;
 }
 
 #header-holder.homepage-header .bg-animation {
-    background-image: url(../img/whitebg.svg);
+    background-image: none;
     background-color: #ffffff;
 }
 
@@ -3625,9 +3627,9 @@ svg.logo text {
     top: 0;
     border-radius: 500px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #cf6a87);
-    background-image: -o-linear-gradient(120deg, #aaa5f1, #cf6a87);
-    background-image: linear-gradient(120deg, #aaa5f1, #cf6a87);
+    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #cb4b70);
+    background-image: -o-linear-gradient(120deg, #aaa5f1, #cb4b70);
+    background-image: linear-gradient(120deg, #aaa5f1, #cb4b70);
     -webkit-box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     opacity: 0.04;
@@ -3652,9 +3654,9 @@ svg.logo text {
     top: 0;
     border-radius: 500px;
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #cf6a87);
-    background-image: -o-linear-gradient(120deg, #aaa5f1, #cf6a87);
-    background-image: linear-gradient(120deg, #aaa5f1, #cf6a87);
+    background-image: -webkit-linear-gradient(120deg, #aaa5f1, #cb4b70);
+    background-image: -o-linear-gradient(120deg, #aaa5f1, #cb4b70);
+    background-image: linear-gradient(120deg, #aaa5f1, #cb4b70);
     -webkit-box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 46px rgba(0, 0, 0, 0.15);
     opacity: 0.08;
@@ -3715,7 +3717,7 @@ svg.logo text {
 #header-holder.homepage-header #page-head .head-content p>span {
     font-size: 22px;
     font-weight: 700;
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 #header-holder.domainspage-header {
@@ -3768,7 +3770,7 @@ svg.logo text {
     font-size: 19px;
     font-weight: 700;
     color: #ffffff;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     border-radius: 5px;
 }
 
@@ -3788,9 +3790,9 @@ svg.logo text {
 
 .bg-custom .obj-gradiant1 {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(90deg, #8700ee, #cf6a87);
-    background-image: -o-linear-gradient(90deg, #8700ee, #cf6a87);
-    background-image: linear-gradient(90deg, #8700ee, #cf6a87);
+    background-image: -webkit-linear-gradient(90deg, #8700ee, #cb4b70);
+    background-image: -o-linear-gradient(90deg, #8700ee, #cb4b70);
+    background-image: linear-gradient(90deg, #8700ee, #cb4b70);
     opacity: 0.43;
     position: absolute;
     width: 70%;
@@ -3801,9 +3803,9 @@ svg.logo text {
 
 .bg-custom .obj-gradiant2 {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(90deg, #cf6a87, #8700ee);
-    background-image: -o-linear-gradient(90deg, #cf6a87, #8700ee);
-    background-image: linear-gradient(90deg, #cf6a87, #8700ee);
+    background-image: -webkit-linear-gradient(90deg, #cb4b70, #8700ee);
+    background-image: -o-linear-gradient(90deg, #cb4b70, #8700ee);
+    background-image: linear-gradient(90deg, #cb4b70, #8700ee);
     opacity: 0.43;
     position: absolute;
     width: 70%;
@@ -3826,7 +3828,7 @@ svg.logo text {
     height: 106px;
     display: inline-block;
     position: absolute;
-    background-color: rgba(129, 122, 233, 0.8);
+    background-color: rgba(207, 106, 135, 0.6);
     text-align: center;
     margin-top: -53px;
     margin-left: -53px;
@@ -3834,7 +3836,8 @@ svg.logo text {
 }
 
 .icons-animation-holder .aicon img {
-    width: 75px;
+    margin-top: -15px;
+    width: 100px;
 }
 
 .icons-animation-holder .aicon1 {
@@ -3879,14 +3882,13 @@ svg.logo text {
 
 .icons-animation-holder .aicon-main {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(-30deg, #b3aff2, #cf6a87);
-    background-image: -o-linear-gradient(-30deg, #b3aff2, #cf6a87);
-    background-image: linear-gradient(-30deg, #b3aff2, #cf6a87);
+    background-image: -webkit-linear-gradient(-30deg, #ffffff, #f5f5f5);
+    background-image: -o-linear-gradient(-30deg, #ffffff, #f5f5f5);
+    background-image: linear-gradient(-30deg, #ffffff, #f5f5f5);
     -webkit-box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 45px rgba(0, 0, 0, 0.15);
     top: 50%;
     left: 50%;
-    padding-top: 45px;
 }
 
 .icons-animation-holder .aicon-main svg.logo {
@@ -4004,7 +4006,7 @@ svg.logo text {
 }
 
 #ifeatures .feature-box .feature-title {
-    color: #cf6a87;
+    color: #cb4b70;
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 25px;
@@ -4032,7 +4034,7 @@ svg.logo text {
 }
 
 #more-info {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
@@ -4051,9 +4053,9 @@ svg.logo text {
 #more-info .bg-custom .obj-gradiant1 {
     /*@include gradient(#97cae5,$main-accent-color,0deg);*/
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(0deg, #87bdce, #cf6a87);
-    background-image: -o-linear-gradient(0deg, #87bdce, #cf6a87);
-    background-image: linear-gradient(0deg, #87bdce, #cf6a87);
+    background-image: -webkit-linear-gradient(0deg, #87bdce, #cb4b70);
+    background-image: -o-linear-gradient(0deg, #87bdce, #cb4b70);
+    background-image: linear-gradient(0deg, #87bdce, #cb4b70);
     opacity: 1;
     position: absolute;
     width: 45%;
@@ -4064,9 +4066,9 @@ svg.logo text {
 
 #more-info .bg-custom .obj-gradiant2 {
     background-repeat: repeat-x;
-    background-image: -webkit-linear-gradient(90deg, #cf6a87, #b3aff2);
-    background-image: -o-linear-gradient(90deg, #cf6a87, #b3aff2);
-    background-image: linear-gradient(90deg, #cf6a87, #b3aff2);
+    background-image: -webkit-linear-gradient(90deg, #cb4b70, #b3aff2);
+    background-image: -o-linear-gradient(90deg, #cb4b70, #b3aff2);
+    background-image: linear-gradient(90deg, #cb4b70, #b3aff2);
     opacity: 0.4;
     position: absolute;
     width: 60%;
@@ -4110,7 +4112,7 @@ svg.logo text {
 #more-info .links-holder ul li .info-link:hover,
 #more-info .links-holder ul li .info-link:focus,
 #more-info .links-holder ul li .info-link.opened {
-    background-color: #c44569;
+    background-color: #be2c5a;
     border-radius: 10px;
     -webkit-box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
@@ -4326,7 +4328,7 @@ svg.logo text {
 }
 
 #header-holder.color2-header {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 #header-holder.color2-header .bg-animation {
@@ -4575,7 +4577,7 @@ svg.logo text {
 }
 
 #articles .article-summary .article-title a {
-    color: #cf6a87;
+    color: #cb4b70;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
@@ -4667,10 +4669,10 @@ svg.logo text {
 #articles .pagination .page-number {
     border-radius: 50px;
     padding: 5px 10px;
-    color: #cf6a87;
+    color: #cb4b70;
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid #cf6a87;
+    border: 2px solid #cb4b70;
 }
 
 #articles .pagination a.page-number {
@@ -4735,7 +4737,7 @@ svg.logo text {
 #post-content .post .meta .view:before {
     content: "\f06e";
     font-family: fontAwesome;
-    color: #cf6a87;
+    color: #cb4b70;
     margin-right: 10px;
 }
 
@@ -4747,7 +4749,7 @@ svg.logo text {
 #post-content .post .meta .like:before {
     content: "\f004";
     font-family: fontAwesome;
-    color: #cf6a87;
+    color: #cb4b70;
     margin-right: 10px;
 }
 
@@ -4770,7 +4772,7 @@ svg.logo text {
 #post-content .post .meta .comment:before {
     content: "\f27a";
     font-family: fontAwesome;
-    color: #cf6a87;
+    color: #cb4b70;
     margin-right: 10px;
 }
 
@@ -4961,11 +4963,11 @@ svg.logo text {
 }
 
 #contact-info .info-box:hover .info-title:before {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 #contact-info .info-box .info-title {
-    color: #cf6a87;
+    color: #cb4b70;
     font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
@@ -5011,7 +5013,7 @@ svg.logo text {
 
 #contact-info .info-box .info-details a {
     font-size: 15px;
-    color: #cf6a87;
+    color: #cb4b70;
     text-decoration: none;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -5046,7 +5048,7 @@ svg.logo text {
 #extra-info h1 {
     font-size: 38px;
     font-weight: 600;
-    color: #cf6a87;
+    color: #cb4b70;
     margin-bottom: 30px;
     line-height: 50px;
 }
@@ -5054,7 +5056,7 @@ svg.logo text {
 #extra-info p {
     font-size: 16px;
     font-weight: 300;
-    color: #cf6a87;
+    color: #cb4b70;
     opacity: 0.7;
     line-height: 30px;
 }
@@ -5285,7 +5287,7 @@ svg.logo text {
     text-align: center;
     font-size: 15px;
     font-weight: 700;
-    color: #cf6a87;
+    color: #cb4b70;
     background-color: #fcfcfd;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -5334,7 +5336,7 @@ svg.logo text {
 
 #domain-pricing .pricing-table-holder table tr td .register-button:hover,
 #domain-pricing .pricing-table-holder table tr td .register-button:focus {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 #domain-pricing .pricing-table-holder table tr:nth-of-type(odd) {
@@ -5351,7 +5353,7 @@ svg.logo text {
 
 #domain-pricing .pricing-table-holder table tr:hover td,
 #domain-pricing .pricing-table-holder table tr:focus td {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 #domain-pricing .htfy-pricing-table-holder {
@@ -5393,7 +5395,7 @@ svg.logo text {
     text-align: center;
     font-size: 15px;
     font-weight: 700;
-    color: #cf6a87;
+    color: #cb4b70;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 27px 10px;
@@ -5440,7 +5442,7 @@ svg.logo text {
 
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row .td .register-button:hover,
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row .td .register-button:focus {
-    background-color: #cf6a87;
+    background-color: #cb4b70;
 }
 
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row.trow:before {
@@ -5493,7 +5495,7 @@ svg.logo text {
 
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row.trow:hover .td,
 #domain-pricing .htfy-pricing-table-holder .htfy-table .row.trow:focus .td {
-    color: #cf6a87;
+    color: #cb4b70;
 }
 
 #serverslocation {
@@ -5556,7 +5558,7 @@ svg.logo text {
     width: 13px;
     height: 13px;
     border-radius: 20px;
-    background-color: #cf6a87;
+    background-color: #cb4b70;
     margin-right: 8px;
     margin-left: 8px;
 }
@@ -5735,7 +5737,7 @@ svg.logo text {
         height: 50px!important
     }
     #form-section svg.logo text {
-        fill: #cf6a87;
+        fill: #cb4b70;
     }
     #contact-info div[class^="col-"]:nth-child(2) .info-box:before {
         opacity: 0;

@@ -25,12 +25,9 @@
         $this->post('/sign-in', 'AuthController:postSignin');
     })->add( new GuestMiddleware($container) );
 
-    //$app->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
-
     $app->group('', function() {
         $this->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
     })->add( new AuthMiddleware($container) );
-
 
     $app->group('', function() {
         $this->get('/sign-out', 'AuthController:signout')->setName('auth.sign-out');

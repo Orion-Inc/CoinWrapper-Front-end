@@ -5,7 +5,7 @@
 
     class Auth
     {
-        public static function authenticate(array $args, $method, $endpoint)
+        public static function authorize(array $args, $method, $endpoint)
         {
             $response = callApi::login($args, $method, $endpoint);
             if($response['success'] == true){

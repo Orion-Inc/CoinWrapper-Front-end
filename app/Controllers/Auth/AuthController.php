@@ -69,7 +69,7 @@
                 return $response->withRedirect($this->router->pathFor('auth.sign-in'));
             }
 
-            $auth = Auth::authenticate(
+            $auth = Auth::authorize(
                 [
                     'credentials' => $request->getParam('emailphonennumber'),
                     'authmethod' => $request->getParam('authmethod')

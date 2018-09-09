@@ -5,21 +5,15 @@
     use \Psr\Http\Message\ResponseInterface as Response;
 
     use Respect\Validation\Validator as v;
+    use Crypto\Classes\Config as get;
+
 
     require __DIR__.'/../vendor/autoload.php';
 
-    $app = new \Slim\App([
-        'settings' => [
-            'diplayErrorDetails' => true,
-            'logger' => [
-                'name' => 'app',
-                'level' => Monolog\Logger::DEBUG,
-                'path' => __DIR__ . '/../logs/app.log',
-            ],
-        ]
-    ]);
+    $app = new \Slim\App(get::configuration());
 
     $container = $app->getContainer();
+    $settings = $container->get('settings')['logger'];
 
     $container['view'] = function ($container){
         $view = new \Slim\Views\Twig(__DIR__.'/../resources/views', [
@@ -39,6 +33,17 @@
         $view->getEnvironment()->addGlobal('flash', $container->flash);
 
         return $view;
+    };
+
+    $container['logger'] = function ($container){
+        $logger = new \Monolog\Logger($settings['name']);
+        $file_handler = new \Monolog\Handler\StreamHandler($settings['path']);
+        $logger->pushHandler($file_handler);
+        return $logger;
+    };
+
+    $container['notFoundHandler'] = function ($container){
+        return new \Crypto\ErrorHandler\NotFoundHandler($container);
     };
 
     $container['flash'] = function () {
@@ -75,6 +80,10 @@
 
     $container['AppController'] = function ($container){
         return new \Crypto\Controllers\AppController($container);
+    };
+
+    $container['ErrorsController'] = function ($container){
+        return new \Crypto\Controllers\Errors\ErrorsController($container);
     };
 
     $app->add(new \Crypto\Middleware\ErrorsMiddleware($container));
