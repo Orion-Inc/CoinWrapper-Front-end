@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Classes;
+    namespace Swap\Classes;
 
     class Stringify
     {

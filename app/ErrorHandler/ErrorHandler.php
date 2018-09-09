@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\ErrorHandler;
+    namespace Swap\ErrorHandler;
 
     class ErrorHandler 
     {

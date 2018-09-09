@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Middleware;
+    namespace Swap\Middleware;
 
     class DashboardMiddleware extends Middleware
     {

@@ -5,7 +5,7 @@
     use \Psr\Http\Message\ResponseInterface as Response;
 
     use Respect\Validation\Validator as v;
-    use Crypto\Classes\Config as get;
+    use Swap\Classes\Config as get;
 
 
     require __DIR__.'/../vendor/autoload.php';
@@ -48,7 +48,7 @@
     };
 
     $container['notFoundHandler'] = function ($container){
-        return new \Crypto\ErrorHandler\NotFoundHandler($container);
+        return new \Swap\ErrorHandler\NotFoundHandler($container);
     };
 
     $container['flash'] = function () {
@@ -60,11 +60,11 @@
     };
 
     $container['auth'] = function ($container){
-        return new \Crypto\Classes\Auth;
+        return new \Swap\Classes\Auth;
     };
 
     $container['api'] = function ($container){
-        return new \Crypto\Classes\Api;
+        return new \Swap\Classes\Api;
     };
 
     $container['csrf'] = function ($container){
@@ -72,32 +72,32 @@
     };
 
     $container['validator'] = function ($container){
-        return new Crypto\Validation\Validator;
+        return new Swap\Validation\Validator;
     };
 
     $container['WebController'] = function ($container){
-        return new \Crypto\Controllers\WebController($container);
+        return new \Swap\Controllers\WebController($container);
     };
 
     $container['AuthController'] = function ($container){
-        return new \Crypto\Controllers\Auth\AuthController($container);
+        return new \Swap\Controllers\Auth\AuthController($container);
     };
 
     $container['AppController'] = function ($container){
-        return new \Crypto\Controllers\AppController($container);
+        return new \Swap\Controllers\AppController($container);
     };
 
     $container['ErrorsController'] = function ($container){
-        return new \Crypto\Controllers\Errors\ErrorsController($container);
+        return new \Swap\Controllers\Errors\ErrorsController($container);
     };
 
-    $app->add(new \Crypto\Middleware\ErrorsMiddleware($container));
-    $app->add(new \Crypto\Middleware\KeepInputMiddleware($container));
-    $app->add(new \Crypto\Middleware\CsrfMiddleware($container));
+    $app->add(new \Swap\Middleware\ErrorsMiddleware($container));
+    $app->add(new \Swap\Middleware\KeepInputMiddleware($container));
+    $app->add(new \Swap\Middleware\CsrfMiddleware($container));
 
     $app->add($container->csrf);
     
     
-    v::with('Crypto\\Validation\\Rules');
+    v::with('Swap\\Validation\\Rules');
 
     require __DIR__.'/../routes/routes.php';

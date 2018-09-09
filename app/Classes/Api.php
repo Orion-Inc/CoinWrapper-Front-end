@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Classes;
+    namespace Swap\Classes;
 
     use GuzzleHttp\Client;
     use GuzzleHttp\Psr7\Request;

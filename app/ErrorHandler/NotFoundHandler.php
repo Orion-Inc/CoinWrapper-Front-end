@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\ErrorHandler;
+    namespace Swap\ErrorHandler;
 
     class NotFoundHandler extends ErrorHandler
     {
@@ -7,7 +7,8 @@
         {
             return $this->view->render($response, 'errors/404.twig', [
                 'pageTitle' => '404 Not Found',
-                'uri'=> 'not-found-404'
+                'uri' => 'not-found-404',
+                'bodyCSS' => 'swap-bg'
             ])->withStatus(404);
         }
     }

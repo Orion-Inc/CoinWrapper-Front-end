@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Validation;
+    namespace Swap\Validation;
 
     use Respect\Validation\Validator as Respect;
     use Respect\Validation\Exceptions\NestedValidationException as Disobey;

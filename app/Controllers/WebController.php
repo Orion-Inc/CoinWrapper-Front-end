@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Controllers;
+    namespace Swap\Controllers;
 
     class WebController extends Controller
     {

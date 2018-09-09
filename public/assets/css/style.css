@@ -15,6 +15,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body.swap-bg {
+    background-color: #cb4b70;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
 a,
 input[type="submit"] {
     -webkit-transition: all 0.3s ease;
@@ -330,6 +338,20 @@ input[type="submit"] {
     background-color: #c44569;
 }
 
+#header-holder.inner-header .navbar-default .navbar-nav .signin-button-holder a.signin-button,
+#header-holder.about-header .navbar-default .navbar-nav .signin-button-holder a.signin-button {
+    background-color: #ffffff;
+    color: #cb4b70;
+}
+
+#header-holder.inner-header .navbar-default .navbar-nav .signin-button-holder a.signin-button:hover,
+#header-holder.inner-header .navbar-default .navbar-nav .signin-button-holder a.signin-button:focus,
+#header-holder.about-header .navbar-default .navbar-nav .signin-button-holder a.signin-button:hover,
+#header-holder.about-header .navbar-default .navbar-nav .signin-button-holder a.signin-button:focus {
+    background-color: #f4f4f4 !important;
+    color: #c44569!important;
+}
+
 #header-holder.inner-header .bg-animation {
     opacity: 1;
     top: 0;
@@ -451,7 +473,7 @@ svg.logo text {
     opacity: 0.6;
 }
 
-.navbar-default .navbar-nav>li>a.login-button {
+.navbar-default .navbar-nav>li>a.signin-button {
     margin-left: 30px;
 }
 
@@ -1916,8 +1938,8 @@ svg.logo text {
 }
 
 .pricing-box.pricing-box-simple .pricing-content .pricing-options .nav li {
+    /*float: inherit;*/
     display: inline-block !important;
-    float: inherit;
     margin: 0 5px !important;
     padding: 4px !important;
 }
@@ -3372,6 +3394,11 @@ svg.logo text {
     margin-top: 0px;
 }
 
+.signin-signup-form .form-text.text-holder a {
+    color: #da5f82;
+    text-decoration: none;
+}
+
 .signin-signup-form .form-text .text-only {
     color: #abb4bc;
     font-size: 13px;
@@ -4369,7 +4396,7 @@ svg.logo text {
     background-color: #3f7ece !important;
 }
 
-#header-holder.web-hosting-page #page-head {
+#header-holder.terms-of-service-page #page-head {
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -5637,7 +5664,7 @@ svg.logo text {
     .nav>li>a {
         padding: 20px 12px;
     }
-    .navbar-default .navbar-nav>li>a.login-button {
+    .navbar-default .navbar-nav>li>a.signin-button {
         margin-left: 10px;
     }
     .signin-button-holder a.signin-button {
@@ -5810,7 +5837,7 @@ svg.logo text {
     .nav>li {
         text-align: center;
     }
-    .navbar-default .navbar-nav>li>a.login-button {
+    .navbar-default .navbar-nav>li>a.signin-button {
         margin-left: 0;
     }
     nav.custom-footer {
@@ -6054,4 +6081,78 @@ svg.logo text {
 .alert-auth {
     margin-top: -30px;
     text-align: left;
+}
+
+.error-device-code {
+    font-size: 80px;
+}
+
+@media (min-width: 992px) {
+    .error-device-code {
+        font-size: 120px;
+    }
+}
+
+error-device-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+}
+
+
+/* Version 2 */
+
+.error-code,
+.error-description {
+    line-height: 1;
+}
+
+.error-code {
+    font-size: 100px;
+}
+
+.error-description {
+    font-size: 28px;
+}
+
+.error-bg-skew {
+    position: absolute;
+    top: 0;
+    right: -50vw;
+    bottom: 0;
+    z-index: -1;
+    width: 200vw;
+}
+
+[dir=rtl] .error-bg-skew {
+    right: auto;
+    left: -50vw;
+}
+
+@media (min-width: 768px) {
+    .error-bg-skew {
+        right: 0;
+        width: 100vw;
+        -webkit-transform: skew(-10deg);
+        transform: skew(-10deg);
+    }
+    [dir=rtl] .error-bg-skew {
+        right: auto;
+        left: 0;
+        -webkit-transform: skew(10deg);
+        transform: skew(10deg);
+    }
 }

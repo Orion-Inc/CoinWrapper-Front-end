@@ -1,19 +1,25 @@
 <?php
-    namespace Crypto\Classes;
+    namespace Swap\Classes;
 
-    use Crypto\Classes\Api as callApi;
+    use Swap\Classes\Api as callApi;
+    
 
     class Auth
     {
         public static function authorize(array $args, $method, $endpoint)
         {
             $response = callApi::login($args, $method, $endpoint);
+        
             if($response['success'] == true){
+                $authorize = $response['results'];
+                $token = $response['meta']['token'];
+
                 $_SESSION['authorize'] = [
-                    'authorize' => true
+                    'authorize' => true,
+                    'email' => $authorize['email'],
+                    'token' => $token
                 ];
             }
-
             return $response;
         }
 
@@ -32,6 +38,26 @@
         public static function checkSession()
         {
             return isset($_SESSION['user']);
+        }
+
+        public function signin($user)
+        {
+            print('<pre>'.print_r(@$user,true).'</pre>');
+            print('<pre>'.print_r(@$_SESSION['authorize'],true).'</pre>');
+            
+            // if(!$this->checkAuthorize()){
+            //     //return false;
+            // }
+            
+            // $authSession = $_SESSION['authorize'];
+
+            // if($authSession['email'] != $user['email']){
+            //     //return false;
+            // }
+
+            
+
+            die();
         }
 
         public function signout()

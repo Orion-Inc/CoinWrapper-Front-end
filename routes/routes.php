@@ -1,7 +1,7 @@
 <?php 
-    use Crypto\Middleware\AuthMiddleware;
-    use Crypto\Middleware\GuestMiddleware;
-    use Crypto\Middleware\DashboardMiddleware;
+    use Swap\Middleware\AuthMiddleware;
+    use Swap\Middleware\GuestMiddleware;
+    use Swap\Middleware\DashboardMiddleware;
 
     $app->get('/', 'WebController:index')->setName('home');
 
@@ -23,11 +23,15 @@
 
         $this->get('/sign-in', 'AuthController:signin')->setName('auth.sign-in');
         $this->post('/sign-in', 'AuthController:postSignin');
+
+        $this->get('/api/v1/auth/{email}', 'AuthController:checkAuthorization');
     })->add( new GuestMiddleware($container) );
 
     $app->group('', function() {
         $this->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
     })->add( new AuthMiddleware($container) );
+
+
 
     $app->group('', function() {
         $this->get('/sign-out', 'AuthController:signout')->setName('auth.sign-out');

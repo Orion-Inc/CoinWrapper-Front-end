@@ -1,11 +1,11 @@
 <?php
-    namespace Crypto\Controllers\Auth;
+    namespace Swap\Controllers\Auth;
 
-    use Crypto\Classes\Auth;
-    use Crypto\Models\User;
-    use Crypto\Controllers\Controller;
+    use Swap\Classes\Auth;
+    use Swap\Models\User;
+    use Swap\Controllers\Controller;
     use Respect\Validation\Validator as v;
-    use Crypto\Classes\Stringify;
+    use Swap\Classes\Stringify;
 
     class AuthController extends Controller
     {
@@ -92,6 +92,22 @@
                 'pageTitle' => 'Authorize',
                 'uri'=> 'authorize'
             ]);
+        }
+
+        public function checkAuthorization($request, $response, $args)
+        {
+            $params = $request->getQueryParams();
+            $user = [
+                'email' => $args['email'],
+                'token' => $params['token']
+            ];
+            
+            if(!$this->auth->signin($user)){
+                $this->flash->addMessage('message', '');
+                return $response->withRedirect($this->router->pathFor('auth.sign-in'));
+            }
+
+            return $response->withRedirect($this->router->pathFor('app.dashboard'));
         }
 
         public function signout($request, $response)

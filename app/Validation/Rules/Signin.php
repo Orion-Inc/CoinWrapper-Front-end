@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Validation\Rules;
+    namespace Swap\Validation\Rules;
 
     use Respect\Validation\Validator as v;
     use Respect\Validation\Rules\AbstractRule;
@@ -13,7 +13,7 @@
 
         public function validate($input)
         {
-            //print("<pre>".print_r($this->match,1)."</pre>");
+            // print("<pre>".print_r($this->match,1)."</pre>");
 
             // if (preg_match($this->match['email'],$input)) {
                 

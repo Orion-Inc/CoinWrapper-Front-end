@@ -1,7 +1,7 @@
 <?php
-    namespace Crypto\Models;
+    namespace Swap\Models;
 
-    use Crypto\Classes\Api as callApi;
+    use Swap\Classes\Api as callApi;
 
     class User
     {

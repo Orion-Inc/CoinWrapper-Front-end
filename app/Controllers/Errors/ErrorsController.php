@@ -1,8 +1,8 @@
 <?php
 
-    namespace Crypto\Controllers\Errors;
+    namespace Swap\Controllers\Errors;
 
-    use Crypto\Controllers\Controller;
+    use Swap\Controllers\Controller;
 
     class ErrorsController extends Controller
     {

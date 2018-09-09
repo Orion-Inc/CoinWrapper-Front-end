@@ -33,7 +33,7 @@
                     <div class="email"><a href=""><i class="fa fa-envelope"></i> info@coin-wrapper.com</a></div>
                     <div class="address">
                         <i class="fa fa-map-marker"></i> 
-                        <div>Coin Wrapper, Office 1000,<br>
+                        <div>{{ app.name }}, Office 1000,<br>
                             In the night,  I hear talk,<br>
                             Ghana.</div>
                     </div>
@@ -56,7 +56,7 @@
 {% if uri in ['activate', 'authorize', 'terms-of-service', 'faqs'] %}
 <nav class="navbar navbar-static-bottom custom-footer">
     <div class="container">
-        <p class="navbar-text"><a href="{{ path_for('home') }}">Coin Wrapper</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
+        <p class="navbar-text"><a href="{{ path_for('home') }}">{{ app.name }}</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
         <div class="navbar-right">
             <a href="{{ path_for('about-us') }}" class="navbar-text">About Us</a>
             <a href="{{ path_for('contact-us') }}" class="navbar-text">Contact Us</a>

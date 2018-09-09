@@ -1,5 +1,5 @@
 <?php
-    namespace Crypto\Validation\Exceptions;
+    namespace Swap\Validation\Exceptions;
 
     use Respect\Validation\Exceptions\ValidationException as Exceptions;
 
