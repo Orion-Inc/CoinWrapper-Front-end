@@ -1,11 +1,13 @@
 <?php
     namespace Swap\Controllers\Auth;
 
+    use Swap\Classes\Stringify;
     use Swap\Classes\Auth;
     use Swap\Models\User;
     use Swap\Controllers\Controller;
+
     use Respect\Validation\Validator as v;
-    use Swap\Classes\Stringify;
+    
 
     class AuthController extends Controller
     {
@@ -40,11 +42,11 @@
                     'phone' => $request->getParam('phonenumber')
                 ],
                 $request->getMethod(),
-                '/signup'
+                '/api/v1/auth/signup'
             );
             
             if($user['success'] == false){
-                $this->flash->addMessage('message', $user['message']);
+                $this->flash->addMessage('message', Stringify::capFirstLetters($user['message']));
                 return $response->withRedirect($this->router->pathFor('auth.sign-up'));
             }
 
@@ -62,9 +64,10 @@
         public function postSignin($request, $response)
         {
             $valaidation = $this->validator->validate($request, [
-                'emailphonennumber' => v::notEmpty()->noWhitespace()->signin()->setName('Email or Phone Number')
+                'emailphonennumber' => v::notEmpty()->noWhitespace()->isEmailPhone()->setName('Email or Phone Number')
             ]);
 
+            
             if($valaidation->invalidate()){
                 return $response->withRedirect($this->router->pathFor('auth.sign-in'));
             }
@@ -75,11 +78,11 @@
                     'authmethod' => $request->getParam('authmethod')
                 ],
                 $request->getMethod(),
-                '/api/v1/authenticate'
+                '/api/v1/auth/authenticate'
             );
 
             if($auth['success'] == false){
-                $this->flash->addMessage('message', $auth['message']);
+                $this->flash->addMessage('message', Stringify::capFirstLetters($auth['message']));
                 return $response->withRedirect($this->router->pathFor('auth.sign-in'));
             }
 
@@ -103,10 +106,10 @@
             ];
             
             if(!$this->auth->signin($user)){
-                $this->flash->addMessage('message', '');
                 return $response->withRedirect($this->router->pathFor('auth.sign-in'));
             }
 
+            Auth::unauthorize();
             return $response->withRedirect($this->router->pathFor('app.dashboard'));
         }
 

@@ -14,7 +14,7 @@
             'x-access-token' => 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWI4ZWJhNDE0OGRhNTA0MWRkN2MzMDlkIiwiaWF0IjoxNTM2MDk1NjY2LCJleHAiOjE1MzYwOTU5NjZ9.cvKFWRqPVNvznCMNJcPd3prwV0PSoT7_pznIPmi6VLU'
         ];
 
-        private static function request($args = array(), $method, $endpoint)
+        private static function request(array $args, $method, $endpoint, array $headers)
         {
             $fields = http_build_query($args);
             $curl = curl_init();
@@ -28,9 +28,7 @@
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => $method,
                 CURLOPT_POSTFIELDS => $fields,
-                CURLOPT_HTTPHEADER => array(
-                    "Content-Type: application/x-www-form-urlencoded"
-                ),
+                CURLOPT_HTTPHEADER => $headers
             ));
 
             $response = curl_exec($curl);
@@ -46,10 +44,15 @@
         }
 
         public function newuser(array $args, $method, $endpoint){
-            return self::request($args, $method, $endpoint);
+            return self::request($args, $method, $endpoint, [
+                "Content-Type: ".self::$client['Content-Type']
+            ]);
         }
 
         public function login(array $args, $method, $endpoint){
-            return self::request($args, $method, $endpoint);
+            return self::request($args, $method, $endpoint, [
+                "Content-Type: ".self::$client['Content-Type'],
+                "x-access-token: ".self::$client['x-access-token']
+            ]);
         }
     }

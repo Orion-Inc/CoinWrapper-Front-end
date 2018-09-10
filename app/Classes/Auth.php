@@ -2,20 +2,21 @@
     namespace Swap\Classes;
 
     use Swap\Classes\Api as callApi;
-    
+    use Lcobucci\JWT\Parser;
+    use Lcobucci\JWT\ValidationData;
 
-    class Auth
+    class Auth extends App
     {
         public static function authorize(array $args, $method, $endpoint)
         {
             $response = callApi::login($args, $method, $endpoint);
-        
             if($response['success'] == true){
                 $authorize = $response['results'];
                 $token = $response['meta']['token'];
 
                 $_SESSION['authorize'] = [
                     'authorize' => true,
+                    'user_id' => $authorize['_id'],
                     'email' => $authorize['email'],
                     'token' => $token
                 ];
@@ -42,28 +43,51 @@
 
         public function signin($user)
         {
-            print('<pre>'.print_r(@$user,true).'</pre>');
-            print('<pre>'.print_r(@$_SESSION['authorize'],true).'</pre>');
+            if(!$this->checkAuthorize()){
+                $this->flash->addMessage('message', 'Please Sign In Again.');
+                return false;
+            }
             
-            // if(!$this->checkAuthorize()){
-            //     //return false;
-            // }
-            
-            // $authSession = $_SESSION['authorize'];
+            $authSession = $_SESSION['authorize'];
 
-            // if($authSession['email'] != $user['email']){
-            //     //return false;
-            // }
+            if($authSession['email'] != $user['email']){
+                $this->unauthorize();
+                $this->flash->addMessage('message', 'We Could Not Sign You Into Your Account.');
+                return false;
+            }
 
-            
+            $userTokenObject = (new Parser())->parse($user['token']);
+            $sessionTokenObject = (new Parser())->parse($authSession['token']);
 
-            die();
+            if($userTokenObject->getClaim('user_id') != $authSession['user_id']){
+                $this->unauthorize();
+                $this->flash->addMessage('message', 'We Could Not Sign You Into Your Account.');
+                return false;
+            }
+
+            $data = new ValidationData();
+
+            if($userTokenObject->validate($data)){
+                $_SESSION['user'] = [
+                    'authorize' => true,
+                    'user_id' => $userTokenObject->getClaim('user_id')
+                ];
+            }else{
+                $this->unauthorize();
+                $this->flash->addMessage('message', 'Please Sign In Again.');
+                return false;
+            }
+
+            return true;
+        }
+
+        public function unauthorize()
+        {
+            unset($_SESSION['authorize']);
         }
 
         public function signout()
         {
-            if(isset($_SESSION['user'])){
-                unset($_SESSION['user']);
-            }
+            unset($_SESSION['user']);
         }
     }

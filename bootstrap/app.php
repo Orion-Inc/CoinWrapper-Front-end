@@ -60,7 +60,7 @@
     };
 
     $container['auth'] = function ($container){
-        return new \Swap\Classes\Auth;
+        return new \Swap\Classes\Auth($container);
     };
 
     $container['api'] = function ($container){

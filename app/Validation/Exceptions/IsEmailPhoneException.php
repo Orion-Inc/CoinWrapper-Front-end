@@ -3,13 +3,11 @@
 
     use Respect\Validation\Exceptions\ValidationException as Exceptions;
 
-    class SigninException extends Exceptions
+    class IsEmailPhoneException extends Exceptions
     {
-        
-
         public static $defaultTemplates = [
             self::MODE_DEFAULT => [
-                self::STANDARD => 'Email Address of Phone Number does not exist'
+                self::STANDARD => 'Input Must Be A Valid Email Address or Phone Number'
             ],
         ];
     }

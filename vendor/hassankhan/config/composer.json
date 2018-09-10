@@ -5,13 +5,11 @@
     "keywords": ["configuration", "config", "json", "yaml", "yml", "ini", "xml", "unframework", "microphp"],
     "homepage": "http://hassankhan.me/config/",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Hassan Khan",
-            "role": "Developer",
-            "homepage": "http://hassankhan.me/"
-        }
-    ],
+    "authors": [{
+        "name": "Hassan Khan",
+        "role": "Developer",
+        "homepage": "http://hassankhan.me/"
+    }],
     "require": {
         "php": ">=5.5.9"
     },
