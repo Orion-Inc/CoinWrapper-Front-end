@@ -24,7 +24,7 @@
         $this->get('/sign-in', 'AuthController:signin')->setName('auth.sign-in');
         $this->post('/sign-in', 'AuthController:postSignin');
 
-        $this->get('/api/v1/auth/{email}', 'AuthController:checkAuthorization');
+        $this->get('/authorize/{email}', 'AuthController:checkAuthorization');
     })->add( new GuestMiddleware($container) );
 
     $app->group('', function() {

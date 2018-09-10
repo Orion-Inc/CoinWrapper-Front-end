@@ -352,6 +352,33 @@ input[type="submit"] {
     color: #c44569!important;
 }
 
+#header-holder.dashboard-header {
+    padding-top: 0px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+}
+
+#header-holder.homepage-header .logo-holder .logo {
+    background-image: url(../img/logo-text.png);
+}
+
+#header-holder.about-header .logo-holder .logo,
+#header-holder.contact-header .logo-holder .logo,
+#header-holder.terms-of-service-page .logo-holder .logo,
+#header-holder.logo-alt .logo-holder .logo {
+    background-image: url(../img/logo-alt.png);
+}
+
+#header-holder.dashboard-header .logo-holder .logo {
+    background-image: url(../img/logo-alt.png);
+}
+
+@media (max-width: 768px) {
+    #header-holder.dashboard-header .logo-holder .logo {
+        margin-top: -10px;
+    }
+}
+
 #header-holder.inner-header .bg-animation {
     opacity: 1;
     top: 0;
@@ -415,7 +442,7 @@ nav.custom-footer p.navbar-text>span {
     font-weight: 500;
     cursor: pointer;
     display: inline-block;
-    padding-top: 0px;
+    padding-top: 5px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
@@ -554,7 +581,7 @@ svg.logo text {
 }
 
 .navbar-toggle {
-    margin-top: 17px;
+    margin-top: 0px;
 }
 
 .navbar-nav>li>.dropdown-menu {
@@ -3048,7 +3075,7 @@ svg.logo text {
 
 .website-logo .logo {
     display: inline-block;
-    background-image: url("../img/logo.png");
+    background-image: url("../img/logo-alt.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -3643,8 +3670,6 @@ svg.logo text {
     transition: all 0.3s cubic-bezier(0.34, 1.61, 0.7, 1);
 }
 
-
-/*
 #header-holder.homepage-header #page-head .logo-icon:before {
     position: absolute;
     content: "";
@@ -3698,7 +3723,6 @@ svg.logo text {
     -webkit-transition: all 0.5s cubic-bezier(0.34, 1.61, 0.7, 1);
     transition: all 0.5s cubic-bezier(0.34, 1.61, 0.7, 1);
 }
-*/
 
 #header-holder.homepage-header #page-head .logo-icon img {
     width: 294px;
@@ -3710,6 +3734,7 @@ svg.logo text {
     -moz-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
+    cursor: pointer;
 }
 
 #header-holder.homepage-header #page-head .logo-icon:hover:before {
