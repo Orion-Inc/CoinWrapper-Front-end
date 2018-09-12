@@ -1,7 +1,7 @@
 <?php
     namespace Swap\ErrorHandler;
 
-    class NotFoundHandler extends ErrorHandler
+    class NotFoundHandler extends Handler
     {
         public function __invoke($request, $response)
         {

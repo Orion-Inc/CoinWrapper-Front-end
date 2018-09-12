@@ -29,6 +29,15 @@ input[type="submit"] {
     transition: all 0.3s ease;
 }
 
+a {
+    color: #da5f82;
+}
+
+a:hover,
+a:focus {
+    color: #cf6a87;
+}
+
 .rtl-cols div[class^="col-"] {
     float: right;
 }

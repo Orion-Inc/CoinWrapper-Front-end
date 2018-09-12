@@ -17,6 +17,7 @@
 
 
 
+
     $app->group('', function() {
         $this->get('/sign-up', 'AuthController:signup')->setName('auth.sign-up');
         $this->post('/sign-up', 'AuthController:postSignup');
@@ -30,8 +31,6 @@
     $app->group('', function() {
         $this->get('/authorize', 'AuthController:authorize')->setName('auth.authorize');
     })->add( new AuthMiddleware($container) );
-
-
 
     $app->group('', function() {
         $this->get('/sign-out', 'AuthController:signout')->setName('auth.sign-out');

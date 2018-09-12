@@ -51,6 +51,10 @@
         return new \Swap\ErrorHandler\NotFoundHandler($container);
     };
 
+    $container['notAllowedHandler'] = function ($container){
+        return new \Swap\ErrorHandler\NotAllowedHandler($container);
+    };
+
     $container['flash'] = function () {
         return new \Slim\Flash\Messages();
     };

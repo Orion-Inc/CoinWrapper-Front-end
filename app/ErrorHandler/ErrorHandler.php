@@ -3,18 +3,13 @@
 
     class ErrorHandler 
     {
-        protected $container;
-
-        public function __construct($container)
+        public function __invoke($request, $response)
         {
-            $this->container = $container;
-        }
-
-        public function __get($property)
-        {
-            if($this->container->{$property}){
-                return $this->container->{$property};
-            }
+            return $this->view->render($response, 'errors/404.twig', [
+                'pageTitle' => '404 Not Found',
+                'uri' => 'not-found-404',
+                'bodyCSS' => 'swap-bg'
+            ])->withStatus(404);
         }
     }
     
