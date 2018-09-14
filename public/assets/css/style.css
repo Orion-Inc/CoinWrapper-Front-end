@@ -363,8 +363,8 @@ a:focus {
 
 #header-holder.dashboard-header {
     padding-top: 0px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04);
 }
 
 #header-holder.homepage-header .logo-holder .logo {
@@ -590,7 +590,7 @@ svg.logo text {
 }
 
 .navbar-toggle {
-    margin-top: 0px;
+    margin-top: 8px;
 }
 
 .navbar-nav>li>.dropdown-menu {
@@ -1218,7 +1218,7 @@ svg.logo text {
 
 
 /*------------------------------------------------------------------
-	4. info Section Styles
+	info Section Styles
 -------------------------------------------------------------------*/
 
 #info {
@@ -1235,6 +1235,12 @@ svg.logo text {
     font-size: 22px;
     font-weight: 300;
     color: #3f3d59;
+}
+
+#info .info-text span {
+    color: #cb4b70;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 #h-info {
@@ -1266,7 +1272,7 @@ svg.logo text {
 
 
 /*------------------------------------------------------------------
-	5. Services Section Styles
+	Services Section Styles
 -------------------------------------------------------------------*/
 
 .service-box {
@@ -3613,7 +3619,7 @@ svg.logo text {
     font-size: 22px;
     font-weight: 300;
     color: #ffffff;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 #header-holder.contact-header .signin-button-holder a.signin-button {
@@ -3640,7 +3646,7 @@ svg.logo text {
 }
 
 #header-holder.homepage-header {
-    background-color: #c44569;
+    background-color: #ffffff;
     overflow: hidden;
 }
 
@@ -3654,7 +3660,7 @@ svg.logo text {
 }
 
 #header-holder.homepage-header #page-head {
-    padding-top: 110px;
+    padding-top: 150px;
     padding-bottom: 150px;
 }
 
@@ -3773,12 +3779,23 @@ svg.logo text {
     font-size: 20px;
     color: #333;
     margin-bottom: 35px;
+    opacity: 0.9;
 }
 
 #header-holder.homepage-header #page-head .head-content p>span {
     font-size: 22px;
     font-weight: 700;
     color: #cb4b70;
+}
+
+@media(max-width: 768px) {
+    #header-holder.homepage-header #page-head .head-content {
+        padding-top: 100px;
+    }
+    #header-holder.homepage-header #page-head .logo-icon {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 #header-holder.domainspage-header {
@@ -4074,10 +4091,10 @@ svg.logo text {
 }
 
 #ifeatures .feature-box .feature-details {
-    color: #678ea6;
+    color: #000000;
     font-size: 15px;
     font-weight: 300;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 #ifeatures.sfeatures {
@@ -4264,18 +4281,18 @@ svg.logo text {
     max-width: 191px;
     position: relative;
     padding: 60px 15px 30px;
-    border-radius: 14px;
-    background-color: #efefef;
-    border: 1px solid #e0e0e8;
+    border-radius: 4px;
+    border: 1px solid #f9f9fd;
     margin-top: 50px;
     margin-bottom: 50px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
-#team .person-box:hover,
-#team .person-box:focus {
-    background-color: #5a5787;
+#team .person-box:hover .person-social a>i,
+#team .person-box:focus .person-social a>i {
+    color: #cb4b70;
+    opacity: 1;
 }
 
 #team .person-box:hover .person-icon .person-img,
@@ -4285,12 +4302,7 @@ svg.logo text {
 
 #team .person-box:hover .person-name,
 #team .person-box:focus .person-name {
-    color: #ffffff;
-}
-
-#team .person-box:hover .person-title,
-#team .person-box:focus .person-title {
-    color: #ffffff;
+    color: #cb4b70;
 }
 
 #team .person-box:hover .person-social a .fa,
@@ -5005,7 +5017,6 @@ svg.logo text {
 }
 
 #contact-info {
-    background-color: #f9fbff;
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -5024,7 +5035,8 @@ svg.logo text {
 }
 
 #contact-info .info-box:hover .info-title:before {
-    background-color: #cb4b70;
+    background-color: #ffffff;
+    color: #cb4b70;
 }
 
 #contact-info .info-box .info-title {
@@ -5047,7 +5059,7 @@ svg.logo text {
     border-radius: 50px;
     width: 48px;
     height: 48px;
-    background-color: #f16ff9;
+    background-color: #cb4b70;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
@@ -5069,7 +5081,7 @@ svg.logo text {
 
 #contact-info .info-box .info-details {
     font-size: 15px;
-    color: #678ea6;
+    color: #000000;
 }
 
 #contact-info .info-box .info-details a {
@@ -5082,12 +5094,12 @@ svg.logo text {
 
 #contact-info .info-box .info-details a:hover,
 #contact-info .info-box .info-details a:focus {
-    color: #4c41e0;
+    color: #c44569;
 }
 
 #contact-info .info-box .info-details p {
     margin-bottom: 18px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 #contact-info .info-box .info-details p:last-child {
@@ -5095,8 +5107,6 @@ svg.logo text {
 }
 
 #extra-info {
-    background-color: #e7f4ff;
-    padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
 }
@@ -5117,8 +5127,8 @@ svg.logo text {
 #extra-info p {
     font-size: 16px;
     font-weight: 300;
-    color: #cb4b70;
-    opacity: 0.7;
+    color: #000000;
+    opacity: 0.9;
     line-height: 30px;
 }
 
@@ -6049,6 +6059,10 @@ svg.logo text {
 }
 
 @media (max-width: 480px) {
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        border-color: #ffffff;
+    }
     nav.custom-footer {
         padding: 100px 0px 50px;
     }
@@ -6060,6 +6074,9 @@ svg.logo text {
     }
     #header-holder .whitebg img {
         transform: skewY(-10deg) scale(2.2);
+    }
+    #header-holder.homepage-header .navbar-default .navbar-toggle .icon-bar {
+        background-color: #c44569;
     }
     #features-links-holder .feature-icon-holder .feature-title {
         display: none;
@@ -6189,4 +6206,667 @@ error-device-content {
         -webkit-transform: skew(10deg);
         transform: skew(10deg);
     }
+}
+
+
+/*------------------------------------------------------------------
+	Crytpo Features
+-------------------------------------------------------------------*/
+
+.crypto-feature {
+    align-items: center;
+}
+
+.crypto-feature .crypto-box {
+    display: -webkit-inline-box;
+    padding: 10px 25px 10px 10px;
+}
+
+.crypto-feature .crypto-box div.crypto-icon img {
+    padding: 0px 10px 0px 0px;
+}
+
+.crypto-feature .crypto-box .crypto-title,
+.crypto-feature .crypto-box .crypto-details {
+    display: table-caption;
+}
+
+.crypto-title {
+    font-weight: 900;
+}
+
+.crypto-title span {
+    float: right;
+    font-size: 10px;
+}
+
+.crypto-title span.up {
+    color: #2ecc71;
+}
+
+.crypto-title span.down {
+    color: #e74c3c;
+}
+
+.crypto-details {
+    font-size: 20px;
+}
+
+@media (max-width: 480px) {
+    .crypto-feature {
+        text-align: center;
+        align-items: center;
+    }
+    .crypto-feature .crypto-box {
+        margin-top: 5rem;
+    }
+}
+
+
+/*------------------------------------------------------------------
+	Utilities
+-------------------------------------------------------------------*/
+
+.pa-0 {
+    padding: 0px !important;
+}
+
+.pa-5 {
+    padding: 5px !important;
+}
+
+.pa-10 {
+    padding: 10px !important;
+}
+
+.pa-15 {
+    padding: 15px !important;
+}
+
+.pa-20 {
+    padding: 20px !important;
+}
+
+.pa-25 {
+    padding: 25px !important;
+}
+
+.pa-30 {
+    padding: 30px !important;
+}
+
+.pa-50 {
+    padding: 50px !important;
+}
+
+.pt-0 {
+    padding-top: 0px !important;
+}
+
+.pt-5 {
+    padding-top: 5px !important;
+}
+
+.pt-6 {
+    padding-top: 6px !important;
+}
+
+.pt-7 {
+    padding-top: 7px !important;
+}
+
+.pt-8 {
+    padding-top: 8px !important;
+}
+
+.pt-10 {
+    padding-top: 10px !important;
+}
+
+.pt-11 {
+    padding-top: 11px !important;
+}
+
+.pt-12 {
+    padding-top: 12px !important;
+}
+
+.pt-13 {
+    padding-top: 13px !important;
+}
+
+.pt-15 {
+    padding-top: 15px !important;
+}
+
+.pt-20 {
+    padding-top: 20px !important;
+}
+
+.pt-25 {
+    padding-top: 25px !important;
+}
+
+.pt-30 {
+    padding-top: 30px !important;
+}
+
+.pt-35 {
+    padding-top: 35px !important;
+}
+
+.pt-40 {
+    padding-top: 40px !important;
+}
+
+.pt-45 {
+    padding-top: 45px !important;
+}
+
+.pt-50 {
+    padding-top: 50px !important;
+}
+
+.pt-100 {
+    padding-top: 100px !important;
+}
+
+.pt-120 {
+    padding-top: 120px !important;
+}
+
+.pt-20p {
+    padding-top: 20% !important;
+}
+
+.pb-0 {
+    padding-bottom: 0px !important;
+}
+
+.pb-5 {
+    padding-bottom: 5px !important;
+}
+
+.pb-10 {
+    padding-bottom: 10px !important;
+}
+
+.pb-12 {
+    padding-bottom: 12px !important;
+}
+
+.pb-15 {
+    padding-bottom: 15px !important;
+}
+
+.pb-20 {
+    padding-bottom: 20px !important;
+}
+
+.pb-22 {
+    padding-bottom: 22px !important;
+}
+
+.pb-25 {
+    padding-bottom: 25px !important;
+}
+
+.pb-30 {
+    padding-bottom: 30px !important;
+}
+
+.pb-35 {
+    padding-bottom: 35px !important;
+}
+
+.pb-40 {
+    padding-bottom: 40px !important;
+}
+
+.pb-45 {
+    padding-bottom: 45px !important;
+}
+
+.pb-50 {
+    padding-bottom: 50px !important;
+}
+
+.pb-59 {
+    padding-bottom: 59px !important;
+}
+
+.pb-100 {
+    padding-bottom: 100px !important;
+}
+
+.pb-147 {
+    padding-bottom: 147px !important;
+}
+
+.pb-160 {
+    padding-bottom: 160px !important;
+}
+
+.pb-170 {
+    padding-bottom: 170px !important;
+}
+
+.pl-0 {
+    padding-left: 0px !important;
+}
+
+.pl-5 {
+    padding-left: 5px !important;
+}
+
+.pl-10 {
+    padding-left: 10px !important;
+}
+
+.pl-15 {
+    padding-left: 15px !important;
+}
+
+.pl-20 {
+    padding-left: 20px !important;
+}
+
+.pl-25 {
+    padding-left: 25px !important;
+}
+
+.pl-30 {
+    padding-left: 30px !important;
+}
+
+.pl-35 {
+    padding-left: 35px !important;
+}
+
+.pl-40 {
+    padding-left: 40px !important;
+}
+
+.pl-45 {
+    padding-left: 45px !important;
+}
+
+.pl-50 {
+    padding-left: 50px !important;
+}
+
+.pr-0 {
+    padding-right: 0px !important;
+}
+
+.pr-5 {
+    padding-right: 5px !important;
+}
+
+.pr-10 {
+    padding-right: 10px !important;
+}
+
+.pr-15 {
+    padding-right: 15px !important;
+}
+
+.pr-20 {
+    padding-right: 20px !important;
+}
+
+.pr-25 {
+    padding-right: 25px !important;
+}
+
+.pr-30 {
+    padding-right: 30px !important;
+}
+
+.pr-35 {
+    padding-right: 35px !important;
+}
+
+.pr-40 {
+    padding-right: 40px !important;
+}
+
+.pr-45 {
+    padding-right: 45px !important;
+}
+
+.pr-50 {
+    padding-right: 50px !important;
+}
+
+.ma-0 {
+    margin: 0px !important;
+}
+
+.ma-5 {
+    margin: 5px !important;
+}
+
+.ma-10 {
+    margin: 10px !important;
+}
+
+.ma-15 {
+    margin: 15px !important;
+}
+
+.ma-20 {
+    margin: 20px !important;
+}
+
+.ma-25 {
+    margin: 25px !important;
+}
+
+.ma-30 {
+    margin: 30px !important;
+}
+
+.mt-0 {
+    margin-top: 0px !important;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-25 {
+    margin-top: 25px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-35 {
+    margin-top: 35px !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.mt-45 {
+    margin-top: 45px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-55 {
+    margin-top: 55px !important;
+}
+
+.mt-60 {
+    margin-top: 60px !important;
+}
+
+.mt-65 {
+    margin-top: 65px !important;
+}
+
+.mt-70 {
+    margin-top: 70px !important;
+}
+
+.mt-75 {
+    margin-top: 75px !important;
+}
+
+.mt-80 {
+    margin-top: 80px !important;
+}
+
+.mt-85 {
+    margin-top: 85px !important;
+}
+
+.mt-90 {
+    margin-top: 90px !important;
+}
+
+.mt-95 {
+    margin-top: 95px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0px !important;
+}
+
+.mb-5 {
+    margin-bottom: 5px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-25 {
+    margin-bottom: 25px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-35 {
+    margin-bottom: 35px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-45 {
+    margin-bottom: 45px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mb-55 {
+    margin-bottom: 55px !important;
+}
+
+.mb-60 {
+    margin-bottom: 60px !important;
+}
+
+.mb-65 {
+    margin-bottom: 65px !important;
+}
+
+.mb-70 {
+    margin-bottom: 70px !important;
+}
+
+.mb-75 {
+    margin-bottom: 75px !important;
+}
+
+.mb-80 {
+    margin-bottom: 80px !important;
+}
+
+.mb-85 {
+    margin-bottom: 85px !important;
+}
+
+.mb-90 {
+    margin-bottom: 90px !important;
+}
+
+.mb-95 {
+    margin-bottom: 95px !important;
+}
+
+.ml-0 {
+    margin-left: 0px !important;
+}
+
+.ml-5 {
+    margin-left: 5px !important;
+}
+
+.ml-10 {
+    margin-left: 10px !important;
+}
+
+.ml-15 {
+    margin-left: 15px !important;
+}
+
+.ml-20 {
+    margin-left: 20px !important;
+}
+
+.ml-25 {
+    margin-left: 25px !important;
+}
+
+.ml-30 {
+    margin-left: 30px !important;
+}
+
+.ml-35 {
+    margin-left: 35px !important;
+}
+
+.ml-40 {
+    margin-left: 40px !important;
+}
+
+.ml-45 {
+    margin-left: 45px !important;
+}
+
+.ml-50 {
+    margin-left: 50px !important;
+}
+
+.ml-55 {
+    margin-left: 55px !important;
+}
+
+.ml-60 {
+    margin-left: 60px !important;
+}
+
+.mr-0 {
+    margin-right: 0px !important;
+}
+
+.mr-5 {
+    margin-right: 5px !important;
+}
+
+.mr-10 {
+    margin-right: 10px !important;
+}
+
+.mr-15 {
+    margin-right: 15px !important;
+}
+
+.mr-20 {
+    margin-right: 20px !important;
+}
+
+.mr-25 {
+    margin-right: 25px !important;
+}
+
+.mr-30 {
+    margin-right: 30px !important;
+}
+
+.mr-35 {
+    margin-right: 35px !important;
+}
+
+.mr-40 {
+    margin-right: 40px !important;
+}
+
+.mr-45 {
+    margin-right: 45px !important;
+}
+
+.mr-50 {
+    margin-right: 50px !important;
+}
+
+.mr-55 {
+    margin-right: 55px !important;
+}
+
+.mr-60 {
+    margin-right: 60px !important;
+}
+
+.ml-auto {
+    margin-left: auto !important;
+}
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.clearfix {
+    overflow: hidden;
+    clear: both;
+    float: none;
+}
+
+.fs-15 {
+    font-size: 15px !important;
+    ;
+}
+
+
+/*------------------------------------------------------------------
+	Backgrounds
+-------------------------------------------------------------------*/
+
+div.crypto-bg-1::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/backgrounds/crypto-bg-1.png);
+    background-size: cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }

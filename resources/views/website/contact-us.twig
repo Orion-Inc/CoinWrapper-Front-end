@@ -1,22 +1,59 @@
 {% extends 'template/app.twig' %}
-
-
-
+{% set pageText = "If you have any concerns, questions or need clarity <br> as may apply to our platform or policies, kindly reach out to us here." %}
 {% block body %}
     <div id="header-holder" class="inner-header contact-header">
         <div class="whitebg"><img src="assets/img/swapbg.svg" alt=""></div>
         {% include 'template/partials/html_blocks/navbar.twig' %}
         {% include 'template/partials/html_blocks/page-head.twig' %}
     </div>
-
-
-
-
-
-
-
-
-
-
+    <div id="contact-info" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-box">
+                        <div class="info-title phone-icon">Call Us</div>
+                        <div class="info-details">
+                            <p>At vero eos et accusamus et iusto odio</p>
+                            <p>dignissimos ducimus qui blanditiis praesentium voluptatum div atque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-box">
+                        <div class="info-title chat-icon">Chat now</div>
+                        <div class="info-details">
+                            <p>At vero eos et accusamus et iusto odio</p>
+                            <p>dignissimos ducimus qui blanditiis praesentium voluptatum div atque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-box">
+                        <div class="info-title location-icon">Visit us</div>
+                        <div class="info-details">
+                            <p>At vero eos et accusamus et iusto odio</p>
+                            <p>dignissimos ducimus qui blanditiis praesentium voluptatum div atque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div id="extra-info" class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-holder crypto-bg-1">
+                        <h1>Ready? Let’s create<br>your Swap Account.</h1>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus<br>qui blanditiis praesentium voluptatum div atque corrupti quos<br>dolores et quas molestias.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 link-holder">
+                    <a href="{{ path_for('auth.sign-up') }}" class="ybtn ybtn-accent-color">Create Your Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
     {% include 'template/partials/html_blocks/footer.twig' %}
 {% endblock %}
