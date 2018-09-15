@@ -16,7 +16,13 @@
                     {% if user.checkSession %}
                     <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse" id="menu">
                         <ul class="nav navbar-nav navbar-right">
+                            {% if uri in ['home', 'buy-sell', 'about-us', 'contact-us'] %}
+                            <li><a href="{{ path_for('home') }}">{{ app.name }}</a></li>
+                            <li><a href="{{ path_for('buy-sell') }}">Buy/Sell</a></li>
+                            <li><a href="{{ path_for('about-us') }}">About Us</a></li>
+                            <li><a href="{{ path_for('contact-us') }}">Contact Us</a></li>
                             <li><a href="{{ path_for('app.dashboard') }}">Dashboard</a></li>
+                            {% endif %}
                             <li class="dropdown">
                                 <a href="#">{{ user.userSession.user_id }} <i class="fa fa-caret-down"></i></a>
                                 <ul class="dropdown-menu">

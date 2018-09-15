@@ -24,7 +24,7 @@
             $valaidation = $this->validator->validate($request, [
                 'firstname' => v::notEmpty()->alpha()->setName('First Name'),
                 'othernames' => v::notEmpty()->alpha()->setName('Other Names'),
-                'username' => v::noWhitespace()->notEmpty()->alpha()->setName('Username'),
+                'username' => v::noWhitespace()->notEmpty()->alnum()->setName('Username'),
                 'email' => v::noWhitespace()->notEmpty()->email()->setName('Email Address'),
                 'phonenumber' =>  v::noWhitespace()->notEmpty()->phone()->setName('Phone Number')
             ]);
