@@ -36,7 +36,8 @@
         $this->get('/sign-out', 'AuthController:signout')->setName('auth.sign-out');
 
         $this->get('/dashboard', 'AppController:dashboard')->setName('app.dashboard');
-        $this->get('/buy', 'AppController:buysell')->setName('app.buy-sell');
+        $this->get('/buy', 'AppController:buy')->setName('app.buy');
+        $this->get('/sell', 'AppController:sell')->setName('app.sell');
         $this->get('/trade', 'AppController:trade')->setName('app.trade');
         $this->get('/wallet', 'AppController:wallet')->setName('app.wallet');
         $this->get('/account-settings', 'AppController:accountsettings')->setName('app.account-settings');

@@ -6884,3 +6884,26 @@ div.crypto-bg-1::after {
         padding-bottom: 0px;
     }
 }
+
+#dashboard ul.nav.nav-pills.nav-stacked {
+    border-right: #d8d8d8 1px solid;
+}
+
+#dashboard .nav.nav-pills.nav-stacked a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+}
+
+#dashboard .nav.nav-pills.nav-stacked li.active>a,
+#dashboard .nav.nav-pills.nav-stacked a:hover,
+#dashboard .nav.nav-pills.nav-stacked a:focus {
+    color: #c44569;
+    border-radius: 0px;
+    border-right: #c44569 2px solid;
+    background-color: #eee;
+}
+
+#dashboard .nav.nav-pills.nav-stacked span.typcn {
+    font-size: 1.5em;
+}

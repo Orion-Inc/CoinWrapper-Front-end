@@ -67,3 +67,15 @@
     </div>
 </nav>
 {% endif %}
+
+{% if uri in ['dashboard','buy','sell','trade','wallet','account-settings'] %}
+<nav class="navbar navbar-static-bottom custom-footer">
+    <div class="container">
+        <p class="navbar-text"><a href="{{ path_for('home') }}">{{ app.name }}</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
+        <div class="navbar-right">
+            <a href="{{ path_for('faqs') }}" class="navbar-text">FAQs</a>
+            <a href="{{ path_for('terms-of-service') }}" class="navbar-text">Terms of Service</a>
+        </div>
+    </div>
+</nav>
+{% endif %}

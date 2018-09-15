@@ -1,31 +1,31 @@
 <ul class="nav nav-pills nav-stacked">
-    <li role="presentation">
+    <li role="presentation" {{ uri == "dashboard" ? "class=active" : '' }}>
         <a href="{{ path_for('app.dashboard') }}">
-            <i class="typcn typcn-home-outline"></i>
+            <span class="typcn typcn-home-outline"></span>
             Dashboard
         </a>
     </li>
-    <li role="presentation">
-        <a href="{{ path_for('app.buy-sell') }}">
-            <i class="typcn typcn-arrow-repeat"></i>
+    <li role="presentation" {{ uri == "buy" or uri == "sell" ? "class=active" : '' }}>
+        <a href="{{ path_for('app.buy') }}">
+            <span class="typcn typcn-arrow-repeat"></span>
             Buy/Sell
         </a>
     </li>
-    <li role="presentation">
+    <li role="presentation" {{ uri == "trade" ? "class=active" : '' }}>
         <a href="{{ path_for('app.trade') }}">
-            <i class="typcn typcn-flow-children"></i>
+            <span class="typcn typcn-flow-children"></span>
             Post Ad
         </a>
     </li>
-    <li role="presentation">
+    <li role="presentation" {{ uri == "wallet" ? "class=active" : '' }}>
         <a href="{{ path_for('app.wallet') }}">
-            <i class="typcn typcn-archive"></i>
+            <span class="typcn typcn-archive"></span>
             Wallet
         </a>
     </li>
-    <li role="presentation">
+    <li role="presentation" {{ uri == "account-settings" ? "class=active" : '' }}>
         <a href="{{ path_for('app.account-settings') }}">
-            <i class="typcn typcn-cog-outline"></i>
+            <span class="typcn typcn-cog-outline"></span>
             Settings
         </a>
     </li>
