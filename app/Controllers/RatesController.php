@@ -1,7 +1,7 @@
 <?php
     namespace Swap\Controllers;
 
-    use Swap\Classes\RateApi as callApi;
+    use Swap\APIs\RateApi as callApi;
 
     class RatesController extends Controller
     {

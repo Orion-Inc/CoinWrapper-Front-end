@@ -1,5 +1,5 @@
 <?php
-    namespace Swap\Classes;
+    namespace Swap\APIs;
 
     use GuzzleHttp\Client;
     use GuzzleHttp\Psr7\Request;
