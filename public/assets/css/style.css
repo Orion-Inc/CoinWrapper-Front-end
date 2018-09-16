@@ -3,6 +3,32 @@
 @import url("../fonts/custom.css");
 
 /*------------------------------------------------------------------
+	Preloader
+-------------------------------------------------------------------*/
+
+#preloader {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    transition: all .5s;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+#preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*------------------------------------------------------------------
 	General Styles
 -------------------------------------------------------------------*/
 
@@ -6246,7 +6272,7 @@ error-device-content {
 }
 
 .crypto-details {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 @media (max-width: 480px) {
@@ -6852,20 +6878,33 @@ error-device-content {
 	Backgrounds
 -------------------------------------------------------------------*/
 
-div.crypto-bg-1::after {
+div.crypto-bg-1::after,
+div.crypto-bg-2::after,
+div.crypto-bg-3::after {
     content: "";
     display: block;
     position: absolute;
     z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/backgrounds/crypto-bg-1.png);
+    width: auto;
+    height: auto;
     background-size: cover;
     opacity: 0.2;
-    top: 0;
+    top: -50px;
     left: 0;
     bottom: 0;
     right: 0;
+}
+
+div.crypto-bg-1::after {
+    background-image: url(../img/backgrounds/crypto-bg-1.png);
+}
+
+div.crypto-bg-2::after {
+    background-image: url(../img/backgrounds/crypto-bg-2.png);
+}
+
+div.crypto-bg-3::after {
+    background-image: url(../img/backgrounds/crypto-bg-3.png);
 }
 
 

@@ -20,17 +20,8 @@
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
     
     {% block body %} {% endblock %}
-
-    <script src="{{ base_url() }}/assets/js/jquery.min.js"></script>
-    {% if uri in ['not-found-404','not-allowed-405'] %}
-    <script src="{{ base_url() }}/assets/js/bootstrap-v4.min.js"></script>
-    {% else %}
-    <script src="{{ base_url() }}/assets/js/bootstrap.min.js"></script>
-    {% endif %}
-    <script src="{{ base_url() }}/assets/js/bootstrap-slider.min.js"></script>
-    <script src="{{ base_url() }}/assets/js/slick.min.js"></script>
-    <script src="{{ base_url() }}/assets/js/main.js"></script>
-
-    <!--<script src="{{ base_url() }}/assets/js/app/{{ uri }}.js"></script>-->
+    <script src="{{ base_url() }}/assets/js/app.js"></script>
+    {% block scripts %} {% endblock %}
+    <script>var preloader = $("#preloader");setTimeout( function(){ preloader.fadeOut("slow");},7000);</script>
 </body>
 </html>

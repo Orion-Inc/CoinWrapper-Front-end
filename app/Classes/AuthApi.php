@@ -4,7 +4,7 @@
     use GuzzleHttp\Client;
     use GuzzleHttp\Psr7\Request;
 
-    class Api
+    class AuthApi
     {
         private static $client = [
             'base_uri' => 'http://localhost:8080',

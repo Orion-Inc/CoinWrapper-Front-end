@@ -16,7 +16,7 @@ mainSlider.slick({
 mainSlider.on('afterChange', function(event, slick, currentSlide, nextSlide){
     $('.slide > div:nth-child(1)','#main-slider').removeClass("animated");
     $('.slide > div:nth-child(2)','#main-slider').removeClass("animated animation-delay1");
- 
+
     $('.slick-active > div:nth-child(1)','#main-slider').addClass("animated");
     $('.slick-active > div:nth-child(2)','#main-slider').addClass("animated animation-delay1");
 });
@@ -47,6 +47,7 @@ infoSlider.slick({
     autoplay: true,
     speed: 200
 });
+
 $(window).on("load", function() {
     // Adding animation to the #main-slider
     $('.slick-active > div:nth-child(1)','#main-slider').addClass("animated");
@@ -109,23 +110,4 @@ $(window).on("load", function() {
         $(".show-details", "#more-info").removeClass("show-details");
         $(".info-d"+$(this).data("id"), "#more-info").addClass("show-details");
     });
-    
-    // Servers Marker Location in our servers page
-    var locationsList = [["California",97,48,"r"],["Costa Rika",212,31,"l"],["Vancouver",136,161,"r"],["Brazil",303,233,"r"],["Alexandria",149,349,"l"],["Dubai",174,469,"l"],["Delhi",204,605,"r"],["Munech",91,417,"r"],["Barcelona",112,279,"l"],["Moscow",41,554,"r"],["Hong Kong",151,663,"r"],["Melborne",356,688,"l"],["Pulau Ujong",265,578,"l"]];
-    
-    var serversLocationHolder = $('.servers-location-holder','#serversmap.st');
-    for(var i=0;i<=locationsList.length-1;i++){
-        var sMarkerDir = locationsList[i][3];
-        var leftText = "";
-        var rightText = "";
-        if(sMarkerDir=="r"){
-            leftText = "";
-            rightText = locationsList[i][0];
-        }else if(sMarkerDir=="l"){
-            leftText = locationsList[i][0];
-            rightText = "";
-        }
-        serversLocationHolder.append('<div class="server-marker" style="top:'+locationsList[i][1]+'px;left:'+locationsList[i][2]+'px;"><span class="left-text">'+leftText+'</span><span class="marker-icon"></span><span class="right-text">'+rightText+'</span></div>');
-    }
-    
 });

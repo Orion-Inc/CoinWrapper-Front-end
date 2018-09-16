@@ -1,7 +1,7 @@
 <?php
     namespace Swap\Models;
 
-    use Swap\Classes\Api as callApi;
+    use Swap\Classes\AuthApi as callApi;
 
     class User
     {

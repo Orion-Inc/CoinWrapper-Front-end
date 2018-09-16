@@ -95,6 +95,10 @@
         return new \Swap\Controllers\Errors\ErrorsController($container);
     };
 
+    $container['RatesController'] = function ($container){
+        return new \Swap\Controllers\RatesController($container);
+    };
+
     $app->add(new \Swap\Middleware\ErrorsMiddleware($container));
     $app->add(new \Swap\Middleware\KeepInputMiddleware($container));
     $app->add(new \Swap\Middleware\CsrfMiddleware($container));

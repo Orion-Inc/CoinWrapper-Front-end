@@ -1,7 +1,7 @@
 <?php
     namespace Swap\Classes;
 
-    use Swap\Classes\Api as callApi;
+    use Swap\Classes\AuthApi as callApi;
     use Lcobucci\JWT\Parser;
     use Lcobucci\JWT\ValidationData;
 

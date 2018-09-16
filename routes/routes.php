@@ -16,8 +16,6 @@
     $app->get('/terms-of-service', 'WebController:termsofservice')->setName('terms-of-service');
 
 
-
-
     $app->group('', function() {
         $this->get('/sign-up', 'AuthController:signup')->setName('auth.sign-up');
         $this->post('/sign-up', 'AuthController:postSignup');
@@ -44,6 +42,8 @@
         $this->get('/help', 'AppController:help')->setName('app.help');
     })->add( new DashboardMiddleware($container) );
 
+
+    $app->get('/rates-api', 'RatesController:getRates');
 
     
 
