@@ -1,4 +1,4 @@
-const baseUrl = "http://app100.localhost/CoinWrapper-Front-end/public/rates-api";
+const baseUrl = window.location.origin+"/public/rates-api";
 
 const app = new Vue({
     el: '#rates',
