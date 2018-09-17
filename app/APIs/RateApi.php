@@ -55,15 +55,15 @@
             $response = [
                 'btc' => [
                     'price' => number_format($rates['BTC']['GHS']['PRICE'],2),
-                    'pctchange' => number_format((float)$rates['BTC']['GHS']['CHANGEPCT24HOUR'],2)
+                    'pctchange' => number_format((float)$rates['BTC']['GHS']['CHANGEPCT24HOUR'],2)."%"
                 ],
                 'eth' => [
                     'price' => number_format($rates['ETH']['GHS']['PRICE'],2),
-                    'pctchange' => number_format((float)$rates['ETH']['GHS']['CHANGEPCT24HOUR'],2)
+                    'pctchange' => number_format((float)$rates['ETH']['GHS']['CHANGEPCT24HOUR'],2)."%"
                 ],
                 'ltc' => [
                     'price' => number_format($rates['LTC']['GHS']['PRICE'],2),
-                    'pctchange' => number_format((float)$rates['LTC']['GHS']['CHANGEPCT24HOUR'],2)
+                    'pctchange' => number_format((float)$rates['LTC']['GHS']['CHANGEPCT24HOUR'],2)."%"
                 ]
             ];
 
