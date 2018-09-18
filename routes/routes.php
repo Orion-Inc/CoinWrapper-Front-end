@@ -15,6 +15,8 @@
 
     $app->get('/terms-of-service', 'WebController:termsofservice')->setName('terms-of-service');
 
+    $app->get('/help', 'WebController:help')->setName('help');
+
 
     $app->group('', function() {
         $this->get('/sign-up', 'AuthController:signup')->setName('auth.sign-up');
@@ -39,7 +41,6 @@
         $this->get('/trade', 'AppController:trade')->setName('app.trade');
         $this->get('/wallet', 'AppController:wallet')->setName('app.wallet');
         $this->get('/account-settings', 'AppController:accountsettings')->setName('app.account-settings');
-        $this->get('/help', 'AppController:help')->setName('app.help');
     })->add( new DashboardMiddleware($container) );
 
 

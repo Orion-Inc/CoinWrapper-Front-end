@@ -43,6 +43,14 @@
             ]);
         }
 
+        public function help($request, $response)
+        {
+            return $this->view->render($response, 'website/help.twig', [
+                'pageTitle' => 'Help',
+                'uri' => 'help'
+            ]);
+        }
+
         public function buySell($request, $response)
         {
             return $this->view->render($response, 'website/buy-sell.twig', [

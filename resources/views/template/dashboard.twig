@@ -15,31 +15,33 @@
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
 
     <link href='{{ base_url() }}/assets/img/logo.png' rel='icon'>
+    <script src="{{ base_url() }}/assets/js/swap.js"></script>
+    <script src="{{ base_url() }}/../node_modules/vue-router/dist/vue-router.js"></script>
 </head>
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
-    
+    {% include 'partials/components/preloader.twig' %}
     {% block body %} 
-        <div id="header-holder" class="inner-header dashboard-header">
-            <div class="whitebg"><img src="assets/img/swapbg.svg" alt=""></div>
-            {% include 'template/partials/html_blocks/navbar.twig' %}
-        </div>
-        <div id="dashboard" class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                        {% include 'template/partials/html_blocks/sidebar.twig' %}
+        <div>
+            <div id="header-holder" class="inner-header dashboard-header">
+                <div class="whitebg"><img src="assets/img/swapbg.svg" alt=""></div>
+                {% include 'template/partials/html_blocks/navbar.twig' %}
+            </div>
+            <div id="dashboard" class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+                            {% include 'template/partials/html_blocks/sidebar.twig' %}
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-9">
-                    {% block mainarea %} {% endblock %}
+                    <div class="col-md-9">
+                        <div id="app"></div>
+                    </div>
                 </div>
             </div>
         </div>
-
         {% include 'template/partials/html_blocks/footer.twig' %}
     {% endblock %}
-
-    <script src="{{ base_url() }}/assets/js/app.js"></script>
-    {% block scripts %} {% endblock %}
+    <script src="{{ base_url() }}/assets/js/dashboard/{{ uri }}.js"></script>
+    <script>var preloader = $("#preloader");preloader.fadeOut("slow");$("#app").fadeIn("slow");</script>
 </body>
 </html>
