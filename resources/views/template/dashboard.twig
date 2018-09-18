@@ -15,8 +15,6 @@
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
 
     <link href='{{ base_url() }}/assets/img/logo.png' rel='icon'>
-    <script src="{{ base_url() }}/assets/js/swap.js"></script>
-    <script src="{{ base_url() }}/../node_modules/vue-router/dist/vue-router.js"></script>
 </head>
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
     {% include 'partials/components/preloader.twig' %}
@@ -41,6 +39,8 @@
         </div>
         {% include 'template/partials/html_blocks/footer.twig' %}
     {% endblock %}
+    <script src="{{ base_url() }}/assets/js/swap.js"></script>
+    <script src="{{ base_url() }}/../node_modules/vue-router/dist/vue-router.js"></script>
     <script src="{{ base_url() }}/assets/js/dashboard/{{ uri }}.js"></script>
     <script>var preloader = $("#preloader");preloader.fadeOut("slow");$("#app").fadeIn("slow");</script>
 </body>
