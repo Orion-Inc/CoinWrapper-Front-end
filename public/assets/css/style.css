@@ -3344,35 +3344,35 @@ svg.logo text {
 }
 
 .form-holder .signin-signup-form ::-webkit-input-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-holder .signin-signup-form :-moz-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-holder .signin-signup-form ::-moz-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-holder .signin-signup-form :-ms-input-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-control ::-webkit-input-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-control :-moz-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-control ::-moz-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .form-control :-ms-input-placeholder {
-    color: #526489;
+    color: #b9b9b9;
 }
 
 .signin-signup-form .form-items {
