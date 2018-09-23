@@ -2,31 +2,31 @@
     <li role="presentation" {{ uri == "dashboard" ? "class=active" : '' }}>
         <a href="{{ path_for('app.dashboard') }}">
             <span class="typcn typcn-home-outline"></span>
-            Dashboard
+            <span>Dashboard</span>
         </a>
     </li>
     <li role="presentation" {{ uri == "buy" or uri == "sell" ? "class=active" : '' }}>
         <a href="{{ path_for('app.buy') }}">
             <span class="typcn typcn-arrow-repeat"></span>
-            Buy/Sell
+            <span>Buy/Sell</span>
         </a>
     </li>
     <li role="presentation" {{ uri == "trade" ? "class=active" : '' }}>
         <a href="{{ path_for('app.trade') }}">
             <span class="typcn typcn-flow-children"></span>
-            Post Ad
+            <span>Post Ad</span>
         </a>
     </li>
     <li role="presentation" {{ uri == "wallet" ? "class=active" : '' }}>
         <a href="{{ path_for('app.wallet') }}">
             <span class="typcn typcn-archive"></span>
-            Wallet
+            <span>Wallet</span>
         </a>
     </li>
     <li role="presentation" {{ uri == "account-settings" ? "class=active" : '' }}>
         <a href="{{ path_for('app.account-settings') }}">
             <span class="typcn typcn-cog-outline"></span>
-            Settings
+            <span>Settings</span>
         </a>
     </li>
 </ul>

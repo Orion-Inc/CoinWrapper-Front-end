@@ -10,19 +10,35 @@
     {% else %}
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/bootstrap.min.css">
     {% endif %}
-    <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/bootstrap-slider.min.css">
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/typicons.min.css">
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
 
     <link href='{{ base_url() }}/assets/img/logo.png' rel='icon'>
 </head>
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
-    
-    {% block body %} {% endblock %}
-    
+    {% include 'partials/components/preloader.twig' %}
+    {% block body %} 
+        <div id="header-holder" class="dashboard-header {{ uri in ['dashboard','buy','sell','trade'] ? "navbar-fixed-top" : '' }}">
+            {% include 'template/partials/html_blocks/navbar.twig' %}
+        </div>
+        <div id="dashboard" class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+                        {% include 'template/partials/html_blocks/sidebar.twig' %}
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    {% block main %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        {% include 'template/partials/html_blocks/footer.twig' %}
+    {% endblock %}
     <script src="{{ base_url() }}/assets/js/swap.js"></script>
-    {% block scripts %} {% endblock %}
-    <script>var preloader = $("#preloader");setTimeout( function(){ preloader.fadeOut("slow");$("body").fadeIn("slow");},7000);</script>
+    <script src="{{ base_url() }}/../node_modules/vue-router/dist/vue-router.js"></script>
+    <script src="{{ base_url() }}/assets/js/dashboard/{{ uri }}.js"></script>
+    <script>var preloader = $("#preloader");preloader.fadeOut("slow");$("#app").fadeIn("slow");</script>
 </body>
 </html>
