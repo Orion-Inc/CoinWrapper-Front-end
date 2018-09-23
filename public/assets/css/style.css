@@ -431,6 +431,11 @@ a:focus {
     background-color: transparent;
 }
 
+#header-holder.inner-header .navbar-default .navbar-toggle .icon-bar,
+#header-holder.about-header .navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+
 nav.custom-footer a {
     text-decoration: none!important;
 }
@@ -6273,12 +6278,19 @@ error-device-content {
 }
 
 @media (max-width: 480px) {
-    .crypto-feature {
-        text-align: center;
-        align-items: center;
+    .crypto-outer-div {
+        padding: 30px 20%;
     }
     .crypto-feature .crypto-box {
-        margin-top: 5rem;
+        margin: 0 auto;
+        width: 300px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .crypto-outer-div {
+        padding: 30px 15%;
     }
 }
 

@@ -53,7 +53,7 @@
 </div>
 {% endif %}
 
-{% if uri in ['activate', 'authorize', 'terms-of-service', 'faqs'] %}
+{% if uri in ['activate', 'authorize', 'terms-of-service', 'faqs', 'help'] %}
 <nav class="navbar navbar-static-bottom custom-footer">
     <div class="container">
         <p class="navbar-text"><a href="{{ path_for('home') }}">{{ app.name }}</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
