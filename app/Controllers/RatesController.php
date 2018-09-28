@@ -1,18 +1,13 @@
 <?php
     namespace Swap\Controllers;
 
-    use Swap\APIs\RatesApi as callApi;
+    use Swap\APIs\RateApi as callApi;
 
     class RatesController extends Controller
     {
-        public function getCoinRates($request, $response)
+        public function getRates($request, $response)
         {
-            callApi::coinrates();
-        }
-
-        public function getExchangeRates($request, $response)
-        {
-            callApi::exchangerates($request->getParam('currency'));
+            callApi::rates();
         }
     }
     

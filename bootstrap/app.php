@@ -91,10 +91,6 @@
         return new \Swap\Controllers\AppController($container);
     };
 
-    $container['BuySellController'] = function ($container){
-        return new \Swap\Controllers\Transactions\BuySellController($container);
-    };
-
     $container['ErrorsController'] = function ($container){
         return new \Swap\Controllers\Errors\ErrorsController($container);
     };
