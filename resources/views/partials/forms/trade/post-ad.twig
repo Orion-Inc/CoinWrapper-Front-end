@@ -1,16 +1,15 @@
-<form class="form" id="post-ad-form" action="{{ path_for('app.trade') }}" method="POST" autocomplete="off">
-    {{ csrf.fields | raw }}
-    <div>
-        <h4>Trade Type - <span class="text-purple-light" v-text="selectedTradeTypeText"></span></h4>
+<form class="form" id="post-ad-form">
+    <div id="trade-type">
+        <h4>Trade Type</h4>
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-text mb-10">
-                        <input type="radio" name="trade-type" id="rad1" value="buy" checked v-on:click="changeTradeType">
+                        <input type="radio" name="trade-type" id="rad1" value="buy" checked>
                         <label for="rad1">Buy</label>
                     </div>
                     <div class="form-text">
-                        <input type="radio" name="trade-type" id="rad2" value="sell" v-on:click="changeTradeType">
+                        <input type="radio" name="trade-type" id="rad2" value="sell">
                         <label for="rad2">Sell</label>
                     </div>
                 </div>
@@ -23,62 +22,47 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-text">
-                        <select name="coin-name" v-on:change="selectCoin">
+                        <select id="coin-name" name="coin-name">
                             <option value="" disabled selected>Select An Option</option>
-                            <option value="btc">Bitcoin</option>
-                            <option value="eth">Ethereum</option>
-                            <option value="ltc">Litecoin</option>
+                            <option value="">Bitcoin</option>
+                            <option value="">Ethereum</option>
+                            <option value="">Litecoin</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-2">
-                <div class="row" >
-                    <template v-if="selectedCoin">
-                        <div class="col-xs-4">
-                            <p><span v-text="selectedCoinName"></span> Price</p>
-                        </div>
-                        <div class="col-xs-8">
-                            <p>GHS <strong v-text="selectedCoinGHS"></strong> / USD <strong v-text="selectedCoinUSD"></strong></p>
-                        </div>
-                    </template>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <span></span> USD Price
+                    </div>
+                    <div class="col-xs-6">
+                        <strong><span></span> GHS / <span></span> USD</strong>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <hr>
-    <div class="mb-15">
-        <h4>USD to GHS Exchange Rate</h4>
+    <div id="exhange-rate" class="mb-15">
+        <h4>USD to GHS rate</h4>
         <div class="row">
-            <template v-if="changeRate">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <div class="form-text">
-                            <input step="any" type="number" name="exhange-rate" id="exhange-rate" placeholder="" v-model="exchangeRate">
-                        </div>
-                    </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-xs-6"><strong>4.8018 GHS / 1 USD</strong></div>
+                    <div class="col-xs-6"><a class="btn-change">Change</a></div>
                 </div>
-                <div class="col-md-6 col-md-offset-2">
-                    <p>GHS <strong v-text="exchangeRate"></strong> / USD <strong>1.00</strong> <a class="btn-change" v-on:click="changeExchangeRate">Default Rate</a></p>
-                </div>
-            </template>
-            <template v-else>
-                <div class="col-md-6">
-                    <p>GHS <strong v-text="exchangeRate"></strong> / USD <strong>1</strong></p>
-                </div>
-                <div class="col-md-6">
-                    <p><a class="btn-change" v-on:click="changeExchangeRate">Change</a></p>
-                </div>
-            </template>
+            </div>
         </div>
     </div>
+
     <div id="currency">
         <h4>Currency</h4>
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-text">
-                        <select name="currency" disabled="disabled">
+                        <select name="currency">
                             <option value="CDF">CDF</option>
                             <option value="CHF">CHF</option>
                             <option value="USD">USD</option>
@@ -138,161 +122,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-md-offset-2">
-                <template v-if="selectedCoin">
-                    <p><span>Currency in exchange for <span v-text="selectedCoinName"></span></span></p>
-                </template>
-            </div>
+            <div class="col-md-6 col-md-offset-2"><span class="explanation">Currency in exchange for <span></span></span></div>
         </div>
     </div>
-    <div id="amount-to-trade">
-        <h4>Amount To Trade</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text">
-                        <input type="number" name="amount" id="amount" placeholder="" v-on:change="tradeAmount" min="0.001">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <p>GHS <strong v-text="tradeAmountGHS"></strong> / USD <strong v-text="tradeAmountUSD"></strong></p>
-            </div>
-        </div>
-    </div>
-    <div class="mb-15">
-        <h4>Trade Fee</h4>
-        <div class="row">
-            <div class="col-md-6">
-                <p><strong v-text="tradeFee"></strong> <span v-text="selectedCoinSName"></span></p>
-            </div>
-            <div class="col-md-6">
-                <p><strong><span></span> GHS / <span></span> USD</strong></p>
-            </div>
-        </div>
-    </div>
-    <div class="mb-15">
-        <h4>Displayed Price</h4>
-        <div class="row">
-            <div class="col-md-12">
-                </p><strong><span></span> GHS</strong></p>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div id="minimum-amount-to-trade">
-        <h4>Minimum <span v-text="selectedCoinName"></span> Amount</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text">
-                        <input type="number" name="min-amount" id="min-amount" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <p>Minimum <span v-text="selectedCoinSName"></span> amount in one trade. (at least 0.001 <span v-text="selectedCoinSName"></span>)</p>
-            </div>
-        </div>
-    </div>
-    <div id="maximum-amount-to-trade">
-        <h4>Maximum <span v-text="selectedCoinName"></span> Amount</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text">
-                        <input type="number" name="max-amount" id="max-amount" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <p>Maximum <span v-text="selectedCoinSName"></span> amount in one trade</p>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div id="location-details">
-        <h4>Location</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text">
-                        <select id="location" name="location">
-                            <option value="" disabled selected>Select A Location</option>
 
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <h4>Reject Unverified Users</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text mb-10">
-                        <input type="checkbox" name="reject-unverified-users" id="reject" value="yes" checked>
-                        <label for="reject">Yes</label>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <p class="mt-0">This Trade Ad will be available only to<a tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="And here's some amazing content. It's very engaging. Right?"> Verified Users</a>.</p>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div>
-        <h4>Payment Method</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text">
-                        <select id="payment-method" name="payment-method">
-                            <option value="" disabled selected>Select An Option</option>
-                            <option value="">Bank Transfer</option>
-                            <option value="">Mobile Money</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div>
-        <h4>Payment Timeout</h4>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <div class="form-text">
-                        <select id="payment-timeout" name="payment-timeout">
-                            <option value="" disabled>Select An Option</option>
-                            <option value="15" selected>15 minutes</option>
-                            <option value="30">30 minutes</option>
-                            <option value="60">1 hour</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-md-offset-2">
-                <p>Trade will be cancelled automatically after <span></span></p>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div>
-        <h4>Terms of Trade</h4>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <div class="form-text">
-                        <textarea rows="5" id="terms-of-service" name="terms-of-service" placeholder="Please type out your Terms for this Trade."></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="form-button">
-        <button id="submit" type="submit" class="ybtn ybtn-accent-color">Create Trade</button>
-    </div>
+    
+
 </form>
