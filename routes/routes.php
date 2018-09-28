@@ -38,13 +38,19 @@
         $this->get('/dashboard', 'AppController:dashboard')->setName('app.dashboard');
         $this->get('/buy', 'AppController:buy')->setName('app.buy');
         $this->get('/sell', 'AppController:sell')->setName('app.sell');
+
         $this->get('/trade', 'AppController:trade')->setName('app.trade');
+        $this->post('/trade', 'BuySellController:postAd');
+
         $this->get('/wallet', 'AppController:wallet')->setName('app.wallet');
         $this->get('/account-settings', 'AppController:accountsettings')->setName('app.account-settings');
+
+
     })->add( new DashboardMiddleware($container) );
 
 
-    $app->get('/rates-api', 'RatesController:getRates');
+    $app->get('/coin-rates-api', 'RatesController:getCoinRates');
+    $app->get('/exchange-rates-api', 'RatesController:getExchangeRates');
 
     
 
