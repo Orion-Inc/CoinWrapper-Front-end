@@ -8,6 +8,10 @@
                         <input type="radio" name="trade-type" id="rad1" value="buy" checked>
                         <label for="rad1">Buy</label>
                     </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
                     <div class="form-text">
                         <input type="radio" name="trade-type" id="rad2" value="sell">
                         <label for="rad2">Sell</label>
@@ -62,7 +66,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-text">
-                        <select name="currency">
+                        <select name="currency" disabled>
                             <option value="CDF">CDF</option>
                             <option value="CHF">CHF</option>
                             <option value="USD">USD</option>
@@ -124,8 +128,197 @@
             </div>
             <div class="col-md-6 col-md-offset-2"><span class="explanation">Currency in exchange for <span></span></span></div>
         </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label for="ecur-amount">Ecurrency Amount</label>
+                    <div class="form-text">
+                        <input id="ecur-amount" name="ecur-amount" placeholder="Enter Ecurrency Amount" value="" required="" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Amount in USD</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Amount in GHS</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">   
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label for="ecur-amount">Trade fee in e-currency</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Trade fee in USD</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Trade fee in GHS</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">   
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label for="ecur-amount">Trade fee in e-currency</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Trade fee in USD</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Trade fee in GHS</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">   
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label for="ecur-amount">Total fee in e-currency</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Total fee in USD</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">
+                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-text">
+                    <label>Total fee in GHS</label>
+                    <div class="form-text">
+                        <div class="alert alert-danger" role="alert">   
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="payment-info">
+        <h4>Payment Info</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="form-text">
+                        <label for="payment-method">Payment method</label>
+                        <select id="payment-method" name="payment-method">
+                            <option value="" disabled selected>Select An Option</option>
+                            <option value="">Bank Transfer</option>
+                            <option value="">MTN Mobile Money</option>
+                            <option value="">Airtel|Tigo Money</option>
+                            <option value="">Vodafone Cash</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="form-text">
+                        <label for="bank-name">Bank name</label>
+                        <select id="bank-name" name="bank-name">
+                        <option value="" disabled selected>Select An Option</option>
+                        <option value="">Ecobank</option>
+                        <option value="">Access Bank</option>
+                        <option value="">Other</option>
+                        </select>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-text">
+                    <label for="account-number">Account Number</label>
+                    <div class="form-text">
+                        <input id="account-number" name="account-number" placeholder="Enter Account Number eg 830074934508" value="" required="" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-text">
+                    <label for="account-name">Account Name</label>
+                    <div class="form-text">
+                        <input id="account-name" name="account-name" placeholder="Enter Account Name eg Swap User" value="" required="" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-ad">
+            <div class="row">
+                <div class="pull-right">
+                    <div class="form-button">
+                        <button type="button" class="ybtn ybtn-accent-color" data-toggle="modal" data-target="#custom-settings">Custom Settings</button>
+                        <button id="submit" type="submit" class="ybtn ybtn-accent-color">Create Ad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    
 
+    
 </form>
