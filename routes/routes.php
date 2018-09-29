@@ -44,7 +44,8 @@
     })->add( new DashboardMiddleware($container) );
 
 
-    $app->get('/rates-api', 'RatesController:getRates');
+    $app->get('/coin-rates-api', 'RatesController:getCoinRates');
+    $app->get('/exchange-rates-api', 'RatesController:getExchangeRates');
 
     
 

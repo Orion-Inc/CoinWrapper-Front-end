@@ -19,15 +19,13 @@
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
     {% include 'partials/components/preloader.twig' %}
     {% block body %} 
-        <div id="header-holder" class="dashboard-header {{ uri in ['dashboard','buy','sell','trade'] ? "navbar-fixed-top" : '' }}">
+        <div id="header-holder" class="dashboard-header">
             {% include 'template/partials/html_blocks/navbar.twig' %}
         </div>
         <div id="dashboard" class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                        {% include 'template/partials/html_blocks/sidebar.twig' %}
-                    </div>
+                    {% include 'template/partials/html_blocks/sidebar.twig' %}
                 </div>
                 <div class="col-md-9">
                     {% block main %}{% endblock %}
