@@ -1,0 +1,47 @@
+<div>
+    <h4>Terms of Trade <small class="text-muted"><span v-text="remainingCount"></span> words remaining</small></h4>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="form-text">
+                    <textarea rows="5" id="terms-of-trade" name="terms-of-trade" placeholder="Please type out your Terms for this Trade." v-on:keyup="textareaLength" v-model="tradeTerms" v-bind:maxlength="maxCount" required></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h4>Payment Timeout</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="form-text">
+                    <select id="payment-timeout" name="payment-timeout" v-on:change="selectPaymentTimeout" required>
+                        <option value="" disabled selected>Select An Option</option>
+                        <option v-for="option in timeoutOptions" v-bind:value="option.value" v-text="option.text"></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p v-if="selectedTimeout">This Trade will be cancelled automatically after <strong v-text="paymentTimeout"></strong></p>
+        </div>
+    </div>
+</div>
+<div>
+    <h4>Reject Unverified Users</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="form-text mb-10">
+                    <input type="checkbox" name="reject-unverified-users" id="reject" value="yes" checked v-model="verifiedUsers">
+                    <label for="reject">Yes</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p v-if="verifiedUsers" class="mt-0">This Trade will be available only to <strong><a tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="">Verified Users</a></strong></p>
+            <p v-else class="mt-0">This Trade will be available to <strong><a tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="">All Users</a></strong></p>
+        </div>
+    </div>
+</div>

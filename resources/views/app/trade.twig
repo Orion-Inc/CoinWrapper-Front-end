@@ -2,7 +2,12 @@
 {% block main %}
     <div class="panel panel-default">
         <div class="panel-body">
-            {% include 'partials/forms/trade/post-ad.twig' %}
+            {% include 'partials/forms/trade/post-ad-form.twig' %}
         </div>
     </div>
+{% endblock %}
+
+{% block additional_scripts %}
+<script src="{{ base_url() }}/../node_modules/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="{{ base_url() }}/../node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
 {% endblock %}

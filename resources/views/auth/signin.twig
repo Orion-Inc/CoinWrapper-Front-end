@@ -2,15 +2,15 @@
 
 {% block body %}
     <div id="form-section" class="container-fluid signin">
-        {% include 'template/partials/auth/website-logo.twig' %}
+        {% include 'partials/auth/website-logo.twig' %}
         <div class="row">
-            {% include 'template/partials/auth/sidebar.twig' %}
+            {% include 'partials/auth/sidebar.twig' %}
             <div class="form-holder">
-                {% include 'template/partials/auth/main-links.twig' %}
+                {% include 'partials/auth/main-links.twig' %}
                 <div class="signin-signup-form">
                     <div class="form-items">
                         <div class="form-title">Sign In</div>
-                        {% include 'template/partials/messages/auth-message.twig' %}
+                        {% include 'partials/messages/auth-message.twig' %}
                         {% include 'partials/forms/auth/signin-form.twig' %}
                     </div>
                 </div>

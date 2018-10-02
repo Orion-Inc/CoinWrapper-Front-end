@@ -5792,6 +5792,11 @@ fieldset[disabled] .navbar-inverse .btn-link:hover {
     float: left
 }
 
+.pager .finish>a,
+.pager .finish>span {
+    float: right
+}
+
 .pager .disabled>a,
 .pager .disabled>a:focus,
 .pager .disabled>a:hover,

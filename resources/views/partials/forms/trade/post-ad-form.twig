@@ -1,0 +1,44 @@
+<form class="form" id="post-ad-form" action="{{ path_for('app.trade') }}" method="POST" autocomplete="off">
+    {{ csrf.fields | raw }}
+    <div id="post-ad-wizard">
+        <ul>
+            <li>
+                <a href="#trade-details" data-toggle="tab">1. <span class="hidden-xs">Trade Details</span></a>
+            </li>
+            <li>
+                <a href="#price-details" data-toggle="tab">2. <span class="hidden-xs">Price Details</span></a>
+            </li>
+            <li>
+                <a href="#trade-limits" data-toggle="tab">3. <span class="hidden-xs">Trade Limits</span></a>
+            </li>
+            <li>
+                <a href="#trade-terms" data-toggle="tab">4. <span class="hidden-xs">Trade Terms</span></a>
+            </li>
+            <li>
+                <a href="#summary" data-toggle="tab">5. <span class="hidden-xs">Summary</span></a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade" id="trade-details">
+                {% include 'partials/forms/trade/form-components/trade-details.twig' %}
+            </div>
+            <div class="tab-pane fade" id="price-details">
+                {% include 'partials/forms/trade/form-components/price-details.twig' %}
+            </div>
+            <div class="tab-pane fade" id="trade-limits">
+                {% include 'partials/forms/trade/form-components/trade-limits.twig' %}
+            </div>
+            <div class="tab-pane fade" id="trade-terms">
+                {% include 'partials/forms/trade/form-components/trade-terms.twig' %}
+            </div>
+            <div class="tab-pane fade" id="summary">
+                {% include 'partials/forms/trade/form-components/summary.twig' %}
+            </div>
+            <ul class="pager wizard">
+                <li class="previous"><a href="#">Previous</a></li>
+                <li class="next"><a href="#">Next</a></li>
+                <li class="finish"><a href="#">Create Ad</a></li>
+            </ul>
+        </div>
+    </div>
+</form>
