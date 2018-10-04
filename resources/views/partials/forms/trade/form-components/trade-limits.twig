@@ -30,16 +30,29 @@
 </div>
 <div>
     <h4>Payment Method</h4>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-group">
-                <div class="form-text">
-                    <select id="payment-method" name="payment-method">
-                        <option value="" disabled selected>Select An Option</option>
-                        <option v-for="option in paymentMethods" v-bind:value="option.value" v-text="option.text"></option>
-                    </select>
+    <div v-for="(paymentMethod, index) in paymentMethods">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="form-text">
+                        <select v-bind:id="index" name="payment-method" v-model="paymentMethod.type" required>
+                            <option value="" disabled v-bind:selected="true">Select An Option</option>
+                            <option v-for="option in paymentMethodsOptions" v-bind:value="option.value" v-text="option.text"></option>
+                        </select>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-8" v-if="index != 0">
+                <p><a class="btn-change" v-on:click="removePaymentMethod">Remove</a></p>
+            </div>
         </div>
+        <template v-if="paymentMethod.type == 'bank'">
+            {% include 'partials/forms/trade/form-components/payment-methods/bank-transfer-method.twig' %}
+        </template>
+        <template v-if="paymentMethod.type == 'momo'">
+            {% include 'partials/forms/trade/form-components/payment-methods/mobile-money-method.twig' %}
+        </template>
+        <hr class="mt-0">
     </div>
+    <p><a class="btn-change" v-on:click="addPaymentMethod">Add Another Payment Method</a></p>
 </div>

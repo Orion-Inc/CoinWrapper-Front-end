@@ -15,9 +15,46 @@ const app = new Vue({
             { text: 'Ethereum', value: 'eth' },
             { text: 'Litecoin', value: 'ltc' }
         ],
-        paymentMethods: [
+        paymentMethodsOptions: [
             { text: 'Bank Transfer', value: 'bank' },
             { text: 'Mobile Money', value: 'momo' }
+        ],
+        banks: [
+            { text: 'Access Bank (Ghana) Limited', value: 'Access Bank (Ghana) Limited' },
+            { text: 'ADB Bank Limited', value: 'ADB Bank Limited' },
+            { text: 'Bank of Africa Ghana Ltd', value: 'Bank of Africa Ghana Ltd' },
+            { text: 'Bank of Baroda (Ghana) Limited', value: 'Bank of Baroda (Ghana) Limited' },
+            { text: 'Barclays Bank of Ghana Ltd', value: 'Barclays Bank of Ghana Ltd' },
+            { text: 'CAL Bank Limited', value: 'CAL Bank Limited' },
+            { text: 'Consolidated Bank Ghana Limited', value: 'Consolidated Bank Ghana Limited' },
+            { text: 'Ecobank Ghana Limited', value: 'Ecobank Ghana Limited' },
+            { text: 'Energy Commercial Bank Ltd', value: 'Energy Commercial Bank Ltd' },
+            { text: 'FBNBank (Ghana) Ltd', value: 'FBNBank (Ghana) Ltd' },
+            { text: 'Fidelity Bank Limited', value: 'Fidelity Bank Limited' },
+            { text: 'First Atlantic Bank Ltd', value: 'First Atlantic Bank Ltd' },
+            { text: 'First National Bank (Ghana) Ltd', value: 'First National Bank (Ghana) Ltd' },
+            { text: 'GCB Bank Limited', value: 'GCB Bank Limited' },
+            { text: 'GN Bank Limited', value: 'GN Bank Limited' },
+            { text: 'Guaranty Trust Bank (Ghana) Limited', value: 'Guaranty Trust Bank (Ghana) Limited' },
+            { text: 'Republic Bank (Ghana) Ltd', value: 'Republic Bank (Ghana) Ltd' },
+            { text: 'National Investment Bank Ltd', value: 'National Investment Bank Ltd' },
+            { text: 'Prudential Bank Limited', value: 'Prudential Bank Limited' },
+            { text: 'Societe General (Ghana) Limited', value: 'Societe General (Ghana) Limited' },
+            { text: 'Stanbic Bank Ghana Ltd', value: 'Stanbic Bank Ghana Ltd' },
+            { text: 'Standard Chartered Bank (Ghana) Limited', value: 'Standard Chartered Bank (Ghana) Limited' },
+            { text: 'United Bank for Africa (Ghana) Ltd.', value: 'United Bank for Africa (Ghana) Ltd.' },
+            { text: 'Universal Merchant Bank Ltd', value: 'Universal Merchant Bank Ltd' },
+            { text: 'Zenith Bank (Ghana) Limited', value: 'Zenith Bank (Ghana) Limited' },
+            { text: 'Premium Bank Ltd', value: 'Premium Bank Ltd' },
+            { text: 'OmniBank Ghana Limited', value: 'OmniBank Ghana Limited' },
+            { text: 'Heritage Bank Limited', value: 'Heritage Bank Limited' },
+            { text: 'GHL Bank Limited', value: 'GHL Bank Limited' },
+            { text: 'ARB Apex Bank Ltd', value: 'ARB Apex Bank Ltd' }
+        ],
+        mobileNetworks: [
+            { text: 'MTN GH', value: 'MTN GH' },
+            { text: 'Vodafone GH', value: 'Vodafone GH' },
+            { text: 'AirtelTigo', value: 'AirtelTigo' }
         ],
         timeoutOptions: [
             { text: '15 minutes', value: '15' },
@@ -46,6 +83,11 @@ const app = new Vue({
         totalTradeAmount: 0.00,
         totalTradeAmountGHS: 0.00,
         totalTradeAmountUSD: 0.00,
+        paymentMethods: [
+            {
+                type: "",
+            }
+        ],
         selectedTimeout: false,
         paymentTimeout: "",
         verifiedUsers: true,
@@ -166,6 +208,14 @@ const app = new Vue({
             this.minAmountGHS = (amount * CoinGHS).toFixed(2);
             this.minAmountUSD = (amount * CoinUSD).toFixed(2);
         },
+        addPaymentMethod: function () {
+            this.paymentMethods.push({
+                type: ""
+            })
+        },
+        removePaymentMethod: function (index) {
+            this.paymentMethods.splice(index,1);
+        },
         textareaLength: function() {
             this.remainingCount = this.maxCount - this.tradeTerms.length;
         },
@@ -197,6 +247,14 @@ const app = new Vue({
                 }
             }).catch( error => { console.log(error); });
         },
+        getCarrierNetwork(network){
+            var index = '';
+            return this.mobileNetworks[index].text;
+        },
+        getBank(bank){
+            var index = '';
+            return this.banks[index].text;
+        },
         toNumberFormat(x){
             var number = Number(x);
         
@@ -224,6 +282,9 @@ var $validator = postAdForm.validate({
         },
         "terms-of-trade": {
             required: "Please Type The Terms of This Trade."
+        },
+        "payment-method": {
+            required: "Select At Least One Payment Method."
         },
         "payment-timeout": {
             required: "Please Select Trade Payment Duration."

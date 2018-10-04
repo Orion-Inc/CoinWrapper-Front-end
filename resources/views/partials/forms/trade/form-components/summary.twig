@@ -21,11 +21,32 @@
     <h4>Trade Limits</h4>
     <div class="row">
         <div class="col-md-12">
-            <p>Min. Trade Amount: <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(minAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(minAmountUSD)"></strong></p>
-            <p>Max. Trade Amount: <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
+            <p>Min. Trade Amount: <strong v-text="minAmount"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(minAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(minAmountUSD)"></strong></p>
+            <p>Max. Trade Amount: <strong v-text="amountToTrade"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
 
-            <h5><u>Payment Method</u></h5>
-            <p></p>
+            <h5><b><u>Payment Method</u></b></h5>
+            <div v-for="paymentMethod in paymentMethods">
+                <template v-if="paymentMethod.type != ''">
+                    <div v-if="paymentMethod.type == 'bank'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Bank: <strong v-text="paymentMethod.bank_name"></strong></p>
+                                <p>Account Name: <strong v-text="paymentMethod.account_name"></strong></p>
+                                <p>Account Number <strong v-text="paymentMethod.account_number"></strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="paymentMethod.type == 'momo'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Carrier Network: <strong v-text="paymentMethod.mobile_network"></strong></p>
+                                <p>Mobile Number: <strong v-text="paymentMethod.mobile_number"></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
         </div>
     </div>
     <hr class="ma-0">

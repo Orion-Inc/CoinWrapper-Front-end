@@ -67,11 +67,3 @@
     </div>
 </nav>
 {% endif %}
-
-{% if uri in ['dashboard','buy','sell','trade','wallet','account-settings'] %}
-<nav class="navbar navbar-static-bottom custom-footer">
-    <div class="container">
-        <p class="navbar-text"><a href="{{ path_for('home') }}">{{ app.name }}</a> <span>&copy; {{ "now" | date("Y") }}</span></p>
-    </div>
-</nav>
-{% endif %}
