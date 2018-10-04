@@ -1,0 +1,58 @@
+<div id="minimum-amount-to-trade">
+    <h4>Minimum <strong v-text="selectedCoinName"></strong> Amount</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="form-text">
+                    <input type="number" name="min-amount" id="min-amount" placeholder="" v-on:change="minTradeAmount" min="0.000001" v-bind:max="amountToTrade" required>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p>Minimum <strong v-text="selectedCoinSName"></strong> amount in one trade. <span class="br-xs">(GHS <strong v-text="toNumberFormat(minAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(minAmountUSD)"></strong>)</span></p>
+        </div>
+    </div>
+</div>
+<div id="maximum-amount-to-trade">
+    <h4>Maximum <strong v-text="selectedCoinName"></strong> Amount</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <div class="form-text">
+                    <input type="number" name="max-amount" id="max-amount" placeholder="" readonly v-model="amountToTrade">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p>Maximum <strong v-text="selectedCoinSName"></strong> amount in one trade. <span class="br-xs">(GHS <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong>)</span></p>
+        </div>
+    </div>
+</div>
+<div>
+    <h4>Payment Method</h4>
+    <div v-for="(paymentMethod, index) in paymentMethods">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="form-text">
+                        <select v-bind:id="index" name="payment-method" v-model="paymentMethod.type" required>
+                            <option value="" disabled v-bind:selected="true">Select An Option</option>
+                            <option v-for="option in paymentMethodsOptions" v-bind:value="option.value" v-text="option.text"></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8" v-if="index != 0">
+                <p><a class="btn-change" v-on:click="removePaymentMethod">Remove</a></p>
+            </div>
+        </div>
+        <template v-if="paymentMethod.type == 'bank'">
+            {% include 'partials/forms/trade/form-components/payment-methods/bank-transfer-method.twig' %}
+        </template>
+        <template v-if="paymentMethod.type == 'momo'">
+            {% include 'partials/forms/trade/form-components/payment-methods/mobile-money-method.twig' %}
+        </template>
+        <hr class="mt-0">
+    </div>
+    <p><a class="btn-change" v-on:click="addPaymentMethod">Add Another Payment Method</a></p>
+</div>

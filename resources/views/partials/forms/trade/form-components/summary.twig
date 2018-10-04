@@ -1,0 +1,62 @@
+<div class="summary">
+    <h4>Trade Details</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Trade Type: <strong class="text-capitalize" v-text="selectedTradeTypeText"></strong></p>
+            <p>Selected Coin: <strong v-text="selectedCoinName"></strong> <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(CoinGHS)"></strong> / USD <strong v-text="selectedCoinUSD"></strong></p>
+            <p>Selected Currency: <strong v-text="selectedCurrency"></strong></p>
+        </div>
+    </div>
+    <hr class="ma-0">
+    <h4>Price Details</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Exchange Rate: <span v-text="selectedCurrency"></span> <strong v-text="userExchangeRate"></strong> / USD <strong>1</strong></p>
+            <p>Amount of Coin to Trade: <strong v-text="amountToTrade"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
+            <p>Trade Fee: <strong v-text="tradeFee"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeFeeGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeFeeUSD)"></strong></p>
+            <p>Total Trade Amount: <strong v-text="totalTradeAmount"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(totalTradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(totalTradeAmountUSD)"></strong></p>
+        </div>
+    </div>
+    <hr class="ma-0">
+    <h4>Trade Limits</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Min. Trade Amount: <strong v-text="minAmount"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(minAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(minAmountUSD)"></strong></p>
+            <p>Max. Trade Amount: <strong v-text="amountToTrade"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
+
+            <h5><b><u>Payment Method</u></b></h5>
+            <div v-for="paymentMethod in paymentMethods">
+                <template v-if="paymentMethod.type != ''">
+                    <div v-if="paymentMethod.type == 'bank'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Bank: <strong v-text="paymentMethod.bank_name"></strong></p>
+                                <p>Account Name: <strong v-text="paymentMethod.account_name"></strong></p>
+                                <p>Account Number <strong v-text="paymentMethod.account_number"></strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-if="paymentMethod.type == 'momo'">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>Carrier Network: <strong v-text="paymentMethod.mobile_network"></strong></p>
+                                <p>Mobile Number: <strong v-text="paymentMethod.mobile_number"></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+    <hr class="ma-0">
+    <h4>Trade Terms</h4>
+    <div class="row">
+        <div class="col-md-12">
+            <p v-text="tradeTerms"></p>
+            <p>Payment Timeout: <strong v-text="paymentTimeout"></strong></p>
+            <p v-if="verifiedUsers" class="mt-0">This Trade will be available only to <strong><a tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="">Verified Users</a></strong></p>
+            <p v-else class="mt-0">This Trade will be available to <strong><a tabindex="0" data-toggle="popover" data-trigger="focus" data-placement="top" data-content="">All Users</a></strong></p>
+        </div>
+    </div>
+</div>

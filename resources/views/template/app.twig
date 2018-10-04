@@ -19,26 +19,27 @@
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
     {% include 'partials/components/preloader.twig' %}
     {% block body %} 
-        <div id="header-holder" class="dashboard-header {{ uri in ['dashboard','buy','sell','trade'] ? "navbar-fixed-top" : '' }}">
-            {% include 'template/partials/html_blocks/navbar.twig' %}
+        <div id="header-holder" class="dashboard-header">
+            {% include 'partials/html_blocks/navbar.twig' %}
         </div>
         <div id="dashboard" class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                        {% include 'template/partials/html_blocks/sidebar.twig' %}
-                    </div>
+                    {% include 'partials/html_blocks/sidebar.twig' %}
                 </div>
                 <div class="col-md-9">
                     {% block main %}{% endblock %}
                 </div>
             </div>
         </div>
-        {% include 'template/partials/html_blocks/footer.twig' %}
+        {% include 'partials/html_blocks/footer.twig' %}
     {% endblock %}
     <script src="{{ base_url() }}/assets/js/swap.js"></script>
     <script src="{{ base_url() }}/../node_modules/vue-router/dist/vue-router.js"></script>
+    {% block additional_scripts %}
+
+    {% endblock %}
     <script src="{{ base_url() }}/assets/js/dashboard/{{ uri }}.js"></script>
-    <script>var preloader = $("#preloader");preloader.fadeOut("slow");$("#app").fadeIn("slow");</script>
+    <script>var preloader = $("#preloader");preloader.fadeOut("slow");$("#app").fadeIn("slow");$('[data-toggle="popover"]').popover()</script>
 </body>
 </html>

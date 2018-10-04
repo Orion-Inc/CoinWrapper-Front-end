@@ -71,6 +71,10 @@ a:focus {
     color: #cf6a87;
 }
 
+a.btn-change {
+    cursor: pointer;
+}
+
 .rtl-cols div[class^="col-"] {
     float: right;
 }
@@ -401,6 +405,11 @@ a:focus {
     box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04); */
 }
 
+#header-holder.dashboard-header #nav {
+    background-color: #ffffff;
+    border-bottom: #eaeaea 1px solid;
+}
+
 #header-holder.dashboard-header .navbar-default .navbar-nav>li>a:not(.signin-button) {
     color: #cb4b70!important;
 }
@@ -596,11 +605,12 @@ svg.logo text {
 
 @media (min-width: 1024px) {
     nav.custom-footer {
-        bottom: 0;
-        position: fixed;
-        right: 0;
+        position: absolute;
         left: 0;
-        z-index: 1030;
+        right: 0;
+        bottom: 0;
+        z-index: 1010;
+        margin: inherit;
     }
     nav.custom-footer>div.container {
         padding-right: 15px;
@@ -3100,7 +3110,7 @@ svg.logo text {
 
 
 /*------------------------------------------------------------------
-	13. Sign in - Sign up Pages Styles
+	Sign in - Sign up Pages Styles
 -------------------------------------------------------------------*/
 
 #form-section>.row {
@@ -3429,14 +3439,14 @@ svg.logo text {
     width: 100%;
     padding: 8px 20px;
     text-align: left;
-    border: 0;
+    border: 1px #ef618a0f solid;
     outline: 0;
     border-radius: 4px;
     background-color: #ef618a0f;
     font-size: 13px;
     color: #333;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    /* -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; */
 }
 
 .signin-signup-form .form-text input:hover,
@@ -3444,6 +3454,10 @@ svg.logo text {
 .signin-signup-form .form-text .dropdown-toggle.btn-default:hover,
 .signin-signup-form .form-text .dropdown-toggle.btn-default:focus {
     background-color: #ef618a0f;
+}
+
+.signin-signup-form .form-text input:focus {
+    border: 1px #cb4b70 solid;
 }
 
 .signin-signup-form .form-text textarea {
@@ -3463,6 +3477,10 @@ svg.logo text {
 .signin-signup-form .form-text textarea:hover,
 .signin-signup-form .form-text textarea:focus {
     background-color: #333;
+}
+
+.signin-signup-form .form-text textarea:focus {
+    border: 1px #cb4b70 solid;
 }
 
 .signin-signup-form .form-text.text-holder {
@@ -3669,8 +3687,8 @@ svg.logo text {
 }
 
 #header-holder.about-header #page-head {
-    padding-top: 80px;
-    padding-bottom: 145px;
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 #header-holder.about-header .bg-animation {
@@ -3693,8 +3711,8 @@ svg.logo text {
 }
 
 #header-holder.homepage-header #page-head {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 160px;
+    padding-bottom: 160px;
 }
 
 #header-holder.homepage-header #page-head .logo-icon {
@@ -4482,7 +4500,7 @@ svg.logo text {
 }
 
 #apps {
-    background-color: #c44569;
+    background-color: #cb4b70;
     background-repeat: repeat-x;
     padding-top: 30px;
     padding-bottom: 40px;
@@ -6889,6 +6907,12 @@ error-device-content {
     ;
 }
 
+@media(max-width: 768px) {
+    .br-xs {
+        display: inline-block;
+    }
+}
+
 
 /*------------------------------------------------------------------
 	Backgrounds
@@ -6929,12 +6953,19 @@ div.crypto-bg-3::after {
 -------------------------------------------------------------------*/
 
 #dashboard {
-    padding-top: 70px;
+    padding-top: 100px;
     padding-bottom: 30px;
 }
 
 #dashboard h4 {
     color: #333!important;
+}
+
+#dashboard h4 span.text-purple-light {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    color: #cb4b70;
 }
 
 #dashboard div {
@@ -6944,6 +6975,10 @@ div.crypto-bg-3::after {
 #dashboard b,
 #dashboard strong {
     font-weight: 500;
+}
+
+#dashboard nav.affix {
+    width: 20%;
 }
 
 #dashboard ul.nav.nav-pills.nav-stacked {
@@ -6975,8 +7010,12 @@ div.crypto-bg-3::after {
     padding: 10px 15px;
 }
 
+#dashboard .form p {
+    margin: 10px 0 10px;
+}
+
 #dashboard .form-control:focus {
-    border-color: #c445698a;
+    border-color: #cb4b70;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(196, 69, 105, 0.41);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(196, 69, 105, 0.41);
@@ -6984,11 +7023,12 @@ div.crypto-bg-3::after {
 
 #dashboard .form-text input,
 #dashboard .form-text select,
+#dashboard .form-text textarea,
 #dashboard .form-text .dropdown-toggle.btn-default {
     width: 100%;
     padding: 8px 20px;
     text-align: left;
-    border: 1px #c445698a solid;
+    border: 1px #ef618a0f solid;
     outline: 0;
     border-radius: 4px;
     background-color: #ef618a0f;
@@ -7002,28 +7042,11 @@ div.crypto-bg-3::after {
 #dashboard .form-text input:focus,
 #dashboard .form-text select:hover,
 #dashboard .form-text select:focus,
+#dashboard .form-text textarea:hover,
+#dashboard .form-text textarea:focus,
 #dashboard .form-text .dropdown-toggle.btn-default:hover,
 #dashboard .form-text .dropdown-toggle.btn-default:focus {
     background-color: #ef618a0f;
-}
-
-#dahboard .form-text textarea {
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 4px;
-    text-align: left;
-    background-color: #ef618a0f;
-    border: 0;
-    font-size: 13px;
-    color: #333;
-    outline: none;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-#dahboard .form-text textarea:hover,
-#dahboard .form-text textarea:focus {
-    background-color: #333;
 }
 
 #dashboard .form-text.text-holder {
@@ -7147,7 +7170,10 @@ div.crypto-bg-3::after {
     transition: all 0.2s ease;
 }
 
-#dashboard .form-text.has-error input {
+#dashboard .form-text.has-error input,
+#dashboard .form-text input.error,
+#dashboard .form-text select.error,
+#dashboard .form-text textarea.error {
     border: 1px #fd7270 solid;
 }
 
@@ -7155,7 +7181,8 @@ div.crypto-bg-3::after {
     display: none;
 }
 
-#dashboard .form-text.has-error span.help-block {
+#dashboard .form-text.has-error span.help-block,
+#dashboard .form-text label.error {
     display: inherit;
     color: #ff3a36;
     font-size: 12px;
@@ -7176,9 +7203,73 @@ div.crypto-bg-3::after {
     transition: all 0.3s ease 0s;
 }
 
+#dashboard #post-ad-form .pager li>a {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 9px 30px;
+    background-color: #cb4b70;
+    border-radius: 4px;
+    color: #ffffff;
+    opacity: 1;
+    margin-top: 11px;
+    font-weight: 600;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+#dashboard #post-ad-form .pager .disabled>a,
+#dashboard #post-ad-form .pager .disabled>a:focus,
+#dashboard #post-ad-form .pager .disabled>a:hover {
+    color: #cb4b70;
+    cursor: not-allowed;
+    background-color: #fff;
+}
+
+#dashboard #post-ad-wizard ul.nav.nav-pills {
+    border-bottom: #d8d8d8 1px solid;
+}
+
+#dashboard #post-ad-wizard ul.nav.nav-pills li.active>a {
+    color: #c44569;
+    font-weight: 700;
+    border-radius: 0px;
+    border-bottom: #c44569 2px solid;
+    background-color: #eee;
+}
+
+#dashboard #post-ad-wizard ul.nav.nav-pills a:hover,
+#dashboard #post-ad-wizard ul.nav.nav-pills a:focus {
+    background-color: transparent;
+}
+
+#dashboard #post-ad-wizard div.tab-content {
+    padding-top: 10px;
+    min-height: 380px;
+}
+
+#dashboard #post-ad-wizard div.tab-content .tab-pane {
+    min-height: 300px;
+}
+
+#dashboard #post-ad-wizard ul.pager.wizard {
+    margin: 10px 0;
+}
+
+#dashboard #post-ad-wizard .summary .h4,
+#dashboard #post-ad-wizard .summary .h5,
+#dashboard #post-ad-wizard .summary .h6,
+#dashboard #post-ad-wizard .summary h4,
+#dashboard #post-ad-wizard .summary h5,
+#dashboard #post-ad-wizard .summary h6 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
 @media(max-width: 768px) {
     #dashboard {
-        padding-top: 0px;
+        padding-top: 50px;
         padding-bottom: 0px;
     }
     #dashboard .main {

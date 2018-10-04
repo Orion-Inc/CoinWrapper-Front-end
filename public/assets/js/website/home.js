@@ -1,11 +1,21 @@
-const baseUrl = window.location.origin+"/public/rates-api";
+//const baseUrl = window.location.origin+"/public/coin-rates-api";
+const baseUrl = window.location.origin+"/CoinWrapper-Front-end/public/coin-rates-api";
 
 const app = new Vue({
     el: '#rates',
     data: {
-        btc:[],
-        eth:[],
-        ltc:[]
+        btc: {
+            priceghsformatted: "00.00",
+            pctchange: "0.00%"
+        },
+        eth: {
+            priceghsformatted: "00.00",
+            pctchange: "0.00%"
+        },
+        ltc: {
+            priceghsformatted: "00.00",
+            pctchange: "0.00%"
+        }
     },
     mounted() {
         this.getRates(baseUrl);
@@ -17,9 +27,11 @@ const app = new Vue({
     methods:{
         getRates(url){
             axios.get(url).then((response) => {
-                this.btc = response.data.btc;
-                this.eth = response.data.eth;
-                this.ltc = response.data.ltc;
+                if(response.data.btc.priceghsformatted != 0 && response.data.eth.priceghsformatted != 0 && response.data.ltc.priceghsformatted != 0){
+                    this.btc = response.data.btc;
+                    this.eth = response.data.eth;
+                    this.ltc = response.data.ltc;
+                }
             }).catch( error => { console.log(error); });
         }
     },

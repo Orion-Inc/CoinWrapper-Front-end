@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <div class="form-text">
+                <select v-model="paymentMethod.mobile_network" required>
+                    <option value="" disabled v-bind:selected="true">Select Carrier Network</option>
+                    <option v-for="option in mobileNetworks" v-bind:value="option.value" v-text="option.text"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <p>Carrier Network of Mobile Money Wallet</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <div class="form-text">
+                <input type="text" placeholder="Enter Mobile Number" v-model="paymentMethod.mobile_number" required>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <p>Mobile Number of Wallet</p>
+    </div>
+</div>
