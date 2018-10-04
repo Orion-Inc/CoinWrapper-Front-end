@@ -1,5 +1,5 @@
-const baseUrl = window.location.origin+"/public/coin-rates-api";
-//const baseUrl = window.location.origin+"/CoinWrapper-Front-end/public/coin-rates-api";
+//const baseUrl = window.location.origin+"/public/coin-rates-api";
+const baseUrl = window.location.origin+"/CoinWrapper-Front-end/public/coin-rates-api";
 
 const app = new Vue({
     el: '#rates',
