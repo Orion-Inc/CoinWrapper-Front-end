@@ -43,6 +43,9 @@ const app = new Vue({
         minAmount: 0.00,
         minAmountGHS: 0.00,
         minAmountUSD: 0.00,
+        totalTradeAmount: 0.00,
+        totalTradeAmountGHS: 0.00,
+        totalTradeAmountUSD: 0.00,
         selectedTimeout: false,
         paymentTimeout: "",
         verifiedUsers: true,
@@ -60,11 +63,15 @@ const app = new Vue({
             this.setExchangeRate();
             this.calculateTradeAmount(this.amountToTrade);
             this.calculateMinTradeAmount(this.minAmount);
+            this.calculateTotalTradeAmount();
         },
         userExchangeRate: function () {
             this.setExchangeRate();
             this.calculateTradeAmount(this.amountToTrade);
             this.calculateMinTradeAmount(this.minAmount);
+        },
+        amountToTrade: function () {
+            this.calculateTotalTradeAmount();
         }
     },
     methods:{
@@ -114,6 +121,7 @@ const app = new Vue({
             var tradeFee = 0;
             var amountGHS = 0;
             var amountUSD = 0;
+            
             var CoinGHS = parseFloat(this.CoinGHS);
             var CoinUSD = parseFloat(this.CoinUSD);
 
@@ -129,7 +137,7 @@ const app = new Vue({
             }
             
             amountGHS = amount * CoinGHS;
-            amountUSD = amount * CoinUSD
+            amountUSD = amount * CoinUSD;
             
             this.tradeFee = tradeFee;
             this.tradeFeeGHS = (tradeFee * CoinGHS).toFixed(2);
@@ -137,6 +145,19 @@ const app = new Vue({
 
             this.tradeAmountGHS = amountGHS.toFixed(2);
             this.tradeAmountUSD = amountUSD.toFixed(2);
+        },
+        calculateTotalTradeAmount: function () {
+            var totalTradeAmount = 0;
+            var CoinGHS = parseFloat(this.CoinGHS);
+            var CoinUSD = parseFloat(this.CoinUSD);
+            var amount = this.amountToTrade;
+            var tradeFee = this.tradeFee;
+
+            totalTradeAmount = tradeFee + amount;
+
+            this.totalTradeAmount = totalTradeAmount;
+            this.totalTradeAmountGHS = (totalTradeAmount * CoinGHS).toFixed(2);
+            this.totalTradeAmountUSD = (totalTradeAmount * CoinUSD).toFixed(2);
         },
         calculateMinTradeAmount: function (amount) {
             var CoinGHS = parseFloat(this.CoinGHS);
@@ -175,6 +196,11 @@ const app = new Vue({
                     this.userExchangeRate = response.data.rate;
                 }
             }).catch( error => { console.log(error); });
+        },
+        toNumberFormat(x){
+            var number = Number(x);
+        
+            return number.toLocaleString('en-EG');
         }
     }
 });
@@ -215,6 +241,10 @@ postAdWizard.bootstrapWizard({
         }
     },
     'onTabClick': function(tab, navigation, index) {
-        return false;
+        var $valid = postAdForm.valid();
+        if(!$valid) {
+            $validator.focusInvalid();
+            return false;
+        }
     }
 });

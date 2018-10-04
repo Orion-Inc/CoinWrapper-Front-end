@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            <p>Minimum <strong v-text="selectedCoinSName"></strong> amount in one trade. <span class="br-xs">(GHS <strong v-text="minAmountGHS"></strong> / USD <strong v-text="minAmountUSD"></strong>)</span></p>
+            <p>Minimum <strong v-text="selectedCoinSName"></strong> amount in one trade. <span class="br-xs">(GHS <strong v-text="toNumberFormat(minAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(minAmountUSD)"></strong>)</span></p>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            <p>Maximum <strong v-text="selectedCoinSName"></strong> amount in one trade. <span class="br-xs">(GHS <strong v-text="tradeAmountGHS"></strong> / USD <strong v-text="tradeAmountUSD"></strong>)</span></p>
+            <p>Maximum <strong v-text="selectedCoinSName"></strong> amount in one trade. <span class="br-xs">(GHS <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong>)</span></p>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-12">
             <p>Trade Type: <strong class="text-capitalize" v-text="selectedTradeTypeText"></strong></p>
-            <p>Selected Coin: <strong v-text="selectedCoinName"></strong> GHS <strong v-text="CoinGHS"></strong> / USD <strong v-text="selectedCoinUSD"></strong></p>
+            <p>Selected Coin: <strong v-text="selectedCoinName"></strong> <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(CoinGHS)"></strong> / USD <strong v-text="selectedCoinUSD"></strong></p>
             <p>Selected Currency: <strong v-text="selectedCurrency"></strong></p>
         </div>
     </div>
@@ -11,18 +11,18 @@
     <h4>Price Details</h4>
     <div class="row">
         <div class="col-md-12">
-            <p>Exchange Rate: GHS <strong v-text="userExchangeRate"></strong> / USD <strong>1</strong></p>
-            <p>Amount of Coin to Trade: <strong v-text="amountToTrade"></strong> <strong v-text="selectedCoinSName"></strong> - GHS <strong v-text="tradeAmountGHS"></strong> / USD <strong v-text="tradeAmountUSD"></strong></p>
-            <p>Trade Fee: <strong v-text="tradeFee"></strong> <strong v-text="selectedCoinSName"></strong> - GHS <strong v-text="tradeFeeGHS"></strong> / USD <strong v-text="tradeFeeUSD"></strong></p>
-
+            <p>Exchange Rate: <span v-text="selectedCurrency"></span> <strong v-text="userExchangeRate"></strong> / USD <strong>1</strong></p>
+            <p>Amount of Coin to Trade: <strong v-text="amountToTrade"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
+            <p>Trade Fee: <strong v-text="tradeFee"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeFeeGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeFeeUSD)"></strong></p>
+            <p>Total Trade Amount: <strong v-text="totalTradeAmount"></strong> <strong v-text="selectedCoinSName"></strong> - <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(totalTradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(totalTradeAmountUSD)"></strong></p>
         </div>
     </div>
     <hr class="ma-0">
     <h4>Trade Limits</h4>
     <div class="row">
         <div class="col-md-12">
-            <p>Min. Trade Amount: GHS <strong v-text="minAmountGHS"></strong> / USD <strong v-text="minAmountUSD"></strong></p>
-            <p>Max. Trade Amount: GHS <strong v-text="tradeAmountGHS"></strong> / USD <strong v-text="tradeAmountUSD"></strong></p>
+            <p>Min. Trade Amount: <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(minAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(minAmountUSD)"></strong></p>
+            <p>Max. Trade Amount: <span v-text="selectedCurrency"></span> <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
 
             <h5><u>Payment Method</u></h5>
             <p></p>

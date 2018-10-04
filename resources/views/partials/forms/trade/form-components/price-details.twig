@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-md-6 col-md-offset-2">
-            <p>GHS <strong v-text="tradeAmountGHS"></strong> / USD <strong v-text="tradeAmountUSD"></strong></p>
+            <p>GHS <strong v-text="toNumberFormat(tradeAmountGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeAmountUSD)"></strong></p>
         </div>
     </div>
 </div>
@@ -45,7 +45,7 @@
             <p><strong v-text="tradeFee"></strong> <span v-text="selectedCoinSName"></span></p>
         </div>
         <div class="col-xs-6">
-            <p>GHS <strong v-text="tradeFeeGHS"></strong> / USD <strong v-text="tradeFeeUSD"></strong></p>
+            <p>GHS <strong v-text="toNumberFormat(tradeFeeGHS)"></strong> / USD <strong v-text="toNumberFormat(tradeFeeUSD)"></strong></p>
         </div>
     </div>
 </div>

@@ -71,6 +71,10 @@ a:focus {
     color: #cf6a87;
 }
 
+a.btn-change {
+    cursor: pointer;
+}
+
 .rtl-cols div[class^="col-"] {
     float: right;
 }
