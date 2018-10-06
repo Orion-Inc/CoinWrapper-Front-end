@@ -1,4 +1,8 @@
 {% extends 'template/app.twig' %}
+{% block additional_stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ base_url() }}/../node_modules/intl-tel-input/build/css/intlTelInput.css">
+{% endblock %}
+
 {% block main %}
     <div class="panel panel-default">
         <div class="panel-body">
@@ -10,4 +14,5 @@
 {% block additional_scripts %}
 <script src="{{ base_url() }}/../node_modules/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
 <script src="{{ base_url() }}/../node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="{{ base_url() }}/../node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
 {% endblock %}

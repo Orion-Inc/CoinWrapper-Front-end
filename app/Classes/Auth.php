@@ -70,7 +70,12 @@
             if($userTokenObject->validate($data)){
                 $_SESSION['user'] = [
                     'authorize' => true,
-                    'user_id' => $userTokenObject->getClaim('user_id')
+                    'user_id' => $userTokenObject->getClaim('user_id'),
+                    'first_name' => $userTokenObject->getClaim('firstname'),
+                    'other_names' => $userTokenObject->getClaim('othername'),
+                    'username' => $userTokenObject->getClaim('username'),
+                    'email' => $userTokenObject->getClaim('email'),
+                    'phone_number' => $userTokenObject->getClaim('phone_number'),
                 ];
             }else{
                 $this->unauthorize();

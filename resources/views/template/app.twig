@@ -12,8 +12,10 @@
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/typicons.min.css">
-    <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
 
+    {% block additional_stylesheets %}{% endblock %}
+
+    <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
     <link href='{{ base_url() }}/assets/img/logo.png' rel='icon'>
 </head>
 <body {{ bodyCSS ? "class=#{bodyCSS}" : '' }}>
@@ -36,9 +38,7 @@
     {% endblock %}
     <script src="{{ base_url() }}/assets/js/swap.js"></script>
     <script src="{{ base_url() }}/../node_modules/vue-router/dist/vue-router.js"></script>
-    {% block additional_scripts %}
-
-    {% endblock %}
+    {% block additional_scripts %}{% endblock %}
     <script src="{{ base_url() }}/assets/js/dashboard/{{ uri }}.js"></script>
     <script>var preloader = $("#preloader");preloader.fadeOut("slow");$("#app").fadeIn("slow");$('[data-toggle="popover"]').popover()</script>
 </body>

@@ -30,7 +30,7 @@
                     <div v-if="paymentMethod.type == 'bank'">
                         <div class="row">
                             <div class="col-md-6">
-                                <p>Bank: <strong v-text="paymentMethod.bank_name"></strong></p>
+                                <p>Bank: <strong v-text="paymentMethod.service_provider"></strong></p>
                                 <p>Account Name: <strong v-text="paymentMethod.account_name"></strong></p>
                                 <p>Account Number <strong v-text="paymentMethod.account_number"></strong></p>
                             </div>
@@ -40,8 +40,9 @@
                     <div v-if="paymentMethod.type == 'momo'">
                         <div class="row">
                             <div class="col-md-6">
-                                <p>Carrier Network: <strong v-text="paymentMethod.mobile_network"></strong></p>
-                                <p>Mobile Number: <strong v-text="paymentMethod.mobile_number"></strong></p>
+                                <p>Carrier Network: <strong v-text="paymentMethod.service_provider"></strong></p>
+                                <p>Account Name: <strong v-text="paymentMethod.account_name"></strong></p>
+                                <p>Mobile Number: <strong v-text="paymentMethod.account_number"></strong></p>
                             </div>
                         </div>
                     </div>
