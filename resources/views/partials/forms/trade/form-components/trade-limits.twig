@@ -35,7 +35,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <div class="form-text">
-                        <select v-bind:id="index" name="payment-method" v-model="paymentMethod.type" required>
+                        <select v-bind:name="'payment-methods-' + index" v-model="paymentMethod.type" data-msg-required="Select A Payment Method" data-rule-required="true">
                             <option value="" disabled v-bind:selected="true">Select An Option</option>
                             <option v-for="option in paymentMethodsOptions" v-bind:value="option.value" v-text="option.text"></option>
                         </select>

@@ -86,6 +86,9 @@ const app = new Vue({
         paymentMethods: [
             {
                 type: "",
+                service_provider: "",
+                account_name: "",
+                account_number: ""
             }
         ],
         selectedTimeout: false,
@@ -210,7 +213,10 @@ const app = new Vue({
         },
         addPaymentMethod: function () {
             this.paymentMethods.push({
-                type: ""
+                type: "",
+                service_provider: "",
+                account_name: "",
+                account_number: ""
             })
         },
         removePaymentMethod: function (index) {
@@ -282,9 +288,6 @@ var $validator = postAdForm.validate({
         },
         "terms-of-trade": {
             required: "Please Type The Terms of This Trade."
-        },
-        "payment-method": {
-            required: "Select At Least One Payment Method."
         },
         "payment-timeout": {
             required: "Please Select Trade Payment Duration."

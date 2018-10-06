@@ -2,7 +2,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <div class="form-text">
-                <select v-model="paymentMethod.bank_name" required>
+                <select v-bind:name="'account-type[' + index + ']'" v-model="paymentMethod.service_provider" data-msg-required="Select A Bank" data-rule-required="true">
                     <option value="" disabled v-bind:selected="true">Select A Bank</option>
                     <option v-for="option in banks" v-bind:value="option.value" v-text="option.text"></option>
                 </select>
@@ -17,7 +17,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <div class="form-text">
-                <input type="text" placeholder="Enter Account Name" v-model="paymentMethod.account_name" required>
+                <input type="text" placeholder="Enter Account Name" v-bind:name="'account-name[' + index + ']'" v-model="paymentMethod.account_name" data-msg-required="Enter Name of Bank Account" data-rule-required="true">
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="col-md-4">
         <div class="form-group">
             <div class="form-text">
-                <input type="text" placeholder="Enter Account Number" v-model="paymentMethod.account_number" required>
+                <input type="text" placeholder="Enter Account Number" v-bind:name="'account-number[' + index + ']'" v-model="paymentMethod.account_number" data-msg-required="Enter Bank Account Number" data-rule-required="true">
             </div>
         </div>
     </div>
