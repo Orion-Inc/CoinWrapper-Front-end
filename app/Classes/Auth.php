@@ -75,7 +75,7 @@
                     'other_names' => $userTokenObject->getClaim('othername'),
                     'username' => $userTokenObject->getClaim('username'),
                     'email' => $userTokenObject->getClaim('email'),
-                    'phone_number' => $userTokenObject->getClaim('phone_number'),
+                    'phone_number' => $userTokenObject->getClaim('phone_number')
                 ];
             }else{
                 $this->unauthorize();
