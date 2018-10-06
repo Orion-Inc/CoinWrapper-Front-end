@@ -19,7 +19,7 @@
             $fields = http_build_query($args);
             $curl = curl_init();
             curl_setopt_array($curl, array(
-                CURLOPT_PORT => "8080",
+                //CURLOPT_PORT => "8080",
                 CURLOPT_URL => self::$client['base_uri'].$endpoint,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
