@@ -7,7 +7,7 @@
     class AuthApi
     {
         private static $client = [
-            'base_uri' => 'http://localhost:8080',
+            'base_uri' => 'https://api-coin-wrapper.herokuapp.com',
             'maxredirs' => 10,
             'timeout'  => 30,
             'Content-Type' => 'application/x-www-form-urlencoded',
