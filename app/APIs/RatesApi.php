@@ -61,7 +61,7 @@
                     'priceghs' => $rates['BTC']['GHS']['PRICE'],
                     'priceusdformatted' => number_format($rates['BTC']['USD']['PRICE'],2),
                     'priceghsformatted' => number_format($rates['BTC']['GHS']['PRICE'],2),
-                    'pctchange' => number_format((float)$rates['BTC']['GHS']['CHANGEPCT24HOUR'],2)."%"
+                    'pctchange' => ($rates['BTC']['USD']['CHANGEPCT24HOUR'] < 0) ? number_format((float)$rates['BTC']['USD']['CHANGEPCT24HOUR'],2)."%" : "+".number_format((float)$rates['BTC']['USD']['CHANGEPCT24HOUR'],2)."%"
                 ],
                 'eth' => [
                     'coinname' => 'Ethereum',
@@ -69,7 +69,7 @@
                     'priceghs' => $rates['ETH']['GHS']['PRICE'],
                     'priceusdformatted' => number_format($rates['ETH']['USD']['PRICE'],2),
                     'priceghsformatted' => number_format($rates['ETH']['GHS']['PRICE'],2),
-                    'pctchange' => number_format((float)$rates['ETH']['GHS']['CHANGEPCT24HOUR'],2)."%"
+                    'pctchange' => ($rates['ETH']['USD']['CHANGEPCT24HOUR'] < 0) ? number_format((float)$rates['ETH']['USD']['CHANGEPCT24HOUR'],2)."%" : "+".number_format((float)$rates['ETH']['USD']['CHANGEPCT24HOUR'],2)."%"
                 ],
                 'ltc' => [
                     'coinname' => 'Litecoin',
@@ -77,7 +77,7 @@
                     'priceghs' => $rates['LTC']['GHS']['PRICE'],
                     'priceusdformatted' => number_format($rates['LTC']['USD']['PRICE'],2),
                     'priceghsformatted' => number_format($rates['LTC']['GHS']['PRICE'],2),
-                    'pctchange' => number_format((float)$rates['LTC']['GHS']['CHANGEPCT24HOUR'],2)."%"
+                    'pctchange' => ($rates['LTC']['USD']['CHANGEPCT24HOUR'] < 0) ? number_format((float)$rates['LTC']['USD']['CHANGEPCT24HOUR'],2)."%" : "+".number_format((float)$rates['LTC']['USD']['CHANGEPCT24HOUR'],2)."%"
                 ]
             ];
 
