@@ -3362,7 +3362,7 @@ svg.logo text {
 
 .form-holder .signin-signup-form {
     text-align: center;
-    padding: 100px 40px 40px;
+    padding: 100px 40px 0px;
 }
 
 .form-holder .signin-signup-form ::-webkit-input-placeholder {

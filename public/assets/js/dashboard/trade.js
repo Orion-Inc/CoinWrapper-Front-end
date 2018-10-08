@@ -1,5 +1,8 @@
-const coinRatesURL = window.location.origin+"/CoinWrapper-Front-end/public/coin-rates-api";
-const exchangeRatesURL = window.location.origin+"/CoinWrapper-Front-end/public/exchange-rates-api";
+const coinRatesURL = window.location.origin+"/public/coin-rates-api";
+// const coinRatesURL = window.location.origin+"/CoinWrapper-Front-end/public/coin-rates-api";
+const exchangeRatesURL = window.location.origin+"/public/exchange-rates-api";
+// const exchangeRatesURL = window.location.origin+"/CoinWrapper-Front-end/public/exchange-rates-api";
+
 
 const app = new Vue({
     el: '#dashboard',

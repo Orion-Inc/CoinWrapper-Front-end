@@ -52,7 +52,7 @@
 
             if($authSession['email'] != $user['email']){
                 $this->unauthorize();
-                $this->flash->addMessage('message', 'We Could Not Sign You Into Your Account.<br><small>Please check your email address.</small>');
+                $this->flash->addMessage('message', 'We Could Not Sign You Into Your Account. <br><small>Please check your email address.</small>');
                 return false;
             }
 
@@ -61,7 +61,7 @@
 
             if($userTokenObject->getClaim('user_id') != $authSession['user_id']){
                 $this->unauthorize();
-                $this->flash->addMessage('message', 'We Could Not Sign You Into Your Account.<br><small>Token has expired!</small>');
+                $this->flash->addMessage('message', 'We Could Not Sign You Into Your Account. <br><small>Token has expired!</small>');
                 return false;
             }
 
