@@ -1318,6 +1318,10 @@ svg.logo text {
 	Services Section Styles
 -------------------------------------------------------------------*/
 
+#services {
+    padding: 50px 0;
+}
+
 .service-box {
     position: relative;
     overflow: hidden;
@@ -2559,13 +2563,13 @@ svg.logo text {
 }
 
 #features-holder .feature-box .feature-details {
-    color: #c0bbf9;
+    color: #ffffff;
     font-size: 17px;
     font-weight: 300;
 }
 
 #features-holder .feature-box .feature-details p {
-    color: #c0bbf9;
+    color: #ffffff;
     font-size: 17px;
     font-weight: 300;
     margin-bottom: 20px;
@@ -2579,21 +2583,21 @@ svg.logo text {
 
 #features-links-holder .icons-axis {
     position: absolute;
-    width: 194px;
-    height: 194px;
+    width: 200px;
+    height: 200px;
     right: 0;
     top: 50%;
     margin-top: -97px;
     border-radius: 200px;
     text-align: center;
-    padding-top: 58px;
+    padding-top: 10px;
     background-color: #ffffff;
     -webkit-box-shadow: 0 3px 37px rgba(112, 145, 179, 0.22);
     box-shadow: 0 3px 37px rgba(112, 145, 179, 0.22);
 }
 
 #features-links-holder .icons-axis img {
-    width: 98px;
+    width: 180px;
 }
 
 #features-links-holder .feature-icon-holder {
@@ -2611,7 +2615,12 @@ svg.logo text {
 }
 
 #features-links-holder .feature-icon-holder.opened {
-    background-color: #f16ff9;
+    background-color: #ffffff;
+    border: 1px #cb4b70 solid;
+}
+
+#features-links-holder .feature-icon-holder.opened .feature-icon {
+    color: #cb4b70;
 }
 
 #features-links-holder .feature-icon-holder.opened .animation-holder {
@@ -2624,7 +2633,12 @@ svg.logo text {
 
 #features-links-holder .feature-icon-holder:hover,
 #features-links-holder .feature-icon-holder:focus {
-    background-color: #5d56c9;
+    background-color: #ffffff;
+}
+
+#features-links-holder .feature-icon-holder:hover .feature-icon,
+#features-links-holder .feature-icon-holder:focus .feature-icon {
+    color: #cb4b70;
 }
 
 #features-links-holder .feature-icon-holder .feature-icon {
@@ -6009,11 +6023,11 @@ svg.logo text {
     #features-links-holder .icons-axis {
         width: 140px;
         height: 140px;
-        padding-top: 42px;
+        padding-top: 0px;
         margin-right: -70px;
     }
     #features-links-holder .icons-axis img {
-        width: 70px;
+        width: 100px;
     }
     #features-links-holder .feature-icon-holder1 {
         bottom: 36px;
