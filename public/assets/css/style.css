@@ -1319,9 +1319,6 @@ svg.logo text {
 -------------------------------------------------------------------*/
 
 .service-box {
-    border-radius: 9px;
-    border: 1px solid #e0e0e8;
-    background-color: #fcfcfd;
     position: relative;
     overflow: hidden;
     padding-top: 38px;
@@ -1333,9 +1330,15 @@ svg.logo text {
     transition: all 0.3s ease 0s;
 }
 
+@media(max-width: 425px) {
+    .service-box {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
 .service-box:hover {
-    border: 1px solid #e2e2ec;
-    background-color: #f3f3f7;
+    background-color: #cb4b7017;
 }
 
 .service-box .service-icon {
@@ -1484,15 +1487,15 @@ svg.logo text {
     Pricing Section Styles
 -------------------------------------------------------------------*/
 
-#pricing {
+#home-services {
     padding-top: 60px;
     padding-bottom: 30px;
     position: relative;
     text-align: center;
 }
 
-#pricing .bg-color {
-    background-color: #d6e0f5;
+#home-services .bg-color {
+    background-color: #cb4b70;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1508,7 +1511,7 @@ svg.logo text {
     z-index: -1;
 }
 
-.pricing-box {
+.home-services-box {
     position: relative;
     text-align: center;
     margin-top: 80px;
@@ -1521,23 +1524,23 @@ svg.logo text {
     transition: all 0.3s ease 0s;
 }
 
-.pricing-box.no-icon {
+.home-services-box.no-icon {
     padding: 40px 27px 27px 27px;
 }
 
-.pricing-box .pricing-content {
+.home-services-box .home-services-content {
     border: 1px solid rgba(224, 224, 232, 0.79);
     background-color: #fcfcfd;
     -webkit-box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04);
     box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04);
-    border-radius: 10px;
+    border-radius: 4px;
     position: relative;
     padding: 65px 27px 27px 27px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
-.pricing-box .pricing-content .header-icon {
+.home-services-box .home-services-content .header-icon {
     position: absolute;
     width: 88px;
     height: 88px;
@@ -1553,23 +1556,23 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-.pricing-box .pricing-content .header-icon .htfy {
+.home-services-box .home-services-content .header-icon .htfy {
     color: #ffffff;
     font-size: 45px;
     margin-top: 21px;
 }
 
-.pricing-box .pricing-content .header-icon .htfy-technology {
+.home-services-box .home-services-content .header-icon .htfy-technology {
     margin-top: 26px;
 }
 
-.pricing-box .pricing-content .header-icon .fa {
+.home-services-box .home-services-content .header-icon .fa {
     color: #ffffff;
     font-size: 40px;
     margin-top: 25px;
 }
 
-.pricing-box .pricing-content .header-icon img {
+.home-services-box .home-services-content .header-icon img {
     position: absolute;
     width: 50px;
     height: 43px;
@@ -1579,7 +1582,7 @@ svg.logo text {
     margin-top: -22px;
 }
 
-.pricing-box .pricing-content .pricing-title {
+.home-services-box .home-services-content .home-services-title {
     font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1590,23 +1593,23 @@ svg.logo text {
     margin-bottom: 30px;
 }
 
-.pricing-box .pricing-content .price-title {
+.home-services-box .home-services-content .price-title {
     font-size: 14px;
     font-weight: 700;
     color: #a5b8df;
     text-transform: uppercase;
 }
 
-.pricing-box .pricing-content .pricing-price {
+.home-services-box .home-services-content .home-services-price {
     font-size: 35px;
     color: #a3a3a3;
 }
 
-.pricing-box .pricing-content .pricing-details {
+.home-services-box .home-services-content .home-services-details {
     text-align: center;
 }
 
-.pricing-box .pricing-content .pricing-details ul {
+.home-services-box .home-services-content .home-services-details ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1616,7 +1619,7 @@ svg.logo text {
     transition: all 0.2s ease;
 }
 
-.pricing-box .pricing-content .pricing-details ul li {
+.home-services-box .home-services-content .home-services-details ul li {
     display: inline-block;
     padding: 2px 30px;
     border-radius: 50px;
@@ -1631,24 +1634,24 @@ svg.logo text {
     box-shadow: 0 1px 1px transparent;
 }
 
-.pricing-box .pricing-content .pricing-details ul li.not-included {
+.home-services-box .home-services-content .home-services-details ul li.not-included {
     color: #bbbac1 !important;
     -webkit-box-shadow: 0 9px 20px transparent !important;
     box-shadow: 0 9px 20px transparent !important;
 }
 
-.pricing-box .pricing-content .pricing-details ul li:hover {
+.home-services-box .home-services-content .home-services-details ul li:hover {
     color: #3f3d59;
     -webkit-box-shadow: 0 9px 20px rgba(0, 0, 0, 0.08);
     box-shadow: 0 9px 20px rgba(0, 0, 0, 0.08);
 }
 
-.pricing-box .pricing-content .pricing-details ul li[id^="product"] {
+.home-services-box .home-services-content .home-services-details ul li[id^="product"] {
     -webkit-box-shadow: 0 1px 1px transparent !important;
     box-shadow: 0 1px 1px transparent !important;
 }
 
-.pricing-box .pricing-content .pricing-details p {
+.home-services-box .home-services-content .home-services-details p {
     font-size: 14px;
     color: #777493;
     padding: 25px 0;
@@ -1657,12 +1660,12 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-.pricing-box .pricing-content .pricing-link {
+.home-services-box .home-services-content .home-services-link {
     position: relative;
     z-index: 1;
 }
 
-.pricing-box .pricing-content .pricing-link a {
+.home-services-box .home-services-content .home-services-link a {
     position: relative;
     color: #66556b;
     background-color: #ffffff;
@@ -1672,7 +1675,7 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-.pricing-box .pricing-content .pricing-link a:before {
+.home-services-box .home-services-content .home-services-link a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -1685,129 +1688,129 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-.pricing-box.pricing-color1:before {
+.home-services-box.home-services-color1:before {
     color: #cb4b70;
 }
 
-.pricing-box.pricing-color1 .pricing-content .header-icon {
+.home-services-box.home-services-color1 .home-services-content .header-icon {
     background-color: #cb4b70;
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-title {
+.home-services-box.home-services-color1 .home-services-content .home-services-title {
     color: #cb4b70;
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-price {
+.home-services-box.home-services-color1 .home-services-content .home-services-price {
     color: #cb4b70;
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-details ul li:before {
+.home-services-box.home-services-color1 .home-services-content .home-services-details ul li:before {
     background-color: #cb4b70;
     -webkit-box-shadow: 0 3px 8px rgba(117, 109, 231, 0.5);
     box-shadow: 0 3px 8px rgba(117, 109, 231, 0.5);
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-link a {
+.home-services-box.home-services-color1 .home-services-content .home-services-link a {
     color: #ffffff;
     background-color: #cb4b70;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-link a:before {
+.home-services-box.home-services-color1 .home-services-content .home-services-link a:before {
     background-color: #231aa1;
 }
 
-.pricing-box.pricing-color1 .pricing-content .pricing-link a:hover,
-.pricing-box.pricing-color1 .pricing-content .pricing-link a:focus {
+.home-services-box.home-services-color1 .home-services-content .home-services-link a:hover,
+.home-services-box.home-services-color1 .home-services-content .home-services-link a:focus {
     color: #ffffff;
     background-color: #6057e3;
 }
 
-.pricing-box.pricing-color2:before {
+.home-services-box.home-services-color2:before {
     color: #5d9cec;
 }
 
-.pricing-box.pricing-color2 .pricing-content .header-icon {
+.home-services-box.home-services-color2 .home-services-content .header-icon {
     background-color: #5d9cec;
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-title {
+.home-services-box.home-services-color2 .home-services-content .home-services-title {
     color: #5d9cec;
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-price {
+.home-services-box.home-services-color2 .home-services-content .home-services-price {
     color: #5d9cec;
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-details ul li:before {
+.home-services-box.home-services-color2 .home-services-content .home-services-details ul li:before {
     background-color: #5d9cec;
     -webkit-box-shadow: 0 3px 8px rgba(93, 156, 236, 0.5);
     box-shadow: 0 3px 8px rgba(93, 156, 236, 0.5);
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-link a {
+.home-services-box.home-services-color2 .home-services-content .home-services-link a {
     color: #ffffff;
     background-color: #5d9cec;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-link a:before {
+.home-services-box.home-services-color2 .home-services-content .home-services-link a:before {
     background-color: #12509e;
 }
 
-.pricing-box.pricing-color2 .pricing-content .pricing-link a:hover,
-.pricing-box.pricing-color2 .pricing-content .pricing-link a:focus {
+.home-services-box.home-services-color2 .home-services-content .home-services-link a:hover,
+.home-services-box.home-services-color2 .home-services-content .home-services-link a:focus {
     color: #ffffff;
     background-color: #468ee9;
 }
 
-.pricing-box.pricing-color3:before {
+.home-services-box.home-services-color3:before {
     color: #65d692;
 }
 
-.pricing-box.pricing-color3 .pricing-content .header-icon {
+.home-services-box.home-services-color3 .home-services-content .header-icon {
     background-color: #65d692;
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-title {
+.home-services-box.home-services-color3 .home-services-content .home-services-title {
     color: #65d692;
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-price {
+.home-services-box.home-services-color3 .home-services-content .home-services-price {
     color: #65d692;
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-details ul li:before {
+.home-services-box.home-services-color3 .home-services-content .home-services-details ul li:before {
     background-color: #65d692;
     -webkit-box-shadow: 0 3px 8px rgba(101, 214, 146, 0.5);
     box-shadow: 0 3px 8px rgba(101, 214, 146, 0.5);
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-link a {
+.home-services-box.home-services-color3 .home-services-content .home-services-link a {
     color: #ffffff;
     background-color: #65d692;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-link a:before {
+.home-services-box.home-services-color3 .home-services-content .home-services-link a:before {
     background-color: #228047;
 }
 
-.pricing-box.pricing-color3 .pricing-content .pricing-link a:hover,
-.pricing-box.pricing-color3 .pricing-content .pricing-link a:focus {
+.home-services-box.home-services-color3 .home-services-content .home-services-link a:hover,
+.home-services-box.home-services-color3 .home-services-content .home-services-link a:focus {
     color: #ffffff;
     background-color: #51d184;
 }
 
-.pricing-box.featured {
+.home-services-box.featured {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
-.pricing-box.featured .pricing-content:after {
+.home-services-box.featured .home-services-content:after {
     position: absolute;
     content: "\f005";
     font-family: "fontAwesome";
@@ -1823,45 +1826,45 @@ svg.logo text {
     transition: all 0.2s ease;
 }
 
-.pricing-box.featured:hover .pricing-content:after {
+.home-services-box.featured:hover .home-services-content:after {
     padding: 4px 5px;
 }
 
-.pricing-box:hover .pricing-content,
-.pricing-box:focus .pricing-content {
+.home-services-box:hover .home-services-content,
+.home-services-box:focus .home-services-content {
     background-color: #fdfdfd;
     -webkit-box-shadow: 0 9px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.08);
 }
 
-.pricing-box:hover .pricing-content .header-icon,
-.pricing-box:focus .pricing-content .header-icon {
+.home-services-box:hover .home-services-content .header-icon,
+.home-services-box:focus .home-services-content .header-icon {
     -webkit-box-shadow: 0 5px 12px rgba(141, 171, 234, 0.5);
     box-shadow: 0 5px 12px rgba(141, 171, 234, 0.5);
 }
 
-.pricing-box:hover .pricing-content .pricing-details p,
-.pricing-box:focus .pricing-content .pricing-details p {
+.home-services-box:hover .home-services-content .home-services-details p,
+.home-services-box:focus .home-services-content .home-services-details p {
     color: #3f3d59;
 }
 
-.pricing-box:hover .pricing-content .pricing-link a,
-.pricing-box:focus .pricing-content .pricing-link a {
+.home-services-box:hover .home-services-content .home-services-link a,
+.home-services-box:focus .home-services-content .home-services-link a {
     margin-top: -4px;
     margin-bottom: 4px;
 }
 
-.pricing-box:hover .pricing-content .pricing-link a:before,
-.pricing-box:focus .pricing-content .pricing-link a:before {
+.home-services-box:hover .home-services-content .home-services-link a:before,
+.home-services-box:focus .home-services-content .home-services-link a:before {
     bottom: -4px;
 }
 
-.pricing-box.pricing-box-simple {
+.home-services-box.home-services-box-simple {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
-.pricing-box.pricing-box-simple .pricing-content {
+.home-services-box.home-services-box-simple .home-services-content {
     background-color: #fcfcfd;
     /*padding: 35px 27px 27px 27px;*/
     padding: 0;
@@ -1871,7 +1874,7 @@ svg.logo text {
     box-shadow: 0 9px 18px rgba(54, 186, 255, 0.19);
 }
 
-.pricing-box.pricing-box-simple .pricing-content .header-icon {
+.home-services-box.home-services-box-simple .home-services-content .header-icon {
     width: 76px;
     height: 76px;
     margin-left: -38px;
@@ -1882,26 +1885,26 @@ svg.logo text {
     box-shadow: 0 5px 9px rgba(141, 171, 234, 0.5);
 }
 
-.pricing-box.pricing-box-simple .pricing-content .header-icon .htfy {
+.home-services-box.home-services-box-simple .home-services-content .header-icon .htfy {
     font-size: 33px;
     color: #a1a1a1;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .header-icon .htfy-technology {
+.home-services-box.home-services-box-simple .home-services-content .header-icon .htfy-technology {
     margin-top: 23px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .header-icon .fa {
+.home-services-box.home-services-box-simple .home-services-content .header-icon .fa {
     font-size: 28px;
     color: #a1a1a1;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .header-icon img {
+.home-services-box.home-services-box-simple .home-services-content .header-icon img {
     width: 44px;
     margin-left: -22px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-head {
+.home-services-box.home-services-box-simple .home-services-content .home-services-head {
     position: relative;
     padding: 27px;
     z-index: 10;
@@ -1912,7 +1915,7 @@ svg.logo text {
     overflow: hidden;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-head:before {
+.home-services-box.home-services-box-simple .home-services-content .home-services-head:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -1934,7 +1937,7 @@ svg.logo text {
     transform: skewY(-7deg);
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-title {
+.home-services-box.home-services-box-simple .home-services-content .home-services-title {
     margin-bottom: 15px;
     background-color: rgba(255, 255, 255, 0.15);
     color: #ffffff;
@@ -1943,18 +1946,18 @@ svg.logo text {
     padding: 10px 25px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-features {
+.home-services-box.home-services-box-simple .home-services-content .home-services-features {
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-features ul {
+.home-services-box.home-services-box-simple .home-services-content .home-services-features ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-features ul li {
+.home-services-box.home-services-box-simple .home-services-content .home-services-features ul li {
     padding: inherit !important;
     color: #ffffff;
     font-size: 15px;
@@ -1962,7 +1965,7 @@ svg.logo text {
     display: block !important;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-features ul li:before {
+.home-services-box.home-services-box-simple .home-services-content .home-services-features ul li:before {
     content: "\62";
     font-family: "hostify" !important;
     font-size: 12px;
@@ -1970,24 +1973,24 @@ svg.logo text {
     color: #00ff66;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .display-price {
+.home-services-box.home-services-box-simple .home-services-content .display-price {
     color: #ffffff;
     font-size: 18px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .free-plan {
+.home-services-box.home-services-box-simple .home-services-content .free-plan {
     color: #ffffff;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .one-time {
+.home-services-box.home-services-box-simple .home-services-content .one-time {
     color: #ffffff;
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-price {
+.home-services-box.home-services-box-simple .home-services-content .home-services-price {
     color: #ffffff;
     font-size: 25px !important;
     font-weight: 300;
@@ -1996,7 +1999,7 @@ svg.logo text {
     margin-bottom: 3px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .billing-cycle {
+.home-services-box.home-services-box-simple .home-services-content .billing-cycle {
     color: #ffffff;
     font-size: 13px;
     font-weight: 300;
@@ -2005,31 +2008,31 @@ svg.logo text {
     text-transform: capitalize;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .setup-fee {
+.home-services-box.home-services-box-simple .home-services-content .setup-fee {
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 10px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .setup-fee:before {
+.home-services-box.home-services-box-simple .home-services-content .setup-fee:before {
     content: "+";
     font-size: 16px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .nav {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .nav {
     border-bottom: 0 !important;
     text-align: center;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .nav li {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .nav li {
     /*float: inherit;*/
     display: inline-block !important;
     margin: 0 5px !important;
     padding: 4px !important;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .nav li a {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .nav li a {
     padding: 3px 10px 4px;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.62);
@@ -2038,16 +2041,16 @@ svg.logo text {
     border: 0;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .nav li.active a {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .nav li.active a {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.16) !important;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .tab-content {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .tab-content {
     padding-top: 10px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .tab-content .tab-pane .pricing-price {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .tab-content .tab-pane .home-services-price {
     color: #ffffff;
     font-size: 25px !important;
     font-weight: 300;
@@ -2056,7 +2059,7 @@ svg.logo text {
     margin-bottom: 3px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .tab-content .tab-pane .billing-cycle {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .tab-content .tab-pane .billing-cycle {
     color: #ffffff;
     font-size: 13px;
     font-weight: 300;
@@ -2065,23 +2068,23 @@ svg.logo text {
     text-transform: capitalize;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .tab-content .tab-pane .setup-fee {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .tab-content .tab-pane .setup-fee {
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 10px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-options .tab-content .tab-pane .setup-fee:before {
+.home-services-box.home-services-box-simple .home-services-content .home-services-options .tab-content .tab-pane .setup-fee:before {
     content: "+";
     font-size: 16px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details {
     padding: 0 27px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details ul {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details ul {
     padding: 0;
     margin: 0;
     list-style: none;
@@ -2091,7 +2094,7 @@ svg.logo text {
     transition: all 0.2s ease;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details ul li {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details ul li {
     display: inline-block !important;
     padding: 2px 20px !important;
     width: inherit !important;
@@ -2108,42 +2111,42 @@ svg.logo text {
     box-shadow: 0 9px 20px rgba(0, 0, 0, 0.08);
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details ul li.not-included {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details ul li.not-included {
     color: #bbbac1 !important;
     -webkit-box-shadow: 0 9px 20px rgba(0, 0, 0, 0.08) !important;
     box-shadow: 0 9px 20px rgba(0, 0, 0, 0.08) !important;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details ul li:hover {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details ul li:hover {
     color: #3f3d59;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details ul li[id^="product"] {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details ul li[id^="product"] {
     -webkit-box-shadow: 0 1px 1px transparent !important;
     box-shadow: 0 1px 1px transparent !important;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-details>ul>li {
+.home-services-box.home-services-box-simple .home-services-content .home-services-details>ul>li {
     padding: 6px 4px !important;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-link {
+.home-services-box.home-services-box-simple .home-services-content .home-services-link {
     position: relative;
     z-index: 1;
     padding: 27px;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-link a {
+.home-services-box.home-services-box-simple .home-services-content .home-services-link a {
     padding: 12px 20px;
     color: #ffffff;
     background-color: #3c3c3c;
 }
 
-.pricing-box.pricing-box-simple .pricing-content .pricing-link a:before {
+.home-services-box.home-services-box-simple .home-services-content .home-services-link a:before {
     display: none;
 }
 
-.pricing-box.pricing-box-simple.bestbuy .pricing-content:after {
+.home-services-box.home-services-box-simple.bestbuy .home-services-content:after {
     content: "";
     position: absolute;
     top: -17px;
@@ -2161,7 +2164,7 @@ svg.logo text {
     transform: rotate(-7deg);
 }
 
-.pricing-box.pricing-box-simple.bestbuy:before {
+.home-services-box.home-services-box-simple.bestbuy:before {
     content: "";
     position: absolute;
     top: -28px;
@@ -2178,7 +2181,7 @@ svg.logo text {
     transform: rotate(-7deg);
 }
 
-.pricing-box.pricing-box-simple.bestbuy:after {
+.home-services-box.home-services-box-simple.bestbuy:after {
     content: "Best Buy!";
     position: absolute;
     top: -20px;
@@ -2195,75 +2198,75 @@ svg.logo text {
     transform: rotate(-7deg);
 }
 
-.pricing-box.pricing-box-simple.pricing-color1 .pricing-content .pricing-head:before {
+.home-services-box.home-services-box-simple.home-services-color1 .home-services-content .home-services-head:before {
     background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(90deg, #2ebaf2, #2b8cf2);
     background-image: -o-linear-gradient(90deg, #2ebaf2, #2b8cf2);
     background-image: linear-gradient(90deg, #2ebaf2, #2b8cf2);
 }
 
-.pricing-box.pricing-box-simple.pricing-color1 .pricing-content .pricing-details ul li:hover {
+.home-services-box.home-services-box-simple.home-services-color1 .home-services-content .home-services-details ul li:hover {
     color: #2c94f2;
 }
 
-.pricing-box.pricing-box-simple.pricing-color1 .pricing-content .pricing-link a {
+.home-services-box.home-services-box-simple.home-services-color1 .home-services-content .home-services-link a {
     color: #ffffff;
     background-color: #2c94f2;
 }
 
-.pricing-box.pricing-box-simple.pricing-color1 .pricing-content .pricing-link a:hover,
-.pricing-box.pricing-box-simple.pricing-color1 .pricing-content .pricing-link a:focus {
+.home-services-box.home-services-box-simple.home-services-color1 .home-services-content .home-services-link a:hover,
+.home-services-box.home-services-box-simple.home-services-color1 .home-services-content .home-services-link a:focus {
     background-color: #0e7bdd !important;
 }
 
-.pricing-box.pricing-box-simple.pricing-color2 .pricing-content .pricing-head:before {
+.home-services-box.home-services-box-simple.home-services-color2 .home-services-content .home-services-head:before {
     background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(90deg, #9c8df1, #7f29f0);
     background-image: -o-linear-gradient(90deg, #9c8df1, #7f29f0);
     background-image: linear-gradient(90deg, #9c8df1, #7f29f0);
 }
 
-.pricing-box.pricing-box-simple.pricing-color2 .pricing-content .pricing-details ul li:hover {
+.home-services-box.home-services-box-simple.home-services-color2 .home-services-content .home-services-details ul li:hover {
     color: #8336f0;
 }
 
-.pricing-box.pricing-box-simple.pricing-color2 .pricing-content .pricing-link a {
+.home-services-box.home-services-box-simple.home-services-color2 .home-services-content .home-services-link a {
     color: #ffffff;
     background-color: #8336f0;
 }
 
-.pricing-box.pricing-box-simple.pricing-color2 .pricing-content .pricing-link a:hover,
-.pricing-box.pricing-box-simple.pricing-color2 .pricing-content .pricing-link a:focus {
+.home-services-box.home-services-box-simple.home-services-color2 .home-services-content .home-services-link a:hover,
+.home-services-box.home-services-box-simple.home-services-color2 .home-services-content .home-services-link a:focus {
     background-color: #6811e2 !important;
 }
 
-.pricing-box.pricing-box-simple.pricing-color3 .pricing-content .pricing-head:before {
+.home-services-box.home-services-box-simple.home-services-color3 .home-services-content .home-services-head:before {
     background-repeat: repeat-x;
     background-image: -webkit-linear-gradient(90deg, #47f48f, #0dcf77);
     background-image: -o-linear-gradient(90deg, #47f48f, #0dcf77);
     background-image: linear-gradient(90deg, #47f48f, #0dcf77);
 }
 
-.pricing-box.pricing-box-simple.pricing-color3 .pricing-content .pricing-features ul li:before {
+.home-services-box.home-services-box-simple.home-services-color3 .home-services-content .home-services-features ul li:before {
     color: #ffffff;
 }
 
-.pricing-box.pricing-box-simple.pricing-color3 .pricing-content .pricing-details ul li:hover {
+.home-services-box.home-services-box-simple.home-services-color3 .home-services-content .home-services-details ul li:hover {
     color: #14d37a;
 }
 
-.pricing-box.pricing-box-simple.pricing-color3 .pricing-content .pricing-link a {
+.home-services-box.home-services-box-simple.home-services-color3 .home-services-content .home-services-link a {
     color: #ffffff;
     background-color: #14d37a;
 }
 
-.pricing-box.pricing-box-simple.pricing-color3 .pricing-content .pricing-link a:hover,
-.pricing-box.pricing-box-simple.pricing-color3 .pricing-content .pricing-link a:focus {
+.home-services-box.home-services-box-simple.home-services-color3 .home-services-content .home-services-link a:hover,
+.home-services-box.home-services-box-simple.home-services-color3 .home-services-content .home-services-link a:focus {
     background-color: #10a45f !important;
 }
 
-.pricing-box.pricing-box-simple:hover .pricing-content,
-.pricing-box.pricing-box-simple:focus .pricing-content {
+.home-services-box.home-services-box-simple:hover .home-services-content,
+.home-services-box.home-services-box-simple:focus .home-services-content {
     -webkit-box-shadow: 0 9px 28px rgba(54, 186, 255, 0.29);
     box-shadow: 0 9px 28px rgba(54, 186, 255, 0.29);
 }
@@ -2303,15 +2306,15 @@ svg.logo text {
     margin-top: 25px;
 }
 
-#page-icon .header-icon.pricing-color1 {
+#page-icon .header-icon.home-services-color1 {
     background-color: #cb4b70;
 }
 
-#page-icon .header-icon.pricing-color2 {
+#page-icon .header-icon.home-services-color2 {
     background-color: #5d9cec;
 }
 
-#page-icon .header-icon.pricing-color3 {
+#page-icon .header-icon.home-services-color3 {
     background-color: #65d692;
 }
 
@@ -5383,18 +5386,18 @@ svg.logo text {
     background-color: #098dff;
 }
 
-#domain-pricing .pricing-table-holder {
+#domain-pricing .home-services-table-holder {
     margin-top: 40px;
     border-radius: 10px;
     border: 1px solid #d3d3dd;
 }
 
-#domain-pricing .pricing-table-holder table {
+#domain-pricing .home-services-table-holder table {
     text-align: center;
     margin-bottom: 0;
 }
 
-#domain-pricing .pricing-table-holder table tr {
+#domain-pricing .home-services-table-holder table tr {
     position: relative;
     background-color: #fcfcfd;
     -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.08);
@@ -5403,7 +5406,7 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-#domain-pricing .pricing-table-holder table tr th {
+#domain-pricing .home-services-table-holder table tr th {
     text-align: center;
     font-size: 15px;
     font-weight: 700;
@@ -5416,11 +5419,11 @@ svg.logo text {
     border-right: 1px solid #d3d3dd;
 }
 
-#domain-pricing .pricing-table-holder table tr th:last-child {
+#domain-pricing .home-services-table-holder table tr th:last-child {
     border-right: 0px solid #d3d3dd;
 }
 
-#domain-pricing .pricing-table-holder table tr td {
+#domain-pricing .home-services-table-holder table tr td {
     text-align: center;
     font-size: 15px;
     color: #6d7b88;
@@ -5433,16 +5436,16 @@ svg.logo text {
     transition: all 0.3s ease;
 }
 
-#domain-pricing .pricing-table-holder table tr td:first-child {
+#domain-pricing .home-services-table-holder table tr td:first-child {
     font-weight: 400;
     color: #4f5459;
 }
 
-#domain-pricing .pricing-table-holder table tr td:last-child {
+#domain-pricing .home-services-table-holder table tr td:last-child {
     border-right: 0px solid #d3d3dd;
 }
 
-#domain-pricing .pricing-table-holder table tr td .register-button {
+#domain-pricing .home-services-table-holder table tr td .register-button {
     border-radius: 10px;
     padding: 10px 24px;
     background-color: #a8b3bd;
@@ -5454,25 +5457,25 @@ svg.logo text {
     letter-spacing: 1px;
 }
 
-#domain-pricing .pricing-table-holder table tr td .register-button:hover,
-#domain-pricing .pricing-table-holder table tr td .register-button:focus {
+#domain-pricing .home-services-table-holder table tr td .register-button:hover,
+#domain-pricing .home-services-table-holder table tr td .register-button:focus {
     background-color: #cb4b70;
 }
 
-#domain-pricing .pricing-table-holder table tr:nth-of-type(odd) {
+#domain-pricing .home-services-table-holder table tr:nth-of-type(odd) {
     background-color: #f6f6f9;
 }
 
-#domain-pricing .pricing-table-holder table tr:hover,
-#domain-pricing .pricing-table-holder table tr:focus {
+#domain-pricing .home-services-table-holder table tr:hover,
+#domain-pricing .home-services-table-holder table tr:focus {
     background-color: #ffffff;
     -webkit-box-shadow: 0 9px 18px rgba(0, 0, 0, 0.08);
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.08);
     z-index: 100;
 }
 
-#domain-pricing .pricing-table-holder table tr:hover td,
-#domain-pricing .pricing-table-holder table tr:focus td {
+#domain-pricing .home-services-table-holder table tr:hover td,
+#domain-pricing .home-services-table-holder table tr:focus td {
     color: #cb4b70;
 }
 
