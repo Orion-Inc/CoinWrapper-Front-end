@@ -41,7 +41,7 @@
         </div>
         <div class="col-sm-6 col-md-6">
             <div class="form-text {{ errors.phonenumber ? 'has-error' : '' }}">
-                <input type="text" name="phonenumber" placeholder="Enter Your Phone Number" value="{{ input.phonenumber }}" required>
+                <input type="text" name="phonenumber" id="phonenumber" placeholder="Phone Number" value="{{ input.phonenumber }}" required>
                 {% if errors.phonenumber %}
                     <span class="help-block">{{ errors.phonenumber | first }}</span>
                 {% endif %}

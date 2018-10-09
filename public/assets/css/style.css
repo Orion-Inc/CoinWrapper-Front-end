@@ -3619,6 +3619,10 @@ svg.logo text {
     transition: all 0.2s ease;
 }
 
+.signin-signup-form .form-text div.intl-tel-input {
+    width: 100%;
+}
+
 .signin-signup-form .form-text.has-error input {
     border: 1px #fd7270 solid;
 }

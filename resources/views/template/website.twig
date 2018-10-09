@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/bootstrap-slider.min.css">
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/slick.css">
+
+    {% block additional_stylesheets %} {% endblock %}
     <link rel="stylesheet" type="text/css" href="{{ base_url() }}/assets/css/style.css">
 
     <link href='{{ base_url() }}/assets/img/logo.png' rel='icon'>
@@ -22,7 +24,7 @@
     {% block body %} {% endblock %}
     
     <script src="{{ base_url() }}/assets/js/swap.js"></script>
-    {% block scripts %} {% endblock %}
+    {% block additional_scripts %} {% endblock %}
     <script>var preloader = $("#preloader");setTimeout( function(){ preloader.fadeOut("slow");$("body").fadeIn("slow");},7000);</script>
 </body>
 </html>

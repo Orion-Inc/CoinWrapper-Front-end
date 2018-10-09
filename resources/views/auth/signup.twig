@@ -1,5 +1,8 @@
 {% extends 'template/website.twig' %}
 
+{% block additional_stylesheets %} 
+    <link rel="stylesheet" type="text/css" href="{{ base_url() }}/../node_modules/intl-tel-input/build/css/intlTelInput.css">
+{% endblock %}
 {% block body %}
     <div id="form-section" class="container-fluid signup">
         {% include 'partials/auth/website-logo.twig' %}
@@ -17,4 +20,8 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block additional_scripts %}
+    <script src="{{ base_url() }}/../node_modules/intl-tel-input/build/js/intlTelInput.js"></script>
+    <script src="{{ base_url() }}/assets/js/dashboard/auth.js"></script>
 {% endblock %}
