@@ -9,8 +9,14 @@
         {
             $response = callApi::newuser($args, $method, $endpoint);
             if($response['success'] == true){
+                $authorize = $response['results'];
+                $token = $response['meta']['token'];
+
                 $_SESSION['authorize'] = [
-                    'authorize' => true
+                    'authorize' => true,
+                    'user_id' => $authorize['_id'],
+                    'email' => $authorize['email'],
+                    'token' => $token
                 ];
             }
 
