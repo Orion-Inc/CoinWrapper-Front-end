@@ -6149,7 +6149,7 @@ svg.logo text {
         transform: skewY(-10deg) scale(2.2);
     }
     #header-holder.homepage-header .navbar-default .navbar-toggle .icon-bar {
-        background-color: #c44569;
+        background-color: #fff;
     }
     #features-links-holder .feature-icon-holder .feature-title {
         display: none;
