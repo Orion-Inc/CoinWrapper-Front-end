@@ -415,7 +415,7 @@ a.btn-change {
 }
 
 #header-holder.homepage-header .logo-holder .logo {
-    background-image: url(../img/logo-text.png);
+    background-image: url(../img/logo-alt.png);
 }
 
 #header-holder.about-header .logo-holder .logo,
@@ -3716,12 +3716,16 @@ svg.logo text {
 }
 
 #header-holder.homepage-header {
-    background-color: #ffffff;
+    background-image: url(../img/backgrounds/home-bg-1.svg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
 }
 
 #header-holder.homepage-header .navbar-default .navbar-nav>li>a:not(.signin-button) {
-    color: #cb4b70!important;
+    color: #fff!important;
 }
 
 #header-holder.homepage-header .bg-animation {
@@ -3732,6 +3736,7 @@ svg.logo text {
 #header-holder.homepage-header #page-head {
     padding-top: 160px;
     padding-bottom: 160px;
+    color: #fff;
 }
 
 #header-holder.homepage-header #page-head .logo-icon {
@@ -3848,7 +3853,7 @@ svg.logo text {
 
 #header-holder.homepage-header #page-head .head-content p {
     font-size: 20px;
-    color: #333;
+    color: #fff;
     margin-bottom: 35px;
     opacity: 0.9;
 }
